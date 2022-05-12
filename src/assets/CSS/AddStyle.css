@@ -1,0 +1,198 @@
+.marO {
+    background-color: #ff9300;
+    font-family: "SukhumvitSet-Text";
+    min-height: 100vh;
+}
+.marB {
+    background-color: #404040;
+    font-family: "SukhumvitSet-Text";
+    min-height: 100vh;
+}
+
+.marSpTop {
+    margin-top: 10%;
+}
+
+.marSpTop2 {
+    margin-top: 3%;
+}
+
+.marSpTop3 {
+    margin-top: 5%;
+}
+.marSpTop4 {
+    margin-top: 1%;
+}
+
+.marSpLeftBar {
+    margin-left: -90%;
+}
+.marSpRightBar{
+    margin-left: 10%;
+}
+.marSpRight {
+    margin-left:2%
+}
+.marSpRight2 {
+    margin-left:20%
+}
+.marSpRight3 {
+    margin-left:5%
+}
+
+.marSpRight4 {
+    margin-left:8%
+}
+.marginleftSlideCo{
+    margin-left:8%
+}
+
+.headtext {
+    font-size: 92px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.text {
+    font-size: 42px;
+    color: #ffffff;
+}
+
+.text2 {
+    font-size: 27px;
+    color: #ffffff;
+}
+.text3 {
+    font-size: 36px;
+    color: #ff9300;
+    text-align: center;
+    font-weight: bold;
+}
+.text4 {
+    font-size: 17px;
+    color: #ff9300;
+    text-align: center;
+}
+
+.text5 {
+    font-size: 24px;
+    color: #f8f8f8;
+}
+.text5dot1 {
+    font-size: 18px;
+    color: #f8f8f8;
+    
+}
+.tab {
+    display: inline-block;
+    margin-left: 40px;
+}
+.text5b {
+    font-size: 28px;
+    color: #f8f8f8;
+    font-weight: bold;
+}
+.text5bH {
+    font-size: 63px;
+    color: #f8f8f8;
+    font-weight: bold;
+}
+.text6 {
+    font-size: 42px;
+    color: #000000;
+    font-weight: bold;
+}
+.text6w {
+    font-size: 42px;
+    color: #f8f8f8;
+    font-weight: bold;
+}
+
+.bgBt {
+    background: linear-gradient(to left, #ff990f, #ff990f);
+    margin: 0 0.6em;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px;
+    display: inline-block;
+    color: rgb(252, 252, 252);
+    letter-spacing: 1px;
+    width: 130px;
+    height: 45px;
+    align-items: center;
+    text-align: center;
+}
+
+.Cline{
+    background-color: #ff9300;
+}
+
+.fontSw{
+    font-family: "SukhumvitSet-Text";
+}
+
+@font-face {
+    font-family: "SukhumvitSet-Text";
+    src: local("SukhumvitSet-Text"),
+        url("../../assets/fonts/SukhumvitSet-Text.ttf") format("truetype");
+    font-weight: normal;
+}
+
+  .round {
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .imgslide{
+    align-items: center;
+    object-fit: contain;
+    display: flex;
+    width: 100%;
+    height: 300px;
+  }
+  .bgslideCo{
+    background-color: #7b7b7b82;
+  }
+.sizepre-next{
+    background-color: #7b7b7b82;
+    height: 100px;
+    
+}
+/* .AllBT {
+    width: 250px;
+    background: linear-gradient(to left, #f5e2c741, #f5e2c741);
+    margin: 0 0.3em;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: inline-block;
+    display: inline-block;
+    padding: 6px 12px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 10px 50px;
+    font-size: 16px;
+    line-height: 1.33;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #428bca;
+    border-color: #091016;
+    color: rgb(36, 8, 8);
+    background-color: #101b24;
+    border-color: #1a2d3d;
+    border-radius: 15px;
+    padding: 10px 50px;
+    border: 0 none;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: deful;
+    outline: 0 none;
+} */
