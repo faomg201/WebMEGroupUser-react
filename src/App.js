@@ -14,7 +14,7 @@ import { motion } from 'framer-motion';
 import {useRef, useEffect, useState} from 'react';
 import images from './assets/images';
 import Workbyid from './components/Workbyid';
-import { Trypage } from './components/Trypage';
+import  Trypage  from './components/Trypage';
 class App extends Component {
   render() {
     // const carousel = useRef();

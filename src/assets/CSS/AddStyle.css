@@ -9,6 +9,12 @@
     min-height: 100vh;
 }
 
+.marL{
+    background-color: #ff9300;
+    font-family: "SukhumvitSet-Text";
+    min-height: 100vh;
+}
+
 .marSpTop {
     margin-top: 10%;
 }
@@ -147,6 +153,12 @@
     display: flex;
     width: 100%;
     height: 300px;
+  }
+  .imgByID{
+    align-items: center;
+    object-fit: contain;
+    width: 100%;
+    
   }
   .bgslideCo{
     background-color: #7b7b7b82;

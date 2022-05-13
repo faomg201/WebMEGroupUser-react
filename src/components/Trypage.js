@@ -1,39 +1,75 @@
-import React from "react";
-import '../assets/CSS/test.css'
+import React, { useState, useEffect } from 'react'
+import { TopbarB } from "./TopbarB";
 
-export const Trypage = () => {
+export default function Trypage() {
+
+  const [Goals, fetchGoals] = useState([])
+  const [status, setStatus] = useState(false);
+  useEffect(() => {
+    getData()
+  }, [])
+  const getData = () => {
+    fetch('http://localhost:8000/goals')
+      .then((res) => res.json())
+      .then((res) => {
+        setStatus(true);
+        // console.log(res)
+        fetchGoals(res.data)
+      })
+  }
+  // console.log(Goals);
+
   return (
-    
     <div>
-      <div class="container">
-        <div class="container_content">
-          <div class="container_content_inner">
-            <div class="title">
-              <h1>Hello World</h1>
-            </div>
-            <div class="par">
-              <p>
-                Cupiditate alias odio omnis minima veritatis saepe porro,
-                repellendus natus vitae, sequi exercitationem ipsam, qui
-                possimus sit eveniet laborum sapiente quisquam quae neque velit?
-              </p>
-            </div>
-            <div class="btns">
-              <button class="btns_more"> See more </button>
-            </div>
+      {status == false || !Goals ? (
+        <div className="marL">
+          <div>loading
           </div>
         </div>
-        <div class="container_outer_img">
-          <div class="img-inner">
-            <img
-              src="https://images.unsplash.com/photo-1517911041065-4960862d38f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80"
-              alt=""
-              class="container_img"
-            />
-          </div>
+      ) : (
+        <div>
+          <body className="marB">
+            <style jsx>{`
+                #content {
+                  display: grid;
+                  grid-template-columns: repeat(4, 1fr);
+                  grid-template-rows: repeat(4, minmax(0px, auto));
+                  grid-gap: 30px;
+                  max-width: auto;
+                  margin: 0 auto;
+                }
+              `}</style>
+            <TopbarB />
+
+            <div class="container ">
+              {Goals.map((item) => {
+                const staticpath =
+                  "http://localhost:8000/static/goals/" +
+                  item.goal_title +
+                  "," +
+                  item.goal_img;
+                return (
+                  <div class="col">
+                    <div class="card">
+                      <img
+                        src={staticpath}
+                        width="280px"
+                        height="280px"
+                      />
+                      <div class="card-body">
+                        <p class="card-text">{item.goal_detail}.</p>
+                        <p class="card-text">{item.service_name}.</p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </body>
         </div>
-      </div>
-      <div class="overlay"></div>
+      )}
     </div>
   );
+
+
 };

@@ -1,27 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from 'react'
 import Topbar from "./Topbar";
+import axios from 'axios';
 
-import { Component } from "react";
-class Serve extends Component {
-  state = {
-    loading: true,
-  };
-  async componentDidMount() {
-    const apiUrl = `http://localhost:8000/services`;
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-    this.setState({ service: data.data, loading: false });
-    console.log(data.data);
+export default function Serve() {
+  const [Service, fetchService] = useState([])
+  const [status, setStatus] = useState(false);
+  useEffect(() => {
+    getData()
+  }, [])
+  const getData = () => {
+    axios.get('http://localhost:8000/services')
+      .then((res) => {
+        setStatus(true);
+        // console.log(res)
+        fetchService(res.data.data) 
+        // console.log(res.data.data);
+      })
+     
   }
 
-  render() {
-    return (
-      <div>
-        {this.state.loading || !this.state.service ? (
-          <div>loading</div>
-        ) : (
-          <div class="container-fluid">
-            <style jsx>{`
+  return (
+
+    <div>
+      {status == false || !Service ? (
+        <div>loading</div>
+      ) : (
+        <div class="container-fluid">
+          <style jsx>{`
               .CSize {
                 max-width: 1000px;
               }
@@ -57,16 +62,16 @@ class Serve extends Component {
                 }
               }
             `}</style>
-            <div class="row">
-              <div class="col-sm-1 marO bgslide"></div>
-              <div class="col-sm-11">
-                <div class="row">
-                  <div class="col-12 col-sm-12">
-                    <Topbar />
-                  </div>
+          <div class="row">
+            <div class="col-sm-1 marO bgslide"></div>
+            <div class="col-sm-11">
+              <div class="row">
+                <div class="col-12 col-sm-12">
+                  <Topbar />
                 </div>
+              </div>
 
-                {/* <div class="container bg-primary"> */}
+              <div class="container">
                 <p class="text6 marSpRight ">บริการของเรา</p>
                 <div class="row">
                   <div className="col-md-12" height="800px">
@@ -83,24 +88,24 @@ class Serve extends Component {
                                 <img
                                   src={
                                     "http://localhost:8000/static/services/" +
-                                    this.state.service[0]?.service_name +
+                                    Service[0]?.service_name +
                                     "," +
-                                    this.state.service[0]?.service_img
+                                    Service[0]?.service_img
                                   }
                                   class="imgslide"
                                 />
                               </div>
                               <div class="col-md-6 bg-light ">
                                 <h5 className="marSpTop3">
-                                  {this.state.service[0]?.service_name}
+                                  {Service[0]?.service_name}
                                 </h5>
                                 <hr class="line Cline"></hr>
-                                <p>{this.state.service[0]?.service_detail}</p>
+                                <p>{Service[0]?.service_detail}</p>
                               </div>
                             </div>
                           </div>
                         </div>
-                        {this.state.service
+                        {Service
                           .filter((f, idx) => idx > 0)
                           .map((item) => {
                             const staticpath =
@@ -108,7 +113,6 @@ class Serve extends Component {
                               item.service_name +
                               "," +
                               item.service_img;
-                            console.log(staticpath);
                             return (
                               <div class="carousel-item ">
                                 <div class="container">
@@ -160,14 +164,13 @@ class Serve extends Component {
                     </div>
                   </div>
                 </div>
-                {/* </div> */}
               </div>
             </div>
           </div>
-        )}
-      </div>
-    );
-  }
+        </div>
+      )}
+    </div>
+  );
+
 }
 
-export default Serve;

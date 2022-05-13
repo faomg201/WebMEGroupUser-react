@@ -1,29 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from 'react'
 import Topbar from "./Topbar";
+import axios from 'axios';
 import {
   GoogleMap,
   withScriptjs,
   withGoogleMap,
   Marker,
 } from "react-google-maps";
-import { Component } from "react";
 
-class Contact extends Component {
-  state = {
-    loading: true,
-  };
-  async componentDidMount() {
-    const apiUrl = `http://localhost:8000/contractUs`;
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-    console.log(data);
-    this.setState({ location: data.data, loading: false });
-    console.log(data.data);
+export default function Contact () {
+  const [Location, fetchLocation] = useState([])
+  const [status, setStatus] = useState(false);
+  useEffect(() => {
+    getData()
+  }, [])
+  const getData = () => {
+    axios.get('http://localhost:8000/contractus')
+      .then((res) => {
+        setStatus(true);
+        // console.log(res)
+        fetchLocation(res.data.data)
+      })
   }
-  render() {
+
     return (
       <div>
-        {this.state.loading || !this.state.location ? (
+        {status == false || !Location ? (
           <div>loading</div>
         ) : (
           <div>
@@ -35,7 +37,7 @@ class Contact extends Component {
                       <Topbar />
                     </div>
                   </div>
-                  {this.state.location.map((item) => {
+                  {Location.map((item) => {
                     function Map() {
                       let stringLat = item.enterprise_latitude;
                       let latitude = parseFloat(stringLat);
@@ -113,6 +115,5 @@ class Contact extends Component {
       </div>
     );
   }
-}
 
-export default Contact;
+
