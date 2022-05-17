@@ -13,10 +13,10 @@ export default function Serve() {
       .then((res) => {
         setStatus(true);
         // console.log(res)
-        fetchService(res.data.data) 
+        fetchService(res.data.data)
         // console.log(res.data.data);
       })
-     
+
   }
 
   return (
@@ -96,11 +96,11 @@ export default function Serve() {
                                 />
                               </div>
                               <div class="col-md-6 bg-light ">
-                                <h5 className="marSpTop3">
-                                  {Service[0]?.service_name}
-                                </h5>
-                                <hr class="line Cline"></hr>
-                                <p>{Service[0]?.service_detail}</p>
+                                <div class="marSpTop3">
+                                  <p class='textTitle mrleft'><p>{Service[0]?.service_name}</p></p>
+                                  <hr class="line Cline"></hr>
+                                  <p class='textDetail'><p>{Service[0]?.service_detail}</p></p>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -125,11 +125,11 @@ export default function Serve() {
                                       />
                                     </div>
                                     <div class="col-md-6 bg-light ">
-                                      <h5 className="marSpTop3">
-                                        {item.service_name}
-                                      </h5>
-                                      <hr class="line Cline"></hr>
-                                      <p>{item.service_detail}</p>
+                                      <div class="marSpTop3">
+                                        <p class='textTitle mrleft'><p>{item.service_name}</p></p>
+                                        <hr class="line Cline"></hr>
+                                        <p class='textDetail'><p>{item.service_detail}</p></p>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>

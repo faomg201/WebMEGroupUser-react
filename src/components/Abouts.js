@@ -41,18 +41,21 @@ export default function Abouts() {
         <div>
           <body className='marB'>
             <style jsx>{`
-           #content{
-         display: grid;
-         grid-template-columns: repeat(3, 1fr);
-         grid-template-rows: repeat(3,minmax(0px, auto));
-         grid-gap: 100px;
-         max-width: auto;
-         margin: 0 auto;   
-       }
-       .test {
-         width: 200px;
-         height: 200px;
-       }
+              #content{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3,minmax(0px, auto));
+                grid-gap: 100px;
+                max-width: auto;
+                margin: 0 auto;   
+              }
+            .test {
+                width: 200px;
+                height: 200px;
+              }
+            .abotusImg {
+                height: 750px
+            }
        `}</style>
             <div class="container-fluid">
               <div class="row">
@@ -76,7 +79,7 @@ export default function Abouts() {
                           <img src={
                             'http://localhost:8000/static/aboutUs/' +
                             aboutUsImg[0]?.image_name
-                          } width="auto" height="600px" />
+                          } class="abotusImg" />
                         </div>
                       </div>
                       {
@@ -88,7 +91,8 @@ export default function Abouts() {
                               <div class="container" align="center">
                                 <img
                                   src={staticpath}
-                                  width="auto" height="600px"
+                                  // width="auto" height="100%"
+                                  class="abotusImg"
                                 />
                               </div>
                             </div>
@@ -126,9 +130,9 @@ export default function Abouts() {
                           <br />
                           <div>
 
-                            <p class="text5b">{item.emp_fname} {item.emp_lname}</p>
-                            <p class="text5">ตำแหน่ง: {item.emp_class}</p>
-                            <p class="text5">คติ: {item.emp_quote}</p>
+                            <p class="text5b">{item.emp_fname} {item.emp_lname} #{item.mbti_name}</p>
+                            <p class="text5">{item.emp_class}</p>
+                            <p class="text5">{item.emp_quote}</p>
                           </div>
                         </div>
                       </tr>

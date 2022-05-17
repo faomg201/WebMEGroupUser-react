@@ -48,7 +48,7 @@ export default function Works() {
               {Services.map((itemSer) => {
                 return (
                   <div>
-                    <p class="text5">&lt;{itemSer.service_name}&gt;</p>
+                    <p class="text5">{itemSer.service_name}</p>
                     <div class="row" id="content">
                       {Goals.map((item) => {
                         if (item.service_name !== itemSer.service_name) {
@@ -63,17 +63,16 @@ export default function Works() {
                         console.log(staticpath);
                         return (
                           <div class="col">
-                            <div class="card">
+                            <div class="card borderCard">
                               <a href={workPath}>
                                 <img
                                   src={staticpath}
-                                  width="280px"
-                                  height="280px"
+                                  width="350px"
+                                  height="350px"
                                 />
                               </a>
-                              <div class="card-body">
-                                <p class="card-text">{item.goal_detail}.</p>
-                                <p class="card-text">{item.service_name}.</p>
+                              <div class="card-body" align="center">
+                                <p class="card-text">{item.goal_title}</p>
                               </div>
                             </div>
                           </div>

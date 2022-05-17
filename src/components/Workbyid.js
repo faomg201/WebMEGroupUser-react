@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { TopbarB } from "./TopbarB";
 import { useLocation } from "react-router-dom";
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default function Workbyid() {
   const getpart = window.location.pathname;
@@ -55,22 +56,33 @@ export default function Workbyid() {
               <div class="container" >
                 <div class="row" >
                   <div className="col-md-12">
-                    <p class="text6w marSpRight">
-                      {GoalID.goal_title}
-                    </p>
+                    <p class="textBack ">
+                      <a href='/goals'>&#60; Back</a>
+
+                    </p>                    
                     <div class="row">
-                      <div class="col-md-4 " >
+                      <div class="col-md-4" >
                         <img
                           src={"http://localhost:8000/static/goals/" + GoalID.goal_title + "," + GoalID.goal_img}
-                          class="imgByID"
+                          class="imgByID d-block"
+                          width="440px"
+                          height="440px"                          
                         />
                       </div>
                       <div class="col-md-8 bg-light ">
-                        <h5 className="marSpTop3">
-                          {GoalID.service_detail}
-                        </h5>
-                        <hr class="line Cline"></hr>
-                        <p>{GoalID.goal_detail}</p>
+                        <div class="marSpTop3">
+                          <p class='textTitle'><p>{GoalID.goal_title}</p></p>
+                          
+                          <p class='textType'>{GoalID.service_name}</p>
+                          <div>
+                             <hr class="Cline"/>
+                          </div>
+                         
+                          
+                          <p class='textDetail'><p>{GoalID.goal_detail}</p></p>
+                        </div>
+                        
+                        
                       </div>
 
                     </div>
@@ -79,8 +91,8 @@ export default function Workbyid() {
               </div>
             </body>
           </div>
-        )}
-      </div>
+         )}
+      </div> 
     </>
   );
 }
