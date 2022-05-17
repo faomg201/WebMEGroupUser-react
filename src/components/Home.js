@@ -1,8 +1,10 @@
 import React from "react";
 // import Topbar from "./Topbar";
 import "../assets/CSS/AddStyle.css"
+import "../assets/CSS/StyleHome.css"
 import { motion } from "framer-motion";
 import { useRef, useEffect, useState } from 'react';
+import Tilt from 'react-tilt'
 
 const Home = () => {
 	const data = ["Mobile application", "Web application", "Desktop application", "IoT", "Digital image processing", "Platform business", "UX/UI"]
@@ -87,16 +89,16 @@ const Home = () => {
 
 
 
-			<div class="container-fluid " align="center">
+			<div class="container-fluid overflowHomepage" align="center" >
 				<div>&nbsp;</div>
-				<div class="marSpTop easeForwards">
-					<font className="headtext " >ME Group Enterprise</font>
-				</div>
-				<div className="was">
-					<font className="text" > บริษัท มี กรุ๊ป เอ็นเตอร์ไพรส์ จำกัด</font>
-
-
-				</div>
+				<Tilt className="Tilt" options={{ max: 25 ,speed: 5000}}>
+					<div class="marSpTop easeForwards">
+						<font className="headtext " >ME Group Enterprise</font>
+					</div>
+					<div className="was">
+						<font className="text" > บริษัท มี กรุ๊ป เอ็นเตอร์ไพรส์ จำกัด</font>
+					</div>
+				</Tilt>
 				<div className="marSpTop2 easeForwards">
 					<a class="bgBt " href="/serve" role="button" >บริการ</a>
 					<a class="bgBt " href="/goals" role="button" >ผลงาน</a>

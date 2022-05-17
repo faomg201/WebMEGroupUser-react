@@ -181,15 +181,19 @@
   border-radius: 100%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.imgslide {
-  align-items: center;
-  object-fit: contain;
-  display: flex;
+.xrow{
+    --bs-gutter-x: 0rem;
+}
+.widthSlideImg{
+  height: 33.33333vw;
+}
+.imgslide{
+  /* position: absolute; */
   width: 100%;
-  height: 300px;
+  overflow: hidden;
 }
 .abotusImg {
-  height: 100%;
+  height: 100vh;
 }
 .bgslideCo {
   background-color: #7b7b7b82;
@@ -200,6 +204,16 @@
 }
 .borderCard {
   border: #000000;
+}
+
+.hoverBack:link{
+  font-size: 16px;
+  color: #ffffff;
+  transition:0.5s;
+}
+.hoverBack:visited{
+  color: #ffffff;
+  transition:0.5s;
 }
 .hoverBack:hover{
   color: rgb(152, 152, 152);
@@ -331,3 +345,10 @@
 .LodingMargin{
   margin-top: 40vh;
 }
+
+
+.cardX {
+ display: block;
+ transform: translateZ(40px);
+}
+

@@ -7,6 +7,7 @@ import {
   withGoogleMap,
   Marker,
 } from "react-google-maps";
+import FadeIn from 'react-fade-in';
 
 export default function Contact() {
   const [Location, fetchLocation] = useState([])
@@ -104,6 +105,7 @@ export default function Contact() {
                             {item.enterprise_servicetime}
                           </p>
                         </div>
+                        <FadeIn>
                         <div class="row justify-content-md-center">
                           <div class="col-sm-5">
                             <div style={{ width: "50vm", height: "50vh" }} >
@@ -141,6 +143,7 @@ export default function Contact() {
 
                           </div>
                         </div>
+                        </FadeIn>
                       </div>
                     </div>
                   );

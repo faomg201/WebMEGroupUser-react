@@ -91,9 +91,6 @@ export default function Abouts() {
                 width: 200px;
                 height: 200px;
               }
-            .abotusImg {
-                height: 750px
-            }
        `}</style>
             <div class="container-fluid">
               <div class="row">

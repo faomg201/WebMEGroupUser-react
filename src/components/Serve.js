@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Topbar from "./Topbar";
 import axios from 'axios';
+import FadeIn from 'react-fade-in';
 
 export default function Serve() {
   const [Service, fetchService] = useState([])
@@ -11,7 +12,7 @@ export default function Serve() {
     }, 5000);
     getData()
     return () => clearTimeout(timer);
-    
+
   }, [])
   const getData = () => {
     axios.get('http://localhost:8000/services')
@@ -27,14 +28,14 @@ export default function Serve() {
   return (
 
     <div>
-      { status == false || !Service ? (
+      {status == false || !Service ? (
         <div>
           <body className='body'>
             <svg className='svg LodingMargin' version="1.1" id="L5" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               viewBox="0 0 60 100" enable-background="new 0 0 0 0" xmlSpace="preserve">
               <circle fill="#fff" stroke="none" cx="6" cy="50" r="6">
                 <animateTransform
-                  attributeName="transform" 
+                  attributeName="transform"
                   dur="1s"
                   type="translate"
                   values="0 15 ; 0 -15; 0 15"
@@ -75,7 +76,7 @@ export default function Serve() {
                 font-family: "SukhumvitSet-Text";
               }
               .carousel-inner {
-                height: 310px;
+                height: 30vw;
               }
 
               .item.active {
@@ -88,15 +89,18 @@ export default function Serve() {
               }
               .bgslide {
                 animation: expand 0.8s ease forwards;
+    
                 overflow: hidden;
                 transition:5s;
               }
 
               @keyframes expand {
                 0% {
-                  transform: translateX(1400px);
+                  background-color: #ffffff;
+                  transform: translateX(200px);
                 }
                 100% {
+                  background-color: #ff990f;
                   transform: translateX(0px);
                 }
               }
@@ -118,20 +122,24 @@ export default function Serve() {
                       class="carousel slide"
                       data-bs-ride="carousel"
                     >
+                      <FadeIn>
                       <div class="carousel-inner ">
                         <div class="carousel-item active">
                           <div class="container">
-                            <div class="row">
-                              <div class="col-md-4 marginleftSlideCo">
-                                <img
-                                  src={
-                                    "http://localhost:8000/static/services/" +
-                                    Service[0]?.service_name +
-                                    "," +
-                                    Service[0]?.service_img
-                                  }
-                                  class="imgslide"
-                                />
+                            <div class="row xrow">
+                              <div class="col-md-4 marginleftSlideCo widthSlideImg">
+                                <div className=''>
+                                  <div className='imgslide'>
+                                    <img
+                                      src={
+                                        "http://localhost:8000/static/services/" +
+                                        Service[0]?.service_name +
+                                        "," +
+                                        Service[0]?.service_img
+                                      }
+                                    />
+                                  </div>
+                                </div>
                               </div>
                               <div class="col-md-6 bg-light ">
                                 <div class="marSpTop3">
@@ -154,13 +162,15 @@ export default function Serve() {
                             return (
                               <div class="carousel-item ">
                                 <div class="container">
-                                  <div class="row">
-                                    <div class="col-md-4 marginleftSlideCo">
-                                      <img
+                                  <div class="row xrow">
+                                    <div class="col-md-4 marginleftSlideCo widthSlideImg">
+                                      <div className=''>
+                                        <div className='imgslide'>
+                                        <img
                                         src={staticpath}
-                                        // class="d-block w-100"
-                                        class="imgslide"
                                       />
+                                        </div>
+                                      </div>
                                     </div>
                                     <div class="col-md-6 bg-light ">
                                       <div class="marSpTop3">
@@ -175,6 +185,7 @@ export default function Serve() {
                             );
                           })}
                       </div>
+                      </FadeIn>
                       <button
                         class="carousel-control-prev "
                         type="button"
@@ -199,6 +210,7 @@ export default function Serve() {
                         ></span>
                         <span class="visually-hidden">Next</span>
                       </button>
+                      
                     </div>
                   </div>
                 </div>

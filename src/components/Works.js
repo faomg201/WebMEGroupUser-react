@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { TopbarB } from "./TopbarB";
 import axios from 'axios';
+import FadeIn from 'react-fade-in';
 
 
 export default function Works() {
@@ -69,6 +70,7 @@ export default function Works() {
         </div>
       ) : (
         <div>
+          
           <body className="marB">
             <style jsx>{`
                 #content {
@@ -76,8 +78,6 @@ export default function Works() {
                   grid-template-columns: repeat(4, 1fr);
                   grid-template-rows: repeat(4, minmax(0px, auto));
                   grid-gap: 30px;
-                  max-width: auto;
-                  margin: 0 auto;
                 }
               `}</style>
             <TopbarB />
@@ -88,7 +88,9 @@ export default function Works() {
                   <div>
                     <p class="text5">{itemSer.service_name}</p>
                     <div class="row" id="content">
-                      {Goals.map((item) => {
+                      
+                      {Goals.map((item,index) => {
+                        console.log(index);
                         if (item.service_name !== itemSer.service_name) {
                           return;
                         }
@@ -100,13 +102,14 @@ export default function Works() {
                         const workPath = "/goals/" + item.goal_id;
                         console.log(staticpath);
                         return (
+                          <FadeIn delay={index * 100}>
                           <div class="col">
                             <div class="card borderCard">
                               <a href={workPath}>
                                 <img
                                   src={staticpath}
-                                  width="350px"
-                                  height="350px"
+                                  width="285px"
+                                  height="285px"
                                 />
                               </a>
                               <div class="card-body" align="center">
@@ -114,8 +117,10 @@ export default function Works() {
                               </div>
                             </div>
                           </div>
+                          </FadeIn>
                         );
                       })}
+                      
                     </div>
                   </div>
                 );

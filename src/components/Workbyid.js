@@ -3,6 +3,7 @@ import { TopbarB } from "./TopbarB";
 import { useLocation } from "react-router-dom";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import FadeIn from 'react-fade-in';
 
 export default function Workbyid() {
   const getpart = window.location.pathname;
@@ -95,9 +96,11 @@ export default function Workbyid() {
                 <div class="row" >
                   <div className="col-md-12">
                     <p class="textBack ">
-                      <a href='/goals' class='hoverBack'>&#60; <u >Back</u></a>
+                      <a href='/goals' class='hoverBack'>&#60; Back</a>
 
-                    </p>                    
+                    </p>   
+                  <FadeIn>
+
                     <div class="row">
                       <div class="col-md-4" >
                         <img
@@ -124,7 +127,9 @@ export default function Workbyid() {
                       </div>
 
                     </div>
+                    </FadeIn>
                   </div>
+                  
                 </div>
               </div>
             </body>
