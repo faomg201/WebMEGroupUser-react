@@ -56,6 +56,9 @@
 .mrleft{
   margin-left: 13px;
 }
+.mapMargin{
+  margin-left: 30px;
+}
 
 .headtext {
   font-size: 92px;
@@ -138,10 +141,10 @@
 }
 
 .bgBt {
-  background: linear-gradient(to left, #ff990f, #ff990f);
+  background: #ff990f;
   margin: 0 0.6em;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px;
+  font-size: 21px;
+  padding: 6px;
   display: inline-block;
   color: rgb(252, 252, 252);
   letter-spacing: 1px;
@@ -149,6 +152,11 @@
   height: 45px;
   align-items: center;
   text-align: center;
+  transition:0.5s;
+}
+.bgBt:hover{
+  background: rgb(255, 255, 255);
+  color: #ff990f;
 }
 
 .Cline {
@@ -193,6 +201,36 @@
 .borderCard {
   border: #000000;
 }
+.hoverBack:hover{
+  color: rgb(152, 152, 152);
+  transition:0.5s;
+}
+.hoverBarB{
+  color: #ffffff;
+  transition:0.5s;
+}
+.hoverBarB:hover{
+  color: #f6851483;
+  transition:0.5s;
+}
+.hoverBar{
+  color: #000000;
+  transition:0.5s;
+}
+
+.hoverBar:hover{
+  color: #f6851483;
+  transition:0.5s;
+}
+.hoverBarbord{
+  font-weight: bold;
+  color: #f68514;
+  transition:0.5s;
+}
+.hoverBarbord:hover{
+  transition:0.5s;
+  color: #f6851483;
+}
 /* .AllBT {
     width: 250px;
     background: linear-gradient(to left, #f5e2c741, #f5e2c741);
@@ -233,3 +271,63 @@
     text-transform: deful;
     outline: 0 none;
 } */
+
+
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700,300);
+*, html {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  background: #ff9300;
+  text-align: center;
+  font-family: "Comfortaa", cursive;
+  height: 100vh;
+}
+
+.svg {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  display: inline-block;
+}
+
+.h1 {
+  text-align: center;
+  color: #fff;
+  margin: 0 0 100px;
+  font-size: 34px;
+  font-weight: 100;
+  text-transform: uppercase;
+  background-color: #e43725;
+  padding: 20px 0;
+}
+.h1 b {
+  font-weight: 700;
+}
+
+.made-with-love {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 10px;
+  font-family: arial;
+  color: #fff;
+}
+.made-with-love i {
+  font-style: normal;
+  color: #F50057;
+  font-size: 14px;
+  position: relative;
+  top: 2px;
+}
+.made-with-love a {
+  color: #fff;
+  text-decoration: none;
+}
+.made-with-love a:hover {
+  text-decoration: underline;
+}
+.LodingMargin{
+  margin-top: 40vh;
+}

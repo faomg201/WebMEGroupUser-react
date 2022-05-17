@@ -33,7 +33,6 @@ const Home = () => {
 }
 .slider-wrapper {
   font-size: 27px;
-  font-weight: bold;
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -99,14 +98,11 @@ const Home = () => {
 
 				</div>
 				<div className="marSpTop2 easeForwards">
-					<a class="btn bgBt button1 " href="/serve" role="button" >บริการ</a>
-					<a class="btn bgBt button1 " href="/goals" role="button" >ผลงาน</a>
-					<a class="btn bgBt button4" href="/abouts" role="button">เกี่ยวกับเรา</a>
-					<a class="btn bgBt button1" href="/contact" role="button">ติดต่อเรา</a>
+					<a class="bgBt " href="/serve" role="button" >บริการ</a>
+					<a class="bgBt " href="/goals" role="button" >ผลงาน</a>
+					<a class="bgBt " href="/abouts" role="button">เกี่ยวกับเรา</a>
+					<a class="bgBt " href="/contact" role="button">ติดต่อเรา</a>
 				</div>
-				{/* <div className="marSpTop3 easeForwards">
-					<font class="slider-text1"> {data}</font>
-				</div> */}
 				<div>
 					<br /><br /><br />
 				</div>
