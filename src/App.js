@@ -25,13 +25,13 @@ class App extends Component {
     return (
       <Router>
         <Routes>
-          <Route path='/' element={<Home/>}/>
+          <Route path='/goals/:id' element={<Workbyid/>}/>
+          <Route path='/goals' element={<Works/>}/>
           <Route path='/abouts' element={<Abouts/>}/>
           <Route path='/serve' element={<Serve/>}/>
-          <Route path='/goals' element={<Works/>}/>
           <Route path='/contact' element={<Contact/>}/>
-          <Route path='/goals/:id' element={<Workbyid/>}/>
           <Route path='/Trypage' element={<Trypage/>}/>
+          <Route path='/' element={<Home/>}/>
         </Routes>
       </Router>
       // <div className='App'>

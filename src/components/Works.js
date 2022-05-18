@@ -2,12 +2,16 @@ import React, { useState, useEffect } from 'react'
 import { TopbarB } from "./TopbarB";
 import axios from 'axios';
 import FadeIn from 'react-fade-in';
-
+import { useNavigate } from "react-router-dom";
 
 export default function Works() {
   const [Goals, fetchGoals] = useState([])
   const [Services, fetchServices] = useState([])
   const [status, setStatus] = useState(false);
+  const history = useNavigate();
+  const isLink = (url) => {
+	  history(`/${url}`)
+  }
   useEffect(() => {
     const timer = setTimeout(() => {
       console.log('This will run after 5 second!')
@@ -99,13 +103,13 @@ export default function Works() {
                           item.goal_title +
                           "," +
                           item.goal_img;
-                        const workPath = "/goals/" + item.goal_id;
+                        const workPath = "goals/" + item.goal_id;
                         console.log(staticpath);
                         return (
                           <FadeIn delay={index * 100}>
                           <div class="col">
                             <div class="card borderCard">
-                              <a href={workPath}>
+                              <a onClick={() => {isLink(workPath)}} >
                                 <img
                                   src={staticpath}
                                   width="285px"

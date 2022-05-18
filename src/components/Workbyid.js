@@ -4,11 +4,16 @@ import { useLocation } from "react-router-dom";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import FadeIn from 'react-fade-in';
+import { useNavigate } from "react-router-dom";
 
 export default function Workbyid() {
   const getpart = window.location.pathname;
   const [GoalID, fetchGoalID] = useState([])
   const [status, setStatus] = useState(false);
+  const history = useNavigate();
+  const isLink = (url) => {
+	  history(`/${url}`)
+  }
   useEffect(() => {
     const timer = setTimeout(() => {
       console.log('This will run after 5 second!')
@@ -96,7 +101,7 @@ export default function Workbyid() {
                 <div class="row" >
                   <div className="col-md-12">
                     <p class="textBack ">
-                      <a href='/goals' class='hoverBack'>&#60; Back</a>
+                      <a onClick={() => {isLink('goals')}} class='hoverBack'>&#60; Back</a>
 
                     </p>   
                   <FadeIn>

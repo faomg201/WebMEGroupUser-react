@@ -1,7 +1,12 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 const partN = window.location.pathname;
 export const TopbarB = () => {
   console.log(window.location.pathname);
+  const history = useNavigate();
+  const isLink = (url) => {
+	  history(`/${url}`)
+  }
   return (
     <div>
       <style jsx>{`
@@ -16,30 +21,30 @@ export const TopbarB = () => {
       <ul class="nav fontSw marSpTop4 marSpRight3 ">
 
         <li class="nav-item ">
-          <a class="nav-link hoverBarB" href="/">หน้าแรก</a>
+          <a class="nav-link hoverBarB" onClick={() => {isLink('')}} >หน้าแรก</a>
         </li>
         <li class="nav-item">
           {partN == '/serve' ?
-            <a class="nav-link hoverBarbord" href="/serve">บริการ</a> :
-            <a class="nav-link hoverBarB" href="/serve">บริการ</a>
+            <a class="nav-link hoverBarbord" onClick={() => {isLink('serve')}} >บริการ</a> :
+            <a class="nav-link hoverBarB" onClick={() => {isLink('serve')}} >บริการ</a>
           }
         </li>
         <li class="nav-item">
           {partN == '/goals' ?
-            <a class="nav-link hoverBarbord" href="/goals">ผลงาน</a> :
-            <a class="nav-link hoverBarB" href="/goals">ผลงาน</a>
+            <a class="nav-link hoverBarbord" onClick={() => {isLink('goals')}} >ผลงาน</a> :
+            <a class="nav-link hoverBarB" onClick={() => {isLink('goals')}} >ผลงาน</a>
           }
         </li>
         <li class="nav-item">
           {partN == '/abouts' ?
-            <a class="nav-link hoverBarbord" href="/abouts">เกี่ยวกับเรา</a> :
-            <a class="nav-link hoverBarB" href="/abouts">เกี่ยวกับเรา</a>
+            <a class="nav-link hoverBarbord" onClick={() => {isLink('abouts')}} >เกี่ยวกับเรา</a> :
+            <a class="nav-link hoverBarB" onClick={() => {isLink('abouts')}} >เกี่ยวกับเรา</a>
           }
         </li>
         <li class="nav-item">
           {partN == '/contact' ?
-            <a class="nav-link hoverBarbord" href="/contact">ติดต่อเรา</a> :
-            <a class="nav-link hoverBarB" href="/contact">ติดต่อเรา</a>
+            <a class="nav-link hoverBarbord" onClick={() => {isLink('contact')}} >ติดต่อเรา</a> :
+            <a class="nav-link hoverBarB" onClick={() => {isLink('contact')}} >ติดต่อเรา</a>
           }
         </li>
         <li class="nav marSpRight2">
