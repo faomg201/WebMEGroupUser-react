@@ -187,10 +187,8 @@
 .widthSlideImg{
   height: 33.33333vw;
 }
-.imgslide{
-  /* position: absolute; */
-  width: 100%;
-  overflow: hidden;
+.slideService{
+  height: auto;
 }
 .abotusImg {
   height: 100vh;

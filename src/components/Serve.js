@@ -127,21 +127,21 @@ export default function Serve() {
                         <div class="carousel-item active">
                           <div class="container">
                             <div class="row xrow">
-                              <div class="col-md-4 marginleftSlideCo widthSlideImg">
+                              <div class="col-md-4 marginleftSlideCo widthSlideImg bg-dark" >
                                 <div className=''>
-                                  <div className='imgslide'>
+                                  <div className='' style={{width:"450px"}}>
                                     <img
                                       src={
                                         "http://localhost:8000/static/services/" +
                                         Service[0]?.service_name +
                                         "," +
                                         Service[0]?.service_img
-                                      }
+                                      }width="100%" height="100%"
                                     />
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-md-6 bg-light ">
+                              <div class="col-md-6 bg-light slideService">
                                 <div class="marSpTop3">
                                   <p class='textTitle mrleft'><p>{Service[0]?.service_name}</p></p>
                                   <hr class="line Cline"></hr>
@@ -165,14 +165,15 @@ export default function Serve() {
                                   <div class="row xrow">
                                     <div class="col-md-4 marginleftSlideCo widthSlideImg">
                                       <div className=''>
-                                        <div className='imgslide'>
+                                        <div className='' style={{width:"450px"}}>
                                         <img
                                         src={staticpath}
+                                        width="100%" height="100%"
                                       />
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="col-md-6 bg-light ">
+                                    <div class="col-md-6 bg-light slideService">
                                       <div class="marSpTop3">
                                         <p class='textTitle mrleft'><p>{item.service_name}</p></p>
                                         <hr class="line Cline"></hr>
