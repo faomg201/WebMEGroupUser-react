@@ -15,7 +15,7 @@ export default function Serve() {
 
   }, [])
   const getData = () => {
-    axios.get('http://localhost:8000/services')
+    axios.get('http://157.245.203.125:8000/services')
       .then((res) => {
         setStatus(true);
         // console.log(res)
@@ -132,7 +132,7 @@ export default function Serve() {
                                   <div className='' style={{width:"450px"}}>
                                     <img
                                       src={
-                                        "http://localhost:8000/static/services/" +
+                                        "http://157.245.203.125:8000/static/services/" +
                                         Service[0]?.service_name +
                                         "," +
                                         Service[0]?.service_img
@@ -155,7 +155,7 @@ export default function Serve() {
                           .filter((f, idx) => idx > 0)
                           .map((item) => {
                             const staticpath =
-                              "http://localhost:8000/static/services/" +
+                              "http://157.245.203.125:8000/static/services/" +
                               item.service_name +
                               "," +
                               item.service_img;

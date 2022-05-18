@@ -17,13 +17,13 @@ export default function Works() {
     
   }, [])
   const getData = () => {
-    axios.get('http://localhost:8000/goals')
+    axios.get('http://157.245.203.125:8000/goals')
       .then((res) => {
         setStatus(true);
         // console.log(res)
         fetchGoals(res.data.data)
       })
-    axios.get('http://localhost:8000/services')
+    axios.get('http://157.245.203.125:8000/services')
       .then((res) => {
         setStatus(true);
         // console.log(res)
@@ -95,7 +95,7 @@ export default function Works() {
                           return;
                         }
                         const staticpath =
-                          "http://localhost:8000/static/goals/" +
+                          "http://157.245.203.125:8000/static/goals/" +
                           item.goal_title +
                           "," +
                           item.goal_img;

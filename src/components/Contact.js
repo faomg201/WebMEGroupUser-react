@@ -21,7 +21,7 @@ export default function Contact() {
     
   }, [])
   const getData = () => {
-    axios.get('http://localhost:8000/contractus')
+    axios.get('http://157.245.203.125:8000/contractus')
       .then((res) => {
         setStatus(true);
         // console.log(res)

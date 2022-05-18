@@ -9,7 +9,7 @@ export default function Trypage() {
     getData()
   }, [])
   const getData = () => {
-    fetch('http://localhost:8000/goals')
+    fetch('http://157.245.203.125:8000/goals')
       .then((res) => res.json())
       .then((res) => {
         setStatus(true);
@@ -44,7 +44,7 @@ export default function Trypage() {
             <div class="container ">
               {Goals.map((item) => {
                 const staticpath =
-                  "http://localhost:8000/static/goals/" +
+                  "http://157.245.203.125:8000/static/goals/" +
                   item.goal_title +
                   "," +
                   item.goal_img;

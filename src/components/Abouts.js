@@ -16,19 +16,19 @@ export default function Abouts() {
     
   }, [])
   const getData = () => {
-    axios.get('http://localhost:8000/employees')
+    axios.get('http://157.245.203.125:8000/employees')
       .then((res) => {
         setStatus(true);
         // console.log(res)
         fetchEmployees(res.data.data)
       })
-    axios.get('http://localhost:8000/enterprises')
+    axios.get('http://157.245.203.125:8000/enterprises')
       .then((res) => {
         setStatus(true);
         // console.log(res)
         fetchEnterprises(res.data.data)
       })
-    axios.get('http://localhost:8000/aboutUs/image')
+    axios.get('http://157.245.203.125:8000/aboutUs/image')
       .then((res) => {
         setStatus(true);
         // console.log(res)
@@ -153,7 +153,7 @@ export default function Abouts() {
                 <br /><br />
                 <div class="row" id='content'>
                   {Employees.map((item) => {
-                    const staticpath = 'http://localhost:8000/static/employees/' + item.emp_fname + ',' + item.emp_lname + ',' + item.emp_img
+                    const staticpath = 'http://157.245.203.125:8000/static/employees/' + item.emp_fname + ',' + item.emp_lname + ',' + item.emp_img
                     // console.log(staticpath);
                     return (
                       <tr >
