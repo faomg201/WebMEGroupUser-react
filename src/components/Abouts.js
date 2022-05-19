@@ -13,22 +13,22 @@ export default function Abouts() {
     }, 3000);
     getData()
     return () => clearTimeout(timer);
-    
+
   }, [])
   const getData = () => {
-    axios.get('http://localhost:8000/employees')
+    axios.get('http://157.245.203.125:8000/employees')
       .then((res) => {
         setStatus(true);
         // console.log(res)
         fetchEmployees(res.data.data)
       })
-    axios.get('http://localhost:8000/enterprises')
+    axios.get('http://157.245.203.125:8000/enterprises')
       .then((res) => {
         setStatus(true);
         // console.log(res)
         fetchEnterprises(res.data.data)
       })
-    axios.get('http://localhost:8000/aboutUs/image')
+    axios.get('http://157.245.203.125:8000/aboutUs/image')
       .then((res) => {
         setStatus(true);
         // console.log(res)
@@ -46,7 +46,7 @@ export default function Abouts() {
               viewBox="0 0 60 100" enable-background="new 0 0 0 0" xmlSpace="preserve">
               <circle fill="#fff" stroke="none" cx="6" cy="50" r="6">
                 <animateTransform
-                  attributeName="transform" 
+                  attributeName="transform"
                   dur="1s"
                   type="translate"
                   values="0 15 ; 0 -15; 0 15"
@@ -105,21 +105,21 @@ export default function Abouts() {
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6">
-                  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="col-sm-6 ">
+                  <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
 
                     <div class="carousel-inner">
                       <div class="carousel-item active">
                         <div class="container" align="center">
                           <img src={
-                            'http://localhost:8000/static/aboutUs/' +
+                            'http://157.245.203.125:8000/static/aboutUs/' +
                             aboutUsImg[0]?.image_name
                           } class="abotusImg" />
                         </div>
                       </div>
                       {
                         aboutUsImg.filter((f, idx) => idx > 0).map((item) => {
-                          const staticpath = 'http://localhost:8000/static/aboutUs/' + item.image_name
+                          const staticpath = 'http://157.245.203.125:8000/static/aboutUs/' + item.image_name
                           // console.log(staticpath);
                           return (
                             <div class="carousel-item">
@@ -146,36 +146,39 @@ export default function Abouts() {
                 </div>
               </div>
             </div>
-            <br /><br /><br /><br />
-            <center>
-              <div class="container ">
-                <p class="text5bH">ทีมของเรา</p>
-                <br /><br />
-                <div class="row" id='content'>
-                  {Employees.map((item) => {
-                    const staticpath = 'http://localhost:8000/static/employees/' + item.emp_fname + ',' + item.emp_lname + ',' + item.emp_img
-                    // console.log(staticpath);
-                    return (
-                      <tr >
-                        <div class="col ">
-                          <img class="card test round" src={staticpath}
-                            alt="" />
-                          <div class="card-body ">
-                          </div>
-                          <br />
-                          <div>
+            <div className='marO'>
+              <br /><br /><br /><br />
+              <center>
+                <div class="container ">
+                  <p class="text5bH">ทีมของเรา</p>
+                  <br /><br />
+                  <div class="row" id='content'>
+                    {Employees.map((item) => {
+                      const staticpath = 'http://157.245.203.125:8000/static/employees/' + item.emp_fname + ',' + item.emp_lname + ',' + item.emp_img
+                      // console.log(staticpath);
+                      return (
+                        <tr >
+                          <div class="col ">
+                            <img class="card test round" src={staticpath}
+                              alt="" />
+                            <div class="card-body ">
+                            </div>
+                            <br />
+                            <div>
 
-                            <p class="text5b">{item.emp_fname} {item.emp_lname} #{item.mbti_name}</p>
-                            <p class="text5">{item.emp_class}</p>
-                            <p class="text5">{item.emp_quote}</p>
+                              <p class="text5b">{item.emp_fname} {item.emp_lname} #{item.mbti_name}</p>
+                              <p class="text5">{item.emp_class}</p>
+                              <p class="text5">{item.emp_quote}</p>
+                            </div>
                           </div>
-                        </div>
-                      </tr>
-                    );
-                  })}
+                        </tr>
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
-            </center>
+              </center>
+            </div>
+
 
           </body>
         </div>

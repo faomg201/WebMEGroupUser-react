@@ -1,3 +1,6 @@
 .overflowHomepage{
  overflow: hidden;
 }
+.Shadow{
+    text-shadow: 1px 1px 5px #00000056;
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 const partN = window.location.pathname;
 export const TopbarB = () => {
-  console.log(window.location.pathname);
+  // console.log(window.location.pathname);
   return (
     <div>
       <style jsx>{`

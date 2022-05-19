@@ -60,6 +60,7 @@
   margin-left: 30px;
 }
 
+
 .headtext {
   font-size: 92px;
   color: #ffffff;
@@ -89,6 +90,10 @@
 
 .text5 {
   font-size: 24px;
+  color: #f8f8f8;
+}
+.textHeadWotk{
+  font-size: 42px;
   color: #f8f8f8;
 }
 .text5dot1 {
@@ -153,6 +158,7 @@
   align-items: center;
   text-align: center;
   transition:0.5s;
+  text-decoration: none;
 }
 .bgBt:hover{
   background: rgb(255, 255, 255);

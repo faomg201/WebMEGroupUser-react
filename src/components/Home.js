@@ -1,13 +1,14 @@
 import React from "react";
-// import Topbar from "./Topbar";
 import "../assets/CSS/AddStyle.css"
 import "../assets/CSS/StyleHome.css"
-import { motion } from "framer-motion";
-import { useRef, useEffect, useState } from 'react';
 import Tilt from 'react-tilt'
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-	const data = ["Mobile application", "Web application", "Desktop application", "IoT", "Digital image processing", "Platform business", "UX/UI"]
+	const histotyH = useNavigate();
+	const isLink = (url)=>{
+		histotyH(`/${url}`)
+	}
 	return (
 
 		<body class="marO">
@@ -93,17 +94,17 @@ const Home = () => {
 				<div>&nbsp;</div>
 				<Tilt className="Tilt" options={{ max: 25 ,speed: 5000}}>
 					<div class="marSpTop easeForwards">
-						<font className="headtext " >ME Group Enterprise</font>
+						<font className="headtext Shadow" >ME Group Enterprise</font>
 					</div>
 					<div className="was">
-						<font className="text" > บริษัท มี กรุ๊ป เอ็นเตอร์ไพรส์ จำกัด</font>
+						<font className="text Shadow" > บริษัท มี กรุ๊ป เอ็นเตอร์ไพรส์ จำกัด</font>
 					</div>
 				</Tilt>
 				<div className="marSpTop2 easeForwards">
-					<a class="bgBt " href="/serve" role="button" >บริการ</a>
-					<a class="bgBt " href="/goals" role="button" >ผลงาน</a>
-					<a class="bgBt " href="/abouts" role="button">เกี่ยวกับเรา</a>
-					<a class="bgBt " href="/contact" role="button">ติดต่อเรา</a>
+					<a class="bgBt " onClick={() => {isLink('serve')}} role="button" >บริการ</a>
+					<a class="bgBt " onClick={() => {isLink('goals')}} role="button" >ผลงาน</a>
+					<a class="bgBt " onClick={() => {isLink('abouts')}} role="button">เกี่ยวกับเรา</a>
+					<a class="bgBt " onClick={() => {isLink('contact')}} role="button">ติดต่อเรา</a>
 				</div>
 				<div>
 					<br /><br /><br />

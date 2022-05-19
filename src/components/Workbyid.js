@@ -4,8 +4,13 @@ import { useLocation } from "react-router-dom";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import FadeIn from 'react-fade-in';
+import { useNavigate } from 'react-router';
 
 export default function Workbyid() {
+  const histotyH = useNavigate();
+	const isLink = (url)=>{
+		histotyH(`/${url}`)
+	}
   const getpart = window.location.pathname;
   const [GoalID, fetchGoalID] = useState([])
   const [status, setStatus] = useState(false);
@@ -18,7 +23,7 @@ export default function Workbyid() {
     
   }, [])
   const getData = () => {
-    axios.get(`http://localhost:8000` + getpart)
+    axios.get(`http://157.245.203.125:8000` + getpart)
       .then((res) => {
         setStatus(true);
         // console.log(res)
@@ -27,7 +32,7 @@ export default function Workbyid() {
   }
   // async componentDidMount() {
   //   const getpart = window.location.pathname;
-  //   const apiUrl = `http://localhost:8000` + getpart;
+  //   const apiUrl = `http://157.245.203.125:8000` + getpart;
   //   const response = await fetch(apiUrl);
   //   const data = await response.json();
   //   this.setState({ goals: data.data, loading: false });
@@ -96,7 +101,7 @@ export default function Workbyid() {
                 <div class="row" >
                   <div className="col-md-12">
                     <p class="textBack ">
-                      <a href='/goals' class='hoverBack'>&#60; Back</a>
+                      <a onClick={() => {isLink('goals')}} class='hoverBack'>&#60; Back</a>
 
                     </p>   
                   <FadeIn>
@@ -104,7 +109,7 @@ export default function Workbyid() {
                     <div class="row">
                       <div class="col-md-4" >
                         <img
-                          src={"http://localhost:8000/static/goals/" + GoalID.goal_title + "," + GoalID.goal_img}
+                          src={"http://157.245.203.125:8000/static/goals/" + GoalID.goal_title + "," + GoalID.goal_img}
                           class="imgByID d-block"
                           width="440px"
                           height="440px"                          

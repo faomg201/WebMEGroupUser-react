@@ -1,6 +1,6 @@
 
 const Topbar = () => {
-  console.log(window.location.pathname);
+  // console.log(window.location.pathname);
   const partN = window.location.pathname;
   return (
 

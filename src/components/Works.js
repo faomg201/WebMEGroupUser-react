@@ -2,45 +2,58 @@ import React, { useState, useEffect } from 'react'
 import { TopbarB } from "./TopbarB";
 import axios from 'axios';
 import FadeIn from 'react-fade-in';
-
+import { useNavigate } from 'react-router';
 
 export default function Works() {
+  const histotyH = useNavigate();
+	const isLink = (url)=>{
+		histotyH(`/${url}`)
+	}
   const [Goals, fetchGoals] = useState([])
   const [Services, fetchServices] = useState([])
   const [status, setStatus] = useState(false);
+
+  const [animals, fetchAnimals] = useState([])
+
+  console.log(animals);
   useEffect(() => {
     const timer = setTimeout(() => {
       console.log('This will run after 5 second!')
     }, 3000);
     getData()
     return () => clearTimeout(timer);
-    
+
   }, [])
   const getData = () => {
-    axios.get('http://localhost:8000/goals')
-      .then((res) => {
-        setStatus(true);
-        // console.log(res)
-        fetchGoals(res.data.data)
-      })
-    axios.get('http://localhost:8000/services')
+    axios.get('http://157.245.203.125:8000/services')
       .then((res) => {
         setStatus(true);
         // console.log(res)
         fetchServices(res.data.data)
+        fetchAnimals(res.data.data)
       })
+    axios.get('http://157.245.203.125:8000/webgoals')
+      .then((res) => {
+        setStatus(true);
+        // console.log(res)
+        // var Goalde = res.data.data
+        fetchAnimals(res.data.data)
+        fetchGoals(res.data.data)
+      })
+
+
   }
 
   return (
     <div>
-      {status == false || !Goals|| !Services ? (
+      {status == false || !Goals || !Services ? (
         <div>
           <body className='body'>
             <svg className='svg LodingMargin' version="1.1" id="L5" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               viewBox="0 0 60 100" enable-background="new 0 0 0 0" xmlSpace="preserve">
               <circle fill="#fff" stroke="none" cx="6" cy="50" r="6">
                 <animateTransform
-                  attributeName="transform" 
+                  attributeName="transform"
                   dur="1s"
                   type="translate"
                   values="0 15 ; 0 -15; 0 15"
@@ -70,7 +83,7 @@ export default function Works() {
         </div>
       ) : (
         <div>
-          
+
           <body className="marB">
             <style jsx>{`
                 #content {
@@ -83,44 +96,61 @@ export default function Works() {
             <TopbarB />
 
             <div class="container ">
-              {Services.map((itemSer) => {
+              <p className="textHeadWotk"> ผลงาน</p>
+              <hr class="line Cline"></hr>
+              <br></br>
+              {Services.map((itemSer, index) => {
+                console.log(Services);
+                // console.log(Services.goal_id);
+                if (!Services) {
+                  return;
+                }
+                var titleN = ""
+                if (itemSer.ctn !== null) titleN = itemSer.service_name
+                else titleN = " "
                 return (
                   <div>
-                    <p class="text5">{itemSer.service_name}</p>
+                    <p class="text5">{titleN}</p>
                     <div class="row" id="content">
-                      
-                      {Goals.map((item,index) => {
-                        console.log(index);
-                        if (item.service_name !== itemSer.service_name) {
+                      {Goals.map((item, index) => {
+                        if (itemSer.service_name !== item.service_name)
                           return;
-                        }
+                        // console.log(Goals);
+                        console.log(index);
                         const staticpath =
-                          "http://localhost:8000/static/goals/" +
+                          "http://157.245.203.125:8000/static/goals/" +
                           item.goal_title +
                           "," +
                           item.goal_img;
-                        const workPath = "/goals/" + item.goal_id;
-                        console.log(staticpath);
+                        const workPath = "goals/" + item.goal_id;
+                        // console.log(staticpath);
+                        var titleN = ""
+                        if (itemSer.service_name == item.service_name) titleN = itemSer.service_name
+                        else titleN = " "
                         return (
-                          <FadeIn delay={index * 100}>
-                          <div class="col">
-                            <div class="card borderCard">
-                              <a href={workPath}>
-                                <img
-                                  src={staticpath}
-                                  width="285px"
-                                  height="285px"
-                                />
-                              </a>
-                              <div class="card-body" align="center">
-                                <p class="card-text">{item.goal_title}</p>
+                          <div>
+                            {/* <p class="text5">{titleN}</p> */}
+                            { }
+                            <FadeIn delay={index * 100}>
+                              <div class="col">
+                                <div class="card borderCard">
+                                  <a onClick={() => {isLink(workPath)}}>
+                                    <img
+                                      src={staticpath}
+                                      width="285px"
+                                      height="285px"
+                                    />
+                                  </a>
+                                  <div class="card-body" align="center">
+                                    <p class="card-text">{item.goal_title}</p>
+                                  </div>
+                                </div>
                               </div>
-                            </div>
+                            </FadeIn>
                           </div>
-                          </FadeIn>
                         );
                       })}
-                      
+
                     </div>
                   </div>
                 );
