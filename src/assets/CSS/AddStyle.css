@@ -14,6 +14,9 @@
   font-family: "SukhumvitSet-Text";
   min-height: 100vh;
 }
+div{
+  font-family: "SukhumvitSet-Text";
+}
 
 .marSpTop {
   margin-top: 10%;
@@ -35,10 +38,10 @@
   margin-left: -90%;
 }
 .marSpRightBar {
-  margin-left: 10%;
+  margin-left: 15%;
 }
 .marSpRight {
-  margin-left: 2%;
+  margin-left: 3%;
 }
 .marSpRight2 {
   margin-left: 20%;
@@ -119,6 +122,12 @@
   color: #000000;
   font-weight: bold;
 }
+.textHeadServe{
+  font-size: 42px;
+  color: #000000;
+  font-weight: bold;
+  margin-left: 9%;
+}
 .text6w {
   font-size: 42px;
   color: #f8f8f8;
@@ -172,9 +181,7 @@
   margin-top: -10px;
 }
 
-.fontSw {
-  font-family: "SukhumvitSet-Text";
-}
+
 
 @font-face {
   font-family: "SukhumvitSet-Text";
@@ -210,8 +217,11 @@
   border: #000000;
 }
 
+.hoverBack{
+  color: #ffffff;
+  transition:0.5s;
+}
 .hoverBack:link{
-  font-size: 16px;
   color: #ffffff;
   transition:0.5s;
 }
@@ -234,6 +244,7 @@
 .hoverBar{
   color: #000000;
   transition:0.5s;
+  font-size: 21px;
 }
 
 .hoverBar:hover{
@@ -244,6 +255,7 @@
   font-weight: bold;
   color: #f68514;
   transition:0.5s;
+  font-size: 21px;
 }
 .hoverBarbord:hover{
   transition:0.5s;

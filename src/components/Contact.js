@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Topbar from "./Topbar";
+import { TopbarContact } from "./TopbarContact";
 import axios from 'axios';
 import {
   GoogleMap,
@@ -73,7 +73,7 @@ export default function Contact() {
               <div class="col-sm-11">
                 <div class="row">
                   <div class="col-12 col-sm-12">
-                    <Topbar />
+                    <TopbarContact />
                   </div>
                 </div>
                 {Location.map((item) => {

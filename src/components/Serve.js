@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import Topbar from "./Topbar";
+import {TopbarService} from "./TopbarService";
 import axios from 'axios';
 import FadeIn from 'react-fade-in';
+import imgEMT from '../../src/assets/Img/default-placeholder.png'
 
 export default function Serve() {
   const [Service, fetchService] = useState([])
@@ -24,11 +25,11 @@ export default function Serve() {
       })
 
   }
-
   return (
 
     <div>
-      {status == false || !Service ? (
+      {status == false || !Service ? 
+     (
         <div>
           <body className='body'>
             <svg className='svg LodingMargin' version="1.1" id="L5" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -110,11 +111,11 @@ export default function Serve() {
             <div class="col-sm-11">
               <div class="row">
                 <div class="col-12 col-sm-12">
-                  <Topbar />
+                  <TopbarService />
                 </div>
               </div>
               <div class="container">
-                <p class="text6 marSpRight ">บริการของเรา</p>
+                <p class="textHeadServe ">บริการของเรา</p>
                 <div class="row">
                   <div className="col-md-12" height="800px">
                     <div
@@ -123,69 +124,75 @@ export default function Serve() {
                       data-bs-ride="carousel"
                     >
                       <FadeIn>
-                      <div class="carousel-inner ">
-                        <div class="carousel-item active">
-                          <div class="container">
-                            <div class="row xrow">
-                              <div class="col-md-4 marginleftSlideCo widthSlideImg bg-dark" >
-                                <div className=''>
-                                  <div className='' style={{width:"450px"}}>
-                                    <img
-                                      src={
-                                        "http://157.245.203.125:8000/static/services/" +
-                                        Service[0]?.service_name +
-                                        "," +
-                                        Service[0]?.service_img
-                                      }width="100%" height="100%"
-                                    />
+                        <div class="carousel-inner ">
+                          <div class="carousel-item active">
+                            <div class="container">
+                              <div class="row xrow">
+                                <div class="col-md-4 marginleftSlideCo widthSlideImg bg-dark" >
+                                  <div className=''>
+                                    <div className='' style={{ width: "450px" }}>
+                                      {!Service[0]?.service_img?
+                                        <img src={imgEMT} width="100%" />:<img
+                                        src={
+                                          "http://157.245.203.125:8000/static/services/" +
+                                          Service[0]?.service_name +
+                                          "," +
+                                          Service[0]?.service_img
+                                        } width="100%" height="100%"
+                                      />                                         
+                                      }                                      
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                              <div class="col-md-6 bg-light slideService">
-                                <div class="marSpTop3">
-                                  <p class='textTitle mrleft'><p>{Service[0]?.service_name}</p></p>
-                                  <hr class="line Cline"></hr>
-                                  <p class='textDetail'><p>{Service[0]?.service_detail}</p></p>
+                                <div class="col-md-6 bg-light slideService">
+                                  <div class="marSpTop3">
+                                    <p class='textTitle mrleft'><p>{Service[0]?.service_name}</p></p>
+                                    <hr class="line Cline"></hr>
+                                    <p class='textDetail'><p>{Service[0]?.service_detail}</p></p>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        {Service
-                          .filter((f, idx) => idx > 0)
-                          .map((item) => {
-                            const staticpath =
-                              "http://157.245.203.125:8000/static/services/" +
-                              item.service_name +
-                              "," +
-                              item.service_img;
-                            return (
-                              <div class="carousel-item ">
-                                <div class="container">
-                                  <div class="row xrow">
-                                    <div class="col-md-4 marginleftSlideCo widthSlideImg">
-                                      <div className=''>
-                                        <div className='' style={{width:"450px"}}>
-                                        <img
-                                        src={staticpath}
-                                        width="100%" height="100%"
-                                      />
+                          {Service
+                            .filter((f, idx) => idx > 0)
+                            .map((item) => {
+                              const staticpath =
+                                "http://157.245.203.125:8000/static/services/" +
+                                item.service_name +
+                                "," +
+                                item.service_img;
+                                console.log(item.service_img);
+                              return (
+                                <div class="carousel-item ">
+                                  <div class="container">
+                                    <div class="row xrow">
+                                      <div class="col-md-4 marginleftSlideCo widthSlideImg">
+                                        <div className=''>
+                                          <div className='' style={{ width: "450px" }}>
+                                            {!item.service_img?
+                                            <img src={imgEMT} width="100%" />:<img
+                                              src={staticpath}
+                                              width="100%" height="100%"
+                                            />
+                                            }
+                                            
+                                          </div>
                                         </div>
                                       </div>
-                                    </div>
-                                    <div class="col-md-6 bg-light slideService">
-                                      <div class="marSpTop3">
-                                        <p class='textTitle mrleft'><p>{item.service_name}</p></p>
-                                        <hr class="line Cline"></hr>
-                                        <p class='textDetail'><p>{item.service_detail}</p></p>
+                                      <div class="col-md-6 bg-light slideService">
+                                        <div class="marSpTop3">
+                                          <p class='textTitle mrleft'><p>{item.service_name}</p></p>
+                                          <hr class="line Cline"></hr>
+                                          <p class='textDetail'><p>{item.service_detail}</p></p>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
-                            );
-                          })}
-                      </div>
+                              );
+                            })}
+                        </div>
                       </FadeIn>
                       <button
                         class="carousel-control-prev "
@@ -211,7 +218,7 @@ export default function Serve() {
                         ></span>
                         <span class="visually-hidden">Next</span>
                       </button>
-                      
+
                     </div>
                   </div>
                 </div>

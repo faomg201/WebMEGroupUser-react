@@ -1,0 +1,56 @@
+.hoverBarBgWhite {
+  color: #000000;
+  transition: 0.5s;
+  font-size: 21px;
+}
+.hoverBarBgWhite:hover {
+  color: #f6851483;
+  transition: 0.5s;
+}
+.hoverBarBgWhitebord {
+  font-weight: bold;
+  color: #f68514;
+  transition: 0.5s;
+  font-size: 21px;
+}
+.hoverBarBgWhitebord:hover {
+  transition: 0.5s;
+  color: #f6851483;
+}
+
+.hoverBarBgBlack {
+  color: #ffffff;
+  transition: 0.5s;
+  font-size: 21px;
+}
+.hoverBarBgBlack:hover {
+  color: #f6851483;
+  transition: 0.5s;
+}
+.hoverBarBgBlackBord {
+  font-weight: bold;
+  color: #f68514;
+  transition: 0.5s;
+  font-size: 21px;
+}
+.hoverBarBgBlackBord:hover {
+  transition: 0.5s;
+  color: #f6851483;
+}
+
+.marginTopService {
+  margin-top: 3%;
+  margin-left: 3%;
+}
+.marginTopWork {
+  margin-top: 1%;
+  margin-left: 12%;
+}
+.marginTopContact {
+  margin-top: 3%;
+  margin-left: 12%;
+}
+.marginTopAnouts {
+  margin-top: 2%;
+  margin-left: 23%;
+}

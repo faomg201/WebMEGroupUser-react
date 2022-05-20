@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { TopbarB } from "./TopbarB";
-import { useLocation } from "react-router-dom";
+import { TopbarWork } from "./TopbarWork";
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 import FadeIn from 'react-fade-in';
 import { useNavigate } from 'react-router';
 
@@ -30,20 +28,7 @@ export default function Workbyid() {
         fetchGoalID(res.data.data)
       })
   }
-  // async componentDidMount() {
-  //   const getpart = window.location.pathname;
-  //   const apiUrl = `http://157.245.203.125:8000` + getpart;
-  //   const response = await fetch(apiUrl);
-  //   const data = await response.json();
-  //   this.setState({ goals: data.data, loading: false });
-  //   console.log(data.data);
-  //   console.log(window.location);
-  //   console.log(GoalID.goal_title);
-  //   console.log(GoalID.service_detail);
-
-  // }
-
-
+  console.log(GoalID);
   return (
     <>
       <div>
@@ -95,16 +80,15 @@ export default function Workbyid() {
                     margin: 0 auto;
                   }
                 `}</style>
-              <TopbarB />
+              <TopbarWork />
 
               <div class="container" >
                 <div class="row" >
                   <div className="col-md-12">
                     <p class="textBack ">
-                      <a onClick={() => {isLink('goals')}} class='hoverBack'>&#60; Back</a>
-
+                      &#60; <a onClick={() => {isLink('goals')}} class='hoverBack'>Back</a>
                     </p>   
-                  <FadeIn>
+                    <FadeIn>
 
                     <div class="row">
                       <div class="col-md-4" >

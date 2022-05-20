@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { TopbarB } from "./TopbarB";
+import { TopbarAbouts } from "./TopbarAbouts";
 import axios from 'axios';
+import imgEMT from '../../src/assets/Img/default-placeholder.png'
 
 export default function Abouts() {
   const [Employees, fetchEmployees] = useState([])
@@ -95,7 +96,7 @@ export default function Abouts() {
             <div class="container-fluid">
               <div class="row">
                 <div class="col-sm-6">
-                  <TopbarB />
+                  <TopbarAbouts />
                   <div class="container marSpRight3 ">
                     <div class="row">
                       <div class="col-12">
@@ -111,10 +112,13 @@ export default function Abouts() {
                     <div class="carousel-inner">
                       <div class="carousel-item active">
                         <div class="container" align="center">
-                          <img src={
-                            'http://157.245.203.125:8000/static/aboutUs/' +
-                            aboutUsImg[0]?.image_name
-                          } class="abotusImg" />
+                          {!aboutUsImg[0]?.image_name ?
+                            <img src={imgEMT} width="100%" /> :
+                            <img src={
+                              'http://157.245.203.125:8000/static/aboutUs/' +
+                              aboutUsImg[0]?.image_name
+                            } class="abotusImg" />
+                          }
                         </div>
                       </div>
                       {
@@ -124,11 +128,14 @@ export default function Abouts() {
                           return (
                             <div class="carousel-item">
                               <div class="container" align="center">
-                                <img
+                                {!item.image_name ?
+                                  <img src={imgEMT} width="100%" /> :
+                                  <img
                                   src={staticpath}
                                   // width="auto" height="100%"
                                   class="abotusImg"
                                 />
+                                }                                
                               </div>
                             </div>
                           );

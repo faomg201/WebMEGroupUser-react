@@ -1,21 +1,19 @@
 import React, { useState, useEffect } from 'react'
-import { TopbarB } from "./TopbarB";
+import { TopbarWork } from "./TopbarWork";
 import axios from 'axios';
 import FadeIn from 'react-fade-in';
 import { useNavigate } from 'react-router';
+import imgEMT from '../../src/assets/Img/default-placeholder.png'
 
 export default function Works() {
   const histotyH = useNavigate();
-	const isLink = (url)=>{
-		histotyH(`/${url}`)
-	}
+  const isLink = (url) => {
+    histotyH(`/${url}`)
+  }
   const [Goals, fetchGoals] = useState([])
   const [Services, fetchServices] = useState([])
   const [status, setStatus] = useState(false);
 
-  const [animals, fetchAnimals] = useState([])
-
-  console.log(animals);
   useEffect(() => {
     const timer = setTimeout(() => {
       console.log('This will run after 5 second!')
@@ -30,14 +28,12 @@ export default function Works() {
         setStatus(true);
         // console.log(res)
         fetchServices(res.data.data)
-        fetchAnimals(res.data.data)
       })
     axios.get('http://157.245.203.125:8000/webgoals')
       .then((res) => {
         setStatus(true);
         // console.log(res)
         // var Goalde = res.data.data
-        fetchAnimals(res.data.data)
         fetchGoals(res.data.data)
       })
 
@@ -83,7 +79,6 @@ export default function Works() {
         </div>
       ) : (
         <div>
-
           <body className="marB">
             <style jsx>{`
                 #content {
@@ -93,21 +88,19 @@ export default function Works() {
                   grid-gap: 30px;
                 }
               `}</style>
-            <TopbarB />
+            <TopbarWork />
 
             <div class="container ">
               <p className="textHeadWotk"> ผลงาน</p>
               <hr class="line Cline"></hr>
               <br></br>
               {Services.map((itemSer, index) => {
-                console.log(Services);
-                // console.log(Services.goal_id);
                 if (!Services) {
                   return;
                 }
                 var titleN = ""
                 if (itemSer.ctn !== null) titleN = itemSer.service_name
-                else titleN = " "
+                else return;
                 return (
                   <div>
                     <p class="text5">{titleN}</p>
@@ -115,14 +108,14 @@ export default function Works() {
                       {Goals.map((item, index) => {
                         if (itemSer.service_name !== item.service_name)
                           return;
-                        // console.log(Goals);
-                        console.log(index);
+                        console.log(Goals);
                         const staticpath =
                           "http://157.245.203.125:8000/static/goals/" +
                           item.goal_title +
                           "," +
                           item.goal_img;
                         const workPath = "goals/" + item.goal_id;
+                        console.log(staticpath);
                         // console.log(staticpath);
                         var titleN = ""
                         if (itemSer.service_name == item.service_name) titleN = itemSer.service_name
@@ -134,12 +127,15 @@ export default function Works() {
                             <FadeIn delay={index * 100}>
                               <div class="col">
                                 <div class="card borderCard">
-                                  <a onClick={() => {isLink(workPath)}}>
-                                    <img
-                                      src={staticpath}
-                                      width="285px"
-                                      height="285px"
-                                    />
+                                  <a onClick={() => { isLink(workPath) }}>
+                                    {!item.goal_img ?
+                                      <img src={imgEMT} width="100%" /> :
+                                      <img
+                                        src={staticpath}
+                                        width="285px"
+                                        height="285px"
+                                      />
+                                    }
                                   </a>
                                   <div class="card-body" align="center">
                                     <p class="card-text">{item.goal_title}</p>
