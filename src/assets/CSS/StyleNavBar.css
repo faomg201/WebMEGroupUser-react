@@ -54,3 +54,22 @@
   margin-top: 2%;
   margin-left: 23%;
 }
+
+.textHeadMEGroup {
+  font-size: 62px;
+  color: #ff9300;
+  font-weight: bold;
+  margin-left: 20%;
+}
+.textThaiMEGroup {
+  margin-top: -3%;
+  font-size: 30px;
+  color: #ffffff;
+  margin-left: 20%;
+}
+.marTopbar{
+  margin-left: 30%;
+}
+.marTopbarContact{
+  margin-left: 28%;
+}

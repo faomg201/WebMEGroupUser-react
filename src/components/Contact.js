@@ -98,16 +98,21 @@ export default function Contact() {
                     <div class="row">
                       <div class="container">
                         <div className="row marSpRight4">
-                          <h3>ติดต่อเรา</h3>
+                          <div class="col-md-1"></div>
+                          <div class="col-md-10">
+                            <h3>ติดต่อเรา</h3>
                           <p>โทร {item.enterprise_phone}</p>
                           <p>
                             สามารถติดต่อเราได้ {" "}
                             {item.enterprise_servicetime}
                           </p>
+                          </div>
+                          
                         </div>
                         <FadeIn>
                         <div class="row justify-content-md-center">
-                          <div class="col-sm-5">
+                        <div class="col-md-1"></div>
+                          <div class="col-md-4">
                             <div style={{ width: "50vm", height: "50vh" }} >
                               <WrappendMap
                                 googleMapURL={
@@ -126,7 +131,7 @@ export default function Contact() {
                               />
                             </div>
                           </div>
-                          <div class="col-sm-5 bg-light">
+                          <div class="col-md-5 bg-light">
                             <div className="marSpTop3">
                               <p><b>ชื่อนิติบุคคลผู้เสียภาษี</b>{" "}
                                 {item.enterprise_facebook}</p>

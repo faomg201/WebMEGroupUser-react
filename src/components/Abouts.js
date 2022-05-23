@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import "../assets/CSS/StyleInComponents.css"
 import { TopbarAbouts } from "./TopbarAbouts";
 import axios from 'axios';
 import imgEMT from '../../src/assets/Img/default-placeholder.png'
@@ -100,7 +101,8 @@ export default function Abouts() {
                   <div class="container marSpRight3 ">
                     <div class="row">
                       <div class="col-12">
-                        <p class="text5dot1"><span class="tab"></span>{Enterprises.enterprise_detail}</p>
+                        <br/>
+                        <p class="DetailAbotus"><span class="tab"></span>{Enterprises.enterprise_detail}</p>
 
                       </div>
                     </div>

@@ -28,7 +28,7 @@ export const TopbarWork = () => {
         <li class="nav-item">
             <a class="nav-link hoverBarBgBlack" onClick={() => {isLink('contact')}}>ติดต่อเรา</a>
         </li>
-        <li class="nav marSpRight2">
+        <li class="nav marTopbar">
           <p class="text3">ME Group Enterprise<br /><p class="text4">บริษัท มี กรุ๊ป เอ็นเตอร์ไพรส์ จำกัด</p></p>
         </li>
       </ul>
