@@ -1,5 +1,133 @@
+.PageFullvh {
+  min-height: 100vh;
+}
+
+.BGLightNav {
+  background: #ffffff23;
+}
+.textHead {
+  font-size: 3vw;
+  color: #000000;
+  font-weight: bold;
+}
+.textInfo {
+  font-size: 1vw;
+  color: #000000;
+}
 .DetailAbotus {
-  font-size: 18px;
+  font-size: 1.5vw;
+  color: #000000;
+}
+
+.textType {
+  font-size: 2vw;
+  color: #000000;
+}
+.Cline {
+  width: 20%;
+  background-color: #f68514;
+  height: 30px;
+  margin-top: -1%;
+}
+.ClineAbout {
+  width: 30%;
+  background-color: #f68514;
+  height: 30px;
+  margin-top: -1%;
+}
+.radiusDetailAbout {
+  background: #ffffff;
+  border-radius: 0px 50px 50px 0px;
+}
+
+.round {
+  border-radius: 100%;
+  background: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.textNEMP {
+  font-size: 2.5vw;
   color: #f8f8f8;
-  margin-left: 13%;
+  font-weight: bold;
+}
+.textNEMP_Mbti_Q {
+  font-size: 1.5vw;
+  color: #f8f8f8;
+}
+
+
+
+.TextContactHsub {
+  font-size: 1.2vw;
+  color: #000000;
+  font-weight: bold;
+}
+.buttonSend {
+  background: #ff990f;
+  border-radius: 30px;
+  margin: 0 0.6em;
+  font-size: 1.2vw;
+  padding: 6px;
+  display: inline-block;
+  color: rgb(252, 252, 252);
+  letter-spacing: 1px;
+  width: 9vw;
+  position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  transition: 0.5s;
+  text-decoration: none;
+}
+.buttonSend:hover {
+  background: rgb(255, 255, 255);
+  color: #ff990f;
+}
+.marginTopCon {
+  margin-top: 15%;
+}
+
+.textTeamEmp {
+  font-size: 4.5vw;
+  color: #f8f8f8;
+  font-weight: bold;
+}
+.CardTitle{
+  position: absolute;
+  width: 23vw;
+  border-radius: 30px 30px 30px 30px;
+  margin-top: -15%;
+  background: #ffffff;
+}
+/* CardHover */
+.sci {
+  position: absolute;
+  justify-content: center;
+  bottom: 100px;
+  background: #ffffff;
+  border-radius: 30px 30px 30px 30px;
+  height: 90%;
+  width: 23vw;
+  overflow-y: scroll;
+  }
+  .sci::-webkit-scrollbar {
+    display: none;
+  }
+  .sci {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+
+.sci {
+  margin: 0 0px;
+  transform: translateY(100%);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.cardCardHover:hover .sci {
+  transform: translateY(35%);/*38% 110px*/
+  opacity: 1;
 }
