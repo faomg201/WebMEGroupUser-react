@@ -3,6 +3,7 @@ import "../assets/CSS/AddStyle.css"
 import "../assets/CSS/StyleHome.css"
 import Tilt from 'react-tilt'
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-scroll'
 
 const Home = () => {
 	const histotyH = useNavigate();
@@ -102,6 +103,7 @@ const Home = () => {
 				</Tilt>
 				<div className="marSpTop2 easeForwards">
 					<a class="bgBt " onClick={() => {isLink('serve')}} role="button" >บริการ</a>
+					<Link to="ContactScroll" spy={true} ><a class="bgBt "  onClick={() => {isLink('allpage')}} role="button" >บริการ</a></Link>
 					<a class="bgBt " onClick={() => {isLink('goals')}} role="button" >ผลงาน</a>
 					<a class="bgBt " onClick={() => {isLink('abouts')}} role="button">เกี่ยวกับเรา</a>
 					<a class="bgBt " onClick={() => {isLink('contact')}} role="button">ติดต่อเรา</a>

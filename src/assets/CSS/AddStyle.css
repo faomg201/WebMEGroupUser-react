@@ -1,5 +1,5 @@
 .marO {
-  background-color: #ff9300;
+  background-color: #FE5000;
   font-family: "SukhumvitSet-Text";
   min-height: 100vh;
 }
@@ -122,12 +122,7 @@ div{
   color: #000000;
   font-weight: bold;
 }
-.textHeadServe{
-  font-size: 42px;
-  color: #000000;
-  font-weight: bold;
-  margin-left: 9%;
-}
+
 .text6w {
   font-size: 42px;
   color: #f8f8f8;
@@ -143,11 +138,7 @@ div{
   color: #404040;
   font-weight: bold;
 }
-.textType{
-  font-size: 18px;
-  color: #404040;
-  margin-top: -20px;
-}
+
 .textDetail{
   font-size: 18px;
   color: #404040;
@@ -155,7 +146,7 @@ div{
 }
 
 .bgBt {
-  background: #ff990f;
+  background: #f96019;
   margin: 0 0.6em;
   font-size: 21px;
   padding: 6px;
@@ -174,12 +165,6 @@ div{
   color: #ff990f;
 }
 
-.Cline {
-  width: 30%;
-  background-color: #f68514;
-  height: 30px;  
-  margin-top: -10px;
-}
 
 
 
@@ -190,10 +175,7 @@ div{
   font-weight: normal;
 }
 
-.round {
-  border-radius: 100%;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
+
 .xrow{
     --bs-gutter-x: 0rem;
 }
