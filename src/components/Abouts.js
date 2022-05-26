@@ -81,15 +81,18 @@ export default function Abouts() {
         <>
           <div class="bg-light">
             <div class="row" >
-              <div className='col-7 radiusDetailAbout PageFullvh'>
+              <div className='col-7 radiusDetailAbout' style={{ height: '58.41vw' }}>
                 <div class="col" style={{ marginTop: '10%', marginLeft: '13%' }}>
                   <p class="textHead">เกี่ยวกับเรา</p><hr class="line ClineAbout"></hr>
                   <p class="DetailAbotus"><span class="tab"></span>{Enterprises.enterprise_detail}</p>
                 </div>
               </div>
               <div class="col-sm-5">
-                <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
-                  <div class="carousel-inner" style={{ height: '100vh' }}>
+                <div id="carouselExampleCaptions" 
+                class="carousel slide " 
+                data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner" style={{ height: '58.41vw' }}>
                     <div class="carousel-item active">
                       <div class="container" align="center">
                         {!aboutUsImg[0]?.image_name ?
@@ -166,10 +169,10 @@ export default function Abouts() {
                             <div>
                               <h class="textNEMP">{item.emp_fname} {item.emp_lname} #{item.mbti_name}</h>
                               <p class="textNEMP_Mbti_Q" >{item.emp_class}</p>
-                              <p class="textNEMP_Mbti_Q" style={{ marginTop: '-5%'}}>{item.emp_quote}</p>
+                              <p class="textNEMP_Mbti_Q" style={{ marginTop: '-5%' }}>{item.emp_quote}</p>
                             </div>
                           </div>
-                          <br/><br/>
+                          <br /><br />
                         </tr>
                       );
                     })}

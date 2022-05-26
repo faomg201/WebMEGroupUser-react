@@ -1,3 +1,32 @@
+.popUpCard {
+  height: 98% !important;
+
+}
+
+.popUpDetail {
+  height: 100% !important;
+  overflow-y: hidden;
+}
+
+.popUpDetail .description {
+  display: none;
+}
+
+.popUpCard.show-detail .popUpDetail .description {
+  display: block;
+}
+
+.popUpCard.show-detail .popUpDetail {
+  overflow-y: scroll;
+}
+.popUpCard.show-detail .popUpDetail::-webkit-scrollbar {
+  display: none;
+}
+.popUpCard.show-detail .popUpDetail {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 .PageFullvh {
   min-height: 100vh;
 }
@@ -12,6 +41,10 @@
 }
 .textInfo {
   font-size: 1vw;
+  color: #000000;
+}
+.textInfoSer {
+  font-size: 1.3vw;
   color: #000000;
 }
 .DetailAbotus {
@@ -56,8 +89,6 @@
   color: #f8f8f8;
 }
 
-
-
 .TextContactHsub {
   font-size: 1.2vw;
   color: #000000;
@@ -73,12 +104,17 @@
   color: rgb(252, 252, 252);
   letter-spacing: 1px;
   width: 9vw;
+  height: 4vw;
   position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: 0.5s;
   text-decoration: none;
+}
+.ItemJJC{
+  padding: 6.5%!important;
+  
 }
 .buttonSend:hover {
   background: rgb(255, 255, 255);
@@ -93,7 +129,7 @@
   color: #f8f8f8;
   font-weight: bold;
 }
-.CardTitle{
+.CardTitle {
   position: absolute;
   width: 23vw;
   border-radius: 30px 30px 30px 30px;
@@ -110,15 +146,14 @@
   height: 90%;
   width: 23vw;
   overflow-y: scroll;
-  }
-  .sci::-webkit-scrollbar {
-    display: none;
-  }
-  .sci {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
-
+}
+.sci::-webkit-scrollbar {
+  display: none;
+}
+.sci {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 
 .sci {
   margin: 0 0px;
@@ -128,6 +163,33 @@
 }
 
 .cardCardHover:hover .sci {
-  transform: translateY(35%);/*38% 110px*/
+  transform: translateY(35%); /*38% 110px*/
   opacity: 1;
+}
+
+.sliderMedium {
+  /* line them up horizontally */
+  display: flex;
+
+  /* allow for scrolling */
+  overflow-x: auto;
+
+  /* make it smooth on iOS */
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-points-x: repeat(300px);
+  scroll-snap-type: mandatory;
+}
+/* .sliderMedium::-webkit-scrollbar {
+  display: none;
+} */
+.sliderMedium > div {
+  /* make sure the width is honored */
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px;
+  line-height: 300px;
+  text-align: center;
+  background: #f0f0f0;
+  margin-right: 15px;
+  border-radius: 5px;
 }
