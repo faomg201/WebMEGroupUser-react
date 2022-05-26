@@ -41,6 +41,22 @@ export default function Works() {
 
   }
 
+  const workID = (index) => {
+    return 'works-' + index
+  }
+
+  const PopUp = (index) => {
+    const tagID = document.getElementById(`works-${index}`)
+    if (tagID.className === 'popUpCard show-detail') {
+      tagID.classList.remove("popUpCard")
+      tagID.classList.remove("show-detail")
+    } else {
+      tagID.classList.add("popUpCard")
+      tagID.classList.add("show-detail")
+    }
+  }
+
+
   return (
     <div>
       {status == false || !Goals || !Services ? (
@@ -82,10 +98,10 @@ export default function Works() {
         <>
           <style jsx>{`
                 .Cardcontent {
-                  display: grid;
-                  grid-template-columns: repeat(4, 1fr);
+                  display:grid;
+                  grid-template-columns: repeat(4, 21vw);
                   grid-template-rows: repeat(4, minmax(0px, auto));
-                  grid-gap: 30px;
+                  grid-gap: 2vw;
                 }
               `}</style>
           <div class="PageFullvh" align="center">
@@ -97,7 +113,7 @@ export default function Works() {
 
 
 
-                <div class="container ">
+                <div class="container" style={{marginLeft:'3.5vw'}}>
                   {Services.map((itemSer, index) => {
                     if (!Services) {
                       return;
@@ -125,24 +141,25 @@ export default function Works() {
                             return (
                               <div>
                                 <FadeIn delay={index * 100}>
-                                  <div class="col" style={{ width: '23vw' }}>
+                                  <div class="col" style={{ width: '19.5vw' }}>
                                     <div class="card borderCard cardCardHover">
                                       {!item.goal_img ?
                                         <img src={imgEMT} width="100%" /> :
                                         <img
                                           src={staticpath}
-                                          style={{borderRadius: '30px 30px 30px 30px'}}
+                                          style={{ borderRadius: '30px 30px 30px 30px' }}
                                         />
                                       }
-                                      <div>
-                                          <div class="shadow p-3 CardTitle">
-                                            <p class="card-text">{item.goal_title}</p>
-                                          </div>
-                                      </div>
-                                      <div class="sci shadow p-3">
-                                        <div className='col-12'>
+                                      <div className="" onClick={() => PopUp(index)} id={workID(index)} style={{
+                                        position: 'absolute', bottom: '0px', left: 0, right: 0, transition: '0.5s ease',
+                                        height: '55px'
+                                      }}>
+                                        <div class='shadow p-3 popUpDetail' style={{
+                                          borderRadius: '30px',
+                                          backgroundColor: 'white'
+                                        }}>
                                           <p class="card-text">{item.goal_title}</p>
-                                          <p align='left' >{item.goal_detail}      Lorem Ipsum is simply dummy text of the
+                                          <p class="description" align='left' >{item.goal_detail}      Lorem Ipsum is simply dummy text of the
                                             printing and typesetting industry. Lorem
                                             Ipsum has been the industry’s standard
                                             dummy text ever since the 1500s, when an
@@ -177,7 +194,8 @@ export default function Works() {
           </div>
 
         </>
-      )}
-    </div>
+      )
+      }
+    </div >
   );
 }

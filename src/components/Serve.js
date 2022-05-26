@@ -6,6 +6,7 @@ import imgEMT from '../../src/assets/Img/default-placeholder.png'
 
 export default function Serve() {
   const [Service, fetchService] = useState([])
+  const [ServiceUs, fetchServiceUs] = useState([])
   const [status, setStatus] = useState(false);
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -23,12 +24,18 @@ export default function Serve() {
         fetchService(res.data.data)
         // console.log(res.data.data);
       })
+    axios.get('http://157.245.203.125:8000/serviceus')
+      .then((res) => {
+        setStatus(true);
+        // console.log(res)
+        fetchServiceUs(res.data.data)
+      })
 
   }
   return (
 
     <div>
-      {status == false || !Service ?
+      {status == false || !Service || !ServiceUs ?
         (
           <div>
             <body className='body'>
@@ -66,36 +73,50 @@ export default function Serve() {
           </div>
         ) : (
           <>
-            <div class="bg-light" align="center">
+            <div class="" align="center">
               <div class="row" >
                 <div class="col-12" style={{ marginTop: '10%' }}>
                   <p class="textHead">บริการของเรา</p><hr class="line Cline"></hr>
                 </div>
                 <div class="col-12">
-                  <div className='row justify-content-md-center '>
-                    <div class="card" style={{ width: '18rem' }}>
-                      <img src=".." class="card-img-top" alt="" />
-                      <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                    </div>
-                    <div class="card" style={{ width: '18rem' }}>
-                      <img src=".." class="card-img-top" alt="" />
-                      <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                    </div><div class="card" style={{ width: '18rem' }}>
-                      <img src=".." class="card-img-top" alt="" />
-                      <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
+                  <div class="container" style={{ marginTop: '10%' }}>
+                    <div className='row justify-content-md-center gap-3'>
+                      {ServiceUs.map((item, index) => {
+                        const staticpath = 'http://157.245.203.125:8000/static/serviceUs/' + item.serviceUs_name + ',' + item.serviceUs_img
+                        return (
+                          <>
+                            <div style={{ width: '23vw' }}>
+                              <div class="card borderCard ">
+                                <img
+                                  className='shadow 10'
+                                  src={staticpath}
+                                  style={{ borderRadius: '2vw' }}
+                                />
+                                <div className="" style={{
+                                  position: 'absolute', bottom: '15%', left: 0, right: 0, transition: '0.5s ease',
+                                  height: '15%'
+                                }}>
+                                  <div class='shadow ItemJJC' style={{
+                                    backgroundColor: 'white',
+                                    height: '4.5vw'                                    
+                                  }}>
+                                    <p class="textInfoSer">{item.serviceUs_name}</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </>
+                        );
+                      })}
                     </div>
                   </div>
+
 
 
                 </div>
               </div>
               <div class="row">
+
                 <div class="col-12" style={{ marginTop: '10%' }}>
                   <p class="textHead ">ความเชี่ยวชาญ</p><hr class="line Cline"></hr>
                 </div>
@@ -108,32 +129,47 @@ export default function Serve() {
                     <FadeIn>
                       <div class="carousel-inner ">
                         <div class="carousel-item active">
-                          <div class="container">
-                            <div class="row xrow">
-                              <div class="col-md-4 marginleftSlideCo widthSlideImg bg-dark" >
-                                <div className=''>
-                                  <div className='' style={{ width: "450px" }}>
-                                    {!Service[0]?.service_img ?
-                                      <img src={imgEMT} width="100%" /> : <img
-                                        src={
-                                          "http://157.245.203.125:8000/static/services/" +
-                                          Service[0]?.service_name +
-                                          "," +
-                                          Service[0]?.service_img
-                                        } width="100%" height="100%"
-                                      />
-                                    }
+                          <div class="col" style={{ width: '100vw' }}>
+                            <div style={{ height: '37vw' }}>
+                              <div class="card borderCard cardCardHover">
+                                <div className="" style={{
+                                  position: 'absolute', bottom: '0px', left: 0, right: 0,
+                                  height: '100%'
+                                }}>
+                                  <div class="row justify-content-md-center" >
+                                    <div className='col-6'></div><div className='col-4 TextContactHsub'>{Service[0]?.service_name}</div>
+                                    <div style={{ marginTop: '1%' }}></div>
+                                    <div class="col-6 " >
+                                      <div className='bg-light' style={{ borderRadius: '30px', height: '100%' }}>
+                                        <div class="row justify-content-md-center">
+                                          <div className='col-10' align='left'>
+                                            <p class='textInfoSer' style={{ marginTop: '10%' }}><p>{Service[0]?.service_detail}</p></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-4" >
+                                      <div className='' style={{ height: '100%' }}>
+                                        {!Service[0]?.service_img ?
+                                          <img src={imgEMT} width="100%" /> : <img
+                                            src={
+                                              "http://157.245.203.125:8000/static/services/" +
+                                              Service[0]?.service_name +
+                                              "," +
+                                              Service[0]?.service_img
+                                            } width="100%"
+                                            style={{ borderRadius: '30px' }}
+
+                                          />
+                                        }
+                                      </div>
+                                    </div>
+
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-md-6 bg-light slideService">
-                                <div class="marSpTop3">
-                                  <p class='textTitle mrleft'><p>{Service[0]?.service_name}</p></p>
-                                  <hr class="line Cline"></hr>
-                                  <p class='textDetail'><p>{Service[0]?.service_detail}</p></p>
-                                </div>
-                              </div>
                             </div>
+
                           </div>
                         </div>
                         {Service
@@ -144,32 +180,43 @@ export default function Serve() {
                               item.service_name +
                               "," +
                               item.service_img;
-                            console.log(item.service_img);
                             return (
                               <div class="carousel-item ">
-                                <div class="container">
-                                  <div class="row xrow">
-                                    <div class="col-md-4 marginleftSlideCo widthSlideImg">
-                                      <div className=''>
-                                        <div className='' style={{ width: "450px" }}>
-                                          {!item.service_img ?
-                                            <img src={imgEMT} width="100%" /> : <img
-                                              src={staticpath}
-                                              width="100%" height="100%"
-                                            />
-                                          }
+                                <div class="col" style={{ width: '100vw' }}>
+                                  <div style={{ height: '37vw' }}>
+                                    <div class="card borderCard cardCardHover">
+                                      <div className="" style={{
+                                        position: 'absolute', bottom: '0px', left: 0, right: 0,
+                                        height: '100%'
+                                      }}>
+                                        <div class="row justify-content-md-center" >
+                                          <div className='col-6'></div><div className='col-4 TextContactHsub'>{item.service_name}</div>
+                                          <div style={{ marginTop: '1%' }}></div>
+                                          <div class="col-6 " >
+                                            <div className='bg-light' style={{ borderRadius: '30px', height: '100%' }}>
+                                              <div class="row justify-content-md-center">
+                                                <div className='col-10' align='left'>
+                                                  <p class='textInfoSer' style={{ marginTop: '10%' }}><p>{item.service_detail}</p></p>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="col-4" >
+                                            <div className='' style={{ height: '100%' }}>
+                                              {!item.service_img ?
+                                                <img src={imgEMT} width="100%" /> : <img
+                                                  src={staticpath}
+                                                  width="100%" style={{ borderRadius: '30px' }}
+                                                />
+                                              }
+                                            </div>
+                                          </div>
 
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="col-md-6 bg-light slideService">
-                                      <div class="marSpTop3">
-                                        <p class='textTitle mrleft'><p>{item.service_name}</p></p>
-                                        <hr class="line Cline"></hr>
-                                        <p class='textDetail'><p>{item.service_detail}</p></p>
-                                      </div>
-                                    </div>
                                   </div>
+
                                 </div>
                               </div>
                             );
@@ -182,10 +229,10 @@ export default function Serve() {
                       data-bs-target="#carouselExampleIndicators"
                       data-bs-slide="prev"
                     >
-                      <span
+                      {/* <span
                         class="carousel-control-prev-icon sizepre-next"
                         aria-hidden="true"
-                      ></span>
+                      ></span> */}
                       <span class="visually-hidden">Previous</span>
                     </button>
                     <button
@@ -194,10 +241,10 @@ export default function Serve() {
                       data-bs-target="#carouselExampleIndicators"
                       data-bs-slide="next"
                     >
-                      <span
+                      {/* <span
                         class="carousel-control-next-icon sizepre-next"
                         aria-hidden="true"
-                      ></span>
+                      ></span> */}
                       <span class="visually-hidden">Next</span>
                     </button>
 
@@ -207,7 +254,7 @@ export default function Serve() {
             </div>
             <div class="container-fluid">
 
-              <style jsx>{`
+              {/* <style jsx>{`
               .carousel-inner {
                 height: 30vw;
               }
@@ -220,24 +267,8 @@ export default function Serve() {
                 object-fit: cover;
                 height: 100% !important;
               }
-            `}</style>
+            `}</style> */}
 
-              <div class="row">
-                <div class="col-sm-11">
-                  <div class="row">
-                    <div class="col-12 col-sm-12">
-                    </div>
-                  </div>
-                  <div class="container">
-
-                    <div class="row">
-                      <div className="col-md-12">
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </>
 

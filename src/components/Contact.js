@@ -75,6 +75,13 @@ export default function Contact() {
                 <p class="textInfo">รู้จักเราให้มากขึ้นผ่านประสบการณ์ของเรา</p>
               </div>
               <div class="col-12">
+                <div class="sliderMedium">
+                  <div>Slide #1</div>
+                  <div>Slide #2</div>
+                  <div>Slide #3</div>
+                  <div>Slide #4</div>
+                  <div>Slide #5</div>
+                </div>
                 <div className='row justify-content-md-center '>
                   <div class="card" style={{ width: '18rem' }}>
                     <img src=".." class="card-img-top" alt="" />
@@ -124,15 +131,15 @@ export default function Contact() {
                       <div class="container">
                         <div className="row marSpRight4" align='left'>
                           <div class="col-12">
-                          <p><span className='TextContactHsub'>โทร {item.enterprise_phone}</span></p>
-                          <p><span className='TextContactHsub'>สามารถติดต่อเราได้ {item.enterprise_servicetime}</span></p>
+                            <p><span className='TextContactHsub'>โทร {item.enterprise_phone}</span></p>
+                            <p><span className='TextContactHsub'>สามารถติดต่อเราได้ {item.enterprise_servicetime}</span></p>
                           </div>
                         </div>
                         <FadeIn>
                           <div class="row justify-content-md-center">
                             <div class="col-1"></div>
                             <div class="col-4">
-                              <div style={{ width: "50vm", height: "50vh" }} >
+                              <div style={{ width: "50vm", height: "30vw" }} >
                                 <WrappendMap
                                   googleMapURL={
                                     `https:maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=` +
@@ -176,8 +183,9 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      )}
-    </div>
+      )
+      }
+    </div >
   );
 }
 
