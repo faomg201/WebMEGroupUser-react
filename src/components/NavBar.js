@@ -7,6 +7,7 @@ export const NavBar = () => {
     const isLink = (url) => {
         histotyH(`/${url}`)
     }
+    // const 
     return (
         <>
             <nav class="navbar fixed-top navbar-light BGLightNav">
@@ -15,7 +16,8 @@ export const NavBar = () => {
                         <a class="nav-link hoverBarBgBlack" onClick={() => { isLink('') }}>หน้าแรก</a>
                     </li>
                     <li class="nav-item HiddenResfixed">
-                        <Link to="ServeScroll" spy={true} ><a class="nav-link hoverBarBgWhite" >บริการ</a></Link>
+                        {/* <Link to="ServeScroll" spy={true} ><a class="nav-link hoverBarBgWhite" >บริการ</a></Link> */}
+                        <a class="nav-link hoverBarBgWhite" href="#ServeScroll" >บริการ</a>
                     </li>
                     <li class="nav-item HiddenResfixed">
                         <Link to="WorksScroll" spy={true} ><a class="nav-link hoverBarBgWhite " >ผลงาน</a></Link>

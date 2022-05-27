@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { TopbarContact } from "./TopbarContact";
+
 import axios from 'axios';
 import {
   GoogleMap,
@@ -11,7 +12,14 @@ import FadeIn from 'react-fade-in';
 
 export default function Contact() {
   const [Location, fetchLocation] = useState([])
+  const [LinkBlog, fetchLinkBlog] = useState([])
+  // const [mediumData, setMediumData] = useState(null);
   const [status, setStatus] = useState(false);
+  // console.log(mediumData?.feed.image);
+  // console.log(mediumData?.items[0].author);
+  // console.log(mediumData.data.feed.image);
+  console.log(LinkBlog);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       console.log('This will run after 5 second!')
@@ -27,6 +35,16 @@ export default function Contact() {
         // console.log(res)
         fetchLocation(res.data.data)
       })
+    // axios.get('http://157.245.203.125:8000/MyBlog')
+    //   .then((res) => {
+    //     setStatus(true);
+    //     fetchLinkBlog(res.data.data)
+    //   })
+    // axios.get('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@tanapon395')
+    //   .then((res) => {
+    //     setStatus(true);
+    //     setMediumData(res.data)
+    //   })
   }
 
   return (
@@ -69,7 +87,7 @@ export default function Contact() {
       ) : (
         <div>
           <div align="center">
-            <div class="row" >
+            {/* <div class="row" >
               <div class="col-12" style={{ marginTop: '10%' }}>
                 <h class="textHead">บล็อกของเรา</h><hr class="line Cline"></hr>
                 <p class="textInfo">รู้จักเราให้มากขึ้นผ่านประสบการณ์ของเรา</p>
@@ -83,12 +101,16 @@ export default function Contact() {
                   <div>Slide #5</div>
                 </div>
                 <div className='row justify-content-md-center '>
+
                   <div class="card" style={{ width: '18rem' }}>
-                    <img src=".." class="card-img-top" alt="" />
-                    <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
+                    <a href={mediumData?.items[0].link} >
+                      <img src={mediumData?.items[0].thumbnail} style={{ width: '18rem' }} />
+                      <div class="card-body">
+                        <p class="card-text"><img style={{ borderRadius: '100%', width: '5vw' }} src={mediumData?.feed.image} />{mediumData?.items[0].author}</p>
+                      </div>
+                    </a>
                   </div>
+                  
                   <div class="card" style={{ width: '18rem' }}>
                     <img src=".." class="card-img-top" alt="" />
                     <div class="card-body">
@@ -102,7 +124,7 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div class="row" >
               <div class="col-12" style={{ marginTop: '10%' }}>
                 <h class="textHead">ติดต่อเรา</h><hr class="line Cline"></hr>
