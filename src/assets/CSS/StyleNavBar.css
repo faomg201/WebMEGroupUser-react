@@ -1,7 +1,7 @@
 .hoverBarBgWhite {
-  color: #000000;
+  color: #ff9300 !important;;
   transition: 0.5s;
-  font-size: 21px;
+  font-size: 1.5vw;
 }
 .hoverBarBgWhite:hover {
   color: #f6851483;
@@ -21,7 +21,7 @@
 .hoverBarBgBlack {
   color: #ffffff;
   transition: 0.5s;
-  font-size: 21px;
+  font-size: 1.5vw;
 }
 .hoverBarBgBlack:hover {
   color: #f6851483;
@@ -67,9 +67,26 @@
   color: #ffffff;
   margin-left: 20%;
 }
+.textLogo1 {
+  font-size: 2.5vw;
+  color: #ff9300;
+  text-align: center;
+  font-weight: bold;
+}
+.textLogo2 {
+  font-size: 1.1vw;
+  color: #ff9300;
+  text-align: center;
+}
 .marTopbar{
   margin-left: 30%;
 }
 .marTopbarContact{
   margin-left: 28%;
+}
+.marginNav{
+  margin-left: 3.4vw;
+}
+.marginNavVV{
+  margin-left: 35vw;
 }
