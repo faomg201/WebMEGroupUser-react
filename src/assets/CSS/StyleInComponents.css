@@ -1,6 +1,5 @@
 .popUpCard {
   height: 98% !important;
-
 }
 
 .popUpDetail {
@@ -59,14 +58,14 @@
 .Cline {
   width: 20%;
   background-color: #f68514;
-  height: 30px;
+  height: 3px !important;
   margin-top: -1%;
 }
 .ClineAbout {
   width: 30%;
   background-color: #f68514;
-  height: 30px;
-  margin-top: -1%;
+  height: 3px !important;
+  margin-top: -2%;
 }
 .radiusDetailAbout {
   background: #ffffff;
@@ -112,14 +111,14 @@
   transition: 0.5s;
   text-decoration: none;
 }
-.ItemJJC{
-  padding: 6.5%!important;
-  
-}
 .buttonSend:hover {
   background: rgb(255, 255, 255);
   color: #ff990f;
 }
+.ItemJJC {
+  padding: 6.5% !important;
+}
+
 .marginTopCon {
   margin-top: 15%;
 }
@@ -192,4 +191,254 @@
   background: #f0f0f0;
   margin-right: 15px;
   border-radius: 5px;
+}
+/* .marginNav{
+  margin-left: 8vw;
+} */
+
+.slider-wrapper {
+  font-size: 2vw;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider {
+  color: #ffffff;
+  height: 50px;
+  padding-left: 15px;
+  overflow: hidden;
+}
+.slider div {
+  height: 50px;
+  margin-bottom: 50px;
+  padding: 2px 10px;
+  box-sizing: border-box;
+}
+.slider-text1 {
+  animation: slide 12s ease infinite;
+  /* animation: appear 10s infinite; */
+  animation-play-state: running;
+}
+
+@keyframes slide {
+  0% {
+    margin-top: 100px;
+  }
+  5% {
+    margin-top: 0px;
+  }
+
+  14% {
+    margin-top: 0px;
+  }
+  19% {
+    margin-top: -100px;
+  }
+
+  28% {
+    margin-top: -100px;
+  }
+  33% {
+    margin-top: -200px;
+  }
+
+  42% {
+    margin-top: -200px;
+  }
+  47% {
+    margin-top: -300px;
+  }
+
+  56% {
+    margin-top: -300px;
+  }
+  61% {
+    margin-top: -400px;
+  }
+
+  70% {
+    margin-top: -400px;
+  }
+  75% {
+    margin-top: -500px;
+  }
+
+  84% {
+    margin-top: -500px;
+  }
+  89% {
+    margin-top: -600px;
+  }
+
+  98% {
+    margin-top: -600px;
+  }
+
+  100% {
+    margin-top: -650px;
+  }
+}
+.HiddenOBJ {
+  display: none !important;
+}
+.contentEMPImg{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3,minmax(0%, auto));
+  grid-gap: 1%;
+  max-width: auto;
+  margin: auto;   
+}
+.test {
+  width: 70%;
+  height: 70%;
+}
+@media only screen and (max-width: 568px) {
+  .marSpTop {
+    margin-top: 35vh;
+  }
+  .ResDisplayNone {
+    display: none !important;
+  }
+  .HiddenOBJ {
+    display: block !important;
+  }
+  .headtext {
+    font-size: 9vw;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  .text {
+    font-size: 4vw;
+    color: #ffffff;
+  }
+  .slider-wrapper {
+    font-size: 5.5vw;
+    margin-right: 5%;
+  }
+  .marginTopRes {
+    margin-top: -10%;
+  }
+  .marginTopResContact{
+    margin-top: 10vw;
+  }
+  .marginDisTopcon1 {
+    text-align: center;
+    margin-left: -5%;
+  }
+  .HomeMenu {
+    margin-left: -3vw;
+    min-height: 100vh;
+    background: #404040 !important;
+    margin-top: -5.7vh;
+    min-width: 100vw;
+  }
+  .Xclose {
+    font-size: 11vw;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  .textLogo1 {
+    font-size: 7vw;
+    color: #fe5000;
+    text-align: center;
+    font-weight: bold;
+  }
+  .textLogo2 {
+    font-size: 3vw;
+    color: #fe5000;
+    text-align: center;
+  }
+  .textHead {
+    font-size: 7vw;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+  }
+  .textHeadWhite{
+    font-size: 7vw;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+  }
+  .FontSizeMenuHome {
+    font-size: 7vw;
+    font-weight: bold;
+    color: #ffffff !important;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  .TextContactHsub {
+    font-size: 3vw;
+    color: #000000;
+    font-weight: normal;
+  }
+  .textInfo {
+    font-size: 2.5vw;
+    color: #000000;
+  }
+  .nav-link {
+    display: block;
+    padding: 3rem 1rem;
+    color: #0d6efd;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+.buttonSend {
+  background: #ff990f;
+  border-radius: 30px;
+  margin: 0 0.6em;
+  font-size: 3.5vw;
+  padding: 6px;
+  display: inline-block;
+  color: rgb(252, 252, 252);
+  letter-spacing: 1px;
+  width: 45vw;
+  height: 15vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  text-decoration: none;
+}
+.buttonSend:hover {
+  background: rgb(255, 255, 255);
+  color: #ff990f;
+}
+
+.radiusDetailAbout {
+  background: #404040;
+  border-radius: 0px ;
+}
+.ClineAbout {
+  width: 40%;
+  background-color: #f68514;
+  height: 2px !important;
+  justify-content: center;
+  align-items: center;
+}
+.DetailAbotus {
+  font-size: 2.5vw;
+  color: #ffffff;
+}
+.abotusImg {
+  height: 59vw;
+  margin-left: 0%;
+}
+.contentEMPImg{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3,minmax(0%, auto));
+  grid-gap: 1%;
+  max-width: auto;
+  margin: auto;   
+}
+.test {
+  width: 80%;
+  height: 80%;
+}
 }

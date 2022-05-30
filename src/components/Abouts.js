@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import "../assets/CSS/StyleInComponents.css"
-import { TopbarAbouts } from "./TopbarAbouts";
 import axios from 'axios';
 import imgEMT from '../../src/assets/Img/default-placeholder.png'
 
@@ -79,7 +78,7 @@ export default function Abouts() {
 
       ) : (
         <>
-          <div class="bg-light">
+          <div class="bg-light ResDisplayNone">
             <div class="row" >
               <div className='col-7 radiusDetailAbout' style={{ height: '58.41vw' }}>
                 <div class="col" style={{ marginTop: '10%', marginLeft: '13%' }}>
@@ -88,9 +87,9 @@ export default function Abouts() {
                 </div>
               </div>
               <div class="col-sm-5">
-                <div id="carouselExampleCaptions" 
-                class="carousel slide " 
-                data-bs-ride="carousel"
+                <div id="carouselExampleCaptions"
+                  class="carousel slide "
+                  data-bs-ride="carousel"
                 >
                   <div class="carousel-inner" style={{ height: '58.41vw' }}>
                     <div class="carousel-item active">
@@ -134,55 +133,102 @@ export default function Abouts() {
               </div>
             </div>
           </div>
-          <body className='marB'>
-            <style jsx>{`
-              .contentEMPImg{
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: repeat(3,minmax(0%, auto));
-                grid-gap: 1%;
-                max-width: auto;
-                margin: auto%;   
-              }
-            .test {
-                width: 70%;
-                height: 70%;
-              }
-       `}</style>
-            <div className='marO'>
-              <br /><br /><br /><br />
-              <center>
-                <div class="container ">
-                  <h class="textTeamEmp">ทีมของเรา</h>
-                  <br /><br />
-                  <div class="row contentEMPImg">
-                    {Employees.map((item) => {
-                      const staticpath = 'http://157.245.203.125:8000/static/employees/' + item.emp_fname + ',' + item.emp_lname + ',' + item.emp_img
-                      // console.log(staticpath);
-                      return (
-                        <tr >
-                          <div class="col ">
-                            <img class="card test round" src={staticpath}
-                              alt="" />
-                            <div class="card-body ">
-                            </div>
-                            <div>
-                              <h class="textNEMP">{item.emp_fname} {item.emp_lname} #{item.mbti_name}</h>
-                              <p class="textNEMP_Mbti_Q" >{item.emp_class}</p>
-                              <p class="textNEMP_Mbti_Q" style={{ marginTop: '-5%' }}>{item.emp_quote}</p>
+          <div class="bg-light HiddenOBJ">
+            <div class="row" >
+              <div className='col-12 radiusDetailAbout' style={{ height: '58.41vw' }}>
+                <div class="col-12" style={{ marginTop: '15%' }} align='center'>
+                  <p class="textHeadWhite" >เกี่ยวกับเรา</p><hr align='center' class="line ClineAbout"></hr>
+                </div>
+                <div class="row">
+                  <div className='col-1'></div>
+                  <div class="col-10">
+                    <p class="DetailAbotus"><span class="tab"></span>{Enterprises.enterprise_detail}</p>
+                  </div>
+                  <div className='col-1'></div>
+                </div>
+              </div>
+              <div class="col-sm-12" >
+                <div id="carouselExampleCaptions"
+                  class="carousel slide "
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner" >
+                    <div class="carousel-item active" >
+                      <div class="container" align="center">
+                        {!aboutUsImg[0]?.image_name ?
+                          <img src={imgEMT} width="100%" /> :
+                          <img src={
+                            'http://157.245.203.125:8000/static/aboutUs/' +
+                            aboutUsImg[0]?.image_name
+                          } class="abotusImg" />
+                        }
+                      </div>
+                    </div>
+                    {
+                      aboutUsImg.filter((f, idx) => idx > 0).map((item) => {
+                        const staticpath = 'http://157.245.203.125:8000/static/aboutUs/' + item.image_name
+                        return (
+                          <div class="carousel-item">
+                            <div class="container" align="center">
+                              {!item.image_name ?
+                                <img src={imgEMT} width="100%" /> :
+                                <img
+                                  src={staticpath}
+                                  class="abotusImg"
+                                />
+                              }
                             </div>
                           </div>
-                          <br /><br />
-                        </tr>
-                      );
-                    })}
+                        );
+                      })}
                   </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    {/* <span class="carousel-control-prev-icon" aria-hidden="true"></span> */}
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    {/* <span class="carousel-control-next-icon" aria-hidden="true"></span> */}
+                    <span class="visually-hidden">Next</span>
+                  </button>
                 </div>
-              </center>
+              </div>
             </div>
+          </div>
+          <style jsx>{`
+              
+       `}</style>
+          <div className='marO'>
+            <br /><br /><br /><br />
+            <center>
+              <div class="container ">
+                <h class="textTeamEmp">ทีมของเรา</h>
+                <br /><br />
+                <div class="row contentEMPImg">
+                  {Employees.map((item) => {
+                    const staticpath = 'http://157.245.203.125:8000/static/employees/' + item.emp_fname + ',' + item.emp_lname + ',' + item.emp_img
+                    // console.log(staticpath);
+                    return (
+                      <tr >
+                        <div class="col ">
+                          <img class="card test round" src={staticpath}
+                            alt="" />
+                          <div class="card-body ">
+                          </div>
+                          <div>
+                            <h class="textNEMP">{item.emp_fname} {item.emp_lname} #{item.mbti_name}</h>
+                            <p class="textNEMP_Mbti_Q" >{item.emp_class}</p>
+                            <p class="textNEMP_Mbti_Q" style={{ marginTop: '-5%' }}>{item.emp_quote}</p>
+                          </div>
+                        </div>
+                        <br /><br />
+                      </tr>
+                    );
+                  })}
+                </div>
+              </div>
+            </center>
+          </div>
 
-
-          </body>
         </>
       )
       }

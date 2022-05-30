@@ -10,29 +10,80 @@ export const NavBar = () => {
     // const 
     return (
         <>
-            <nav class="navbar fixed-top navbar-light BGLightNav">
-                <ul class="nav">
-                    <li class="nav-item HiddenResfixed">
-                        <a class="nav-link hoverBarBgBlack" onClick={() => { isLink('') }}>หน้าแรก</a>
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light BGLightNav">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li className="nav-item HiddenResfixed marginNav">
+                                <a className="nav-link hoverBarBgBlack marginNav" onClick={() => { isLink('') }}>หน้าแรก</a>
+                            </li>
+                            <li className="nav-item HiddenResfixed">
+                                <Link to="ServeScroll" spy={true} ><a className="nav-link hoverBarBgWhite" >บริการ</a></Link>
+                            </li>
+                            <li className="nav-item HiddenResfixed">
+                                <Link to="WorksScroll" spy={true} ><a className="nav-link hoverBarBgWhite " >ผลงาน</a></Link>
+                            </li>
+                            <li className="nav-item HiddenResfixed">
+                                <Link to="AboutsScroll" spy={true} ><a className="nav-link hoverBarBgWhite " >เกี่ยวกับเรา</a></Link>
+                            </li>
+                            <li className="nav-item HiddenResfixed">
+                                <Link to="ContactScroll" spy={true} ><a className="nav-link hoverBarBgWhite " >ติดต่อเรา</a></Link>
+                            </li>
+                            <li className="nav-item HiddenResfixed marginNavVV">
+                                <p className="textLogo1">ME Group Enterprise<br /><p className="textLogo2">บริษัท มี กรุ๊ป เอ็นเตอร์ไพรส์ จำกัด</p></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            {/* <nav className="navbar fixed-top navbar-light BGLightNav">
+                <ul className="nav ">
+                    <li className="nav-item HiddenResfixed ">
+                        <a className="nav-link hoverBarBgBlack marginNav" onClick={() => { isLink('') }}>หน้าแรก</a>
                     </li>
-                    <li class="nav-item HiddenResfixed">
-                        {/* <Link to="ServeScroll" spy={true} ><a class="nav-link hoverBarBgWhite" >บริการ</a></Link> */}
-                        <a class="nav-link hoverBarBgWhite" href="#ServeScroll" >บริการ</a>
+                    <li className="nav-item HiddenResfixed">
+                        <Link to="ServeScroll" spy={true} ><a className="nav-link hoverBarBgWhite" >บริการ</a></Link>
                     </li>
-                    <li class="nav-item HiddenResfixed">
-                        <Link to="WorksScroll" spy={true} ><a class="nav-link hoverBarBgWhite " >ผลงาน</a></Link>
+                    <li className="nav-item HiddenResfixed">
+                        <Link to="WorksScroll" spy={true} ><a className="nav-link hoverBarBgWhite " >ผลงาน</a></Link>
                     </li>
-                    <li class="nav-item HiddenResfixed">
-                        <Link to="AboutsScroll" spy={true} ><a class="nav-link hoverBarBgWhite " >เกี่ยวกับเรา</a></Link>
+                    <li className="nav-item HiddenResfixed">
+                        <Link to="AboutsScroll" spy={true} ><a className="nav-link hoverBarBgWhite " >เกี่ยวกับเรา</a></Link>
                     </li>
-                    <li class="nav-item HiddenResfixed">
-                        <Link to="ContactScroll" spy={true} ><a class="nav-link hoverBarBgWhite " >ติดต่อเรา</a></Link>
+                    <li className="nav-item HiddenResfixed">
+                        <Link to="ContactScroll" spy={true} ><a className="nav-link hoverBarBgWhite " >ติดต่อเรา</a></Link>
                     </li>
-                    <li class="nav">
-                        <p class="text3">ME Group Enterprise<br /><p class="text4">บริษัท มี กรุ๊ป เอ็นเตอร์ไพรส์ จำกัด</p></p>
+                    <li className="nav">
+                        <p className="text3">ME Group Enterprise<br /><p className="text4">บริษัท มี กรุ๊ป เอ็นเตอร์ไพรส์ จำกัด</p></p>
                     </li>
                 </ul>
-            </nav>
+            </nav> */}
+
+            {/* <nav className="navbar fixed-top navbar-light BGLightNav">
+                <ul className="nav">
+                    <li className="nav-item HiddenResfixed">
+                        <a className="nav-link hoverBarBgBlack" onClick={() => { isLink('') }}>หน้าแรก</a>
+                    </li>
+                    <li className="nav-item HiddenResfixed">
+                        <a className="nav-link hoverBarBgWhite" href="#ServeScroll" >บริการ</a>
+                    </li>
+                    <li className="nav-item HiddenResfixed">
+                        <Link to="WorksScroll" spy={true} ><a className="nav-link hoverBarBgWhite " >ผลงาน</a></Link>
+                    </li>
+                    <li className="nav-item HiddenResfixed">
+                        <Link to="AboutsScroll" spy={true} ><a className="nav-link hoverBarBgWhite " >เกี่ยวกับเรา</a></Link>
+                    </li>
+                    <li className="nav-item HiddenResfixed">
+                        <Link to="ContactScroll" spy={true} ><a className="nav-link hoverBarBgWhite " >ติดต่อเรา</a></Link>
+                    </li>
+                    <li className="nav">
+                        <p className="text3">ME Group Enterprise<br /><p className="text4">บริษัท มี กรุ๊ป เอ็นเตอร์ไพรส์ จำกัด</p></p>
+                    </li>
+                </ul>
+            </nav> */}
         </>
     );
 }

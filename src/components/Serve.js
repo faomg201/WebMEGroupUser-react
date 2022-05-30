@@ -73,20 +73,20 @@ export default function Serve() {
           </div>
         ) : (
           <>
-            <div class="" align="center">
-              <div class="row" >
-                <div class="col-12" style={{ marginTop: '10%' }}>
-                  <p class="textHead">บริการของเรา</p><hr class="line Cline"></hr>
+            <div className="" align="center">
+              <div className="row" >
+                <div className="col-12" style={{ marginTop: '10%' }}>
+                  <p className="textHead">บริการของเรา</p><hr className="line Cline"></hr>
                 </div>
-                <div class="col-12">
-                  <div class="container" style={{ marginTop: '10%' }}>
+                <div className="col-12">
+                  <div className="container" style={{ marginTop: '10%' }}>
                     <div className='row justify-content-md-center gap-3'>
                       {ServiceUs.map((item, index) => {
                         const staticpath = 'http://157.245.203.125:8000/static/serviceUs/' + item.serviceUs_name + ',' + item.serviceUs_img
                         return (
                           <>
                             <div style={{ width: '23vw' }}>
-                              <div class="card borderCard ">
+                              <div className="card borderCard ">
                                 <img
                                   className='shadow 10'
                                   src={staticpath}
@@ -96,11 +96,11 @@ export default function Serve() {
                                   position: 'absolute', bottom: '15%', left: 0, right: 0, transition: '0.5s ease',
                                   height: '15%'
                                 }}>
-                                  <div class='shadow ItemJJC' style={{
+                                  <div className='shadow ItemJJC' style={{
                                     backgroundColor: 'white',
                                     height: '4.5vw'                                    
                                   }}>
-                                    <p class="textInfoSer">{item.serviceUs_name}</p>
+                                    <p className="textInfoSer">{item.serviceUs_name}</p>
                                   </div>
                                 </div>
                               </div>
@@ -115,40 +115,40 @@ export default function Serve() {
 
                 </div>
               </div>
-              <div class="row">
+              <div className="row">
 
-                <div class="col-12" style={{ marginTop: '10%' }}>
-                  <p class="textHead ">ความเชี่ยวชาญ</p><hr class="line Cline"></hr>
+                <div className="col-12" style={{ marginTop: '10%' }}>
+                  <p className="textHead ">ความเชี่ยวชาญ</p><hr className="line Cline"></hr>
                 </div>
-                <div class="col-12">
+                <div className="col-12">
                   <div
                     id="carouselExampleIndicators"
-                    class="carousel slide"
+                    className="carousel slide"
                     data-bs-ride="carousel"
                   >
                     <FadeIn>
-                      <div class="carousel-inner ">
-                        <div class="carousel-item active">
-                          <div class="col" style={{ width: '100vw' }}>
+                      <div className="carousel-inner ">
+                        <div className="carousel-item active">
+                          <div className="col" style={{ width: '100vw' }}>
                             <div style={{ height: '37vw' }}>
-                              <div class="card borderCard cardCardHover">
+                              <div className="card borderCard cardCardHover">
                                 <div className="" style={{
                                   position: 'absolute', bottom: '0px', left: 0, right: 0,
                                   height: '100%'
                                 }}>
-                                  <div class="row justify-content-md-center" >
+                                  <div className="row justify-content-md-center" >
                                     <div className='col-6'></div><div className='col-4 TextContactHsub'>{Service[0]?.service_name}</div>
                                     <div style={{ marginTop: '1%' }}></div>
-                                    <div class="col-6 " >
+                                    <div className="col-6 " >
                                       <div className='bg-light' style={{ borderRadius: '30px', height: '100%' }}>
-                                        <div class="row justify-content-md-center">
+                                        <div className="row justify-content-md-center">
                                           <div className='col-10' align='left'>
-                                            <p class='textInfoSer' style={{ marginTop: '10%' }}><p>{Service[0]?.service_detail}</p></p>
+                                            <p className='textInfoSer' style={{ marginTop: '10%' }}><p>{Service[0]?.service_detail}</p></p>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="col-4" >
+                                    <div className="col-4" >
                                       <div className='' style={{ height: '100%' }}>
                                         {!Service[0]?.service_img ?
                                           <img src={imgEMT} width="100%" /> : <img
@@ -181,27 +181,27 @@ export default function Serve() {
                               "," +
                               item.service_img;
                             return (
-                              <div class="carousel-item ">
-                                <div class="col" style={{ width: '100vw' }}>
+                              <div className="carousel-item ">
+                                <div className="col" style={{ width: '100vw' }}>
                                   <div style={{ height: '37vw' }}>
-                                    <div class="card borderCard cardCardHover">
+                                    <div className="card borderCard cardCardHover">
                                       <div className="" style={{
                                         position: 'absolute', bottom: '0px', left: 0, right: 0,
                                         height: '100%'
                                       }}>
-                                        <div class="row justify-content-md-center" >
+                                        <div className="row justify-content-md-center" >
                                           <div className='col-6'></div><div className='col-4 TextContactHsub'>{item.service_name}</div>
                                           <div style={{ marginTop: '1%' }}></div>
-                                          <div class="col-6 " >
+                                          <div className="col-6 " >
                                             <div className='bg-light' style={{ borderRadius: '30px', height: '100%' }}>
-                                              <div class="row justify-content-md-center">
+                                              <div className="row justify-content-md-center">
                                                 <div className='col-10' align='left'>
-                                                  <p class='textInfoSer' style={{ marginTop: '10%' }}><p>{item.service_detail}</p></p>
+                                                  <p className='textInfoSer' style={{ marginTop: '10%' }}><p>{item.service_detail}</p></p>
                                                 </div>
                                               </div>
                                             </div>
                                           </div>
-                                          <div class="col-4" >
+                                          <div className="col-4" >
                                             <div className='' style={{ height: '100%' }}>
                                               {!item.service_img ?
                                                 <img src={imgEMT} width="100%" /> : <img
@@ -224,35 +224,35 @@ export default function Serve() {
                       </div>
                     </FadeIn>
                     <button
-                      class="carousel-control-prev "
+                      className="carousel-control-prev "
                       type="button"
                       data-bs-target="#carouselExampleIndicators"
                       data-bs-slide="prev"
                     >
                       {/* <span
-                        class="carousel-control-prev-icon sizepre-next"
+                        className="carousel-control-prev-icon sizepre-next"
                         aria-hidden="true"
                       ></span> */}
-                      <span class="visually-hidden">Previous</span>
+                      <span className="visually-hidden">Previous</span>
                     </button>
                     <button
-                      class="carousel-control-next "
+                      className="carousel-control-next "
                       type="button"
                       data-bs-target="#carouselExampleIndicators"
                       data-bs-slide="next"
                     >
                       {/* <span
-                        class="carousel-control-next-icon sizepre-next"
+                        className="carousel-control-next-icon sizepre-next"
                         aria-hidden="true"
                       ></span> */}
-                      <span class="visually-hidden">Next</span>
+                      <span className="visually-hidden">Next</span>
                     </button>
 
                   </div>
                 </div>
               </div>
             </div>
-            <div class="container-fluid">
+            <div className="container-fluid">
 
               {/* <style jsx>{`
               .carousel-inner {

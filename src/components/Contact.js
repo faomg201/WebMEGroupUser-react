@@ -86,7 +86,7 @@ export default function Contact() {
         </div>
       ) : (
         <div>
-          <div align="center">
+          <div align="center" style={{minHeight: '100vh'}}>
             {/* <div class="row" >
               <div class="col-12" style={{ marginTop: '10%' }}>
                 <h class="textHead">บล็อกของเรา</h><hr class="line Cline"></hr>
@@ -126,8 +126,8 @@ export default function Contact() {
               </div>
             </div> */}
             <div class="row" >
-              <div class="col-12" style={{ marginTop: '10%' }}>
-                <h class="textHead">ติดต่อเรา</h><hr class="line Cline"></hr>
+              <div class="col-12 " style={{ marginTop: '10%' }}>
+                <p class="textHead marginTopResContact">ติดต่อเรา</p><hr class="line Cline ResDisplayNone"></hr>
               </div>
               <div class="col-12">
                 {Location.map((item) => {
@@ -152,13 +152,13 @@ export default function Contact() {
                     <div class="row">
                       <div class="container">
                         <div className="row marSpRight4" align='left'>
-                          <div class="col-12">
+                          <div class="col-12 marginDisTopcon1" >
                             <p><span className='TextContactHsub'>โทร {item.enterprise_phone}</span></p>
                             <p><span className='TextContactHsub'>สามารถติดต่อเราได้ {item.enterprise_servicetime}</span></p>
                           </div>
                         </div>
                         <FadeIn>
-                          <div class="row justify-content-md-center">
+                          <div class="row justify-content-md-center ResDisplayNone">
                             <div class="col-1"></div>
                             <div class="col-4">
                               <div style={{ width: "50vm", height: "30vw" }} >
@@ -195,13 +195,48 @@ export default function Contact() {
                             </div>
                             <div class="col-1"></div>
                           </div>
+                          <div class="row justify-content-md-center bg-light HiddenOBJ">
+                            <div class="col-12">
+                              <div style={{ width: "100vw", height: "45vh" }} >
+                                <WrappendMap
+                                  googleMapURL={
+                                    `https:maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=` +
+                                    item.enterprise_GG_key_api
+                                  }
+                                  loadingElement={
+                                    <div style={{ height: "100%" }} />
+                                  }
+                                  containerElement={
+                                    <div style={{ height: "100%" }} />
+                                  }
+                                  mapElement={
+                                    <div style={{ height: "100%"}} />
+                                  }
+                                />
+                              </div>
+                            </div>
+                            <div class="col-12 bg-light" align='left' style={{ height: "30vh"}}>
+                              <div className="marSpTop3">
+                                <p><span className='TextContactHsub'><b>ชื่อนิติบุคคลผู้เสียภาษี</b></span>
+                                  <span className='tab textInfo'>{item.enterprise_facebook}</span></p>
+                                <p>
+                                  <span className='TextContactHsub'><b>ที่อยู่</b></span> &nbsp; <span className='textInfo'>{item.enterprise_address}</span>
+                                </p>
+                                <p>
+                                  <span className='TextContactHsub'><b>เวลาทำการ</b></span>
+                                  <span className='tab'></span> &nbsp;<span className='textInfo'>{item.enterprise_servicetime}</span>
+                                </p>
+                                <div align='center' className='marginTopCon'><a class="buttonSend" role="button" >ส่งข้อความ</a></div>
+                              </div>
+                            </div>
+                          </div>
                         </FadeIn>
                       </div>
                     </div>
                   );
                 })}
               </div>
-              <div style={{ marginTop: '5%' }}></div>
+              <div className='ResDisplayNone' style={{ marginTop: '5%' }}></div>
             </div>
           </div>
         </div>
