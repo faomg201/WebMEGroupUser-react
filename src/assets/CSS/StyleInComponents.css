@@ -52,8 +52,9 @@
 }
 
 .textType {
-  font-size: 2vw;
+  font-size: 1.8vw;
   color: #000000;
+  margin-left: 2vw;
 }
 .Cline {
   width: 20%;
@@ -282,13 +283,13 @@
 .HiddenOBJ {
   display: none !important;
 }
-.contentEMPImg{
+.contentEMPImg {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3,minmax(0%, auto));
+  grid-template-rows: repeat(3, minmax(0%, auto));
   grid-gap: 1%;
   max-width: auto;
-  margin: auto;   
+  margin: auto;
 }
 .test {
   width: 70%;
@@ -320,7 +321,7 @@
   .marginTopRes {
     margin-top: -10%;
   }
-  .marginTopResContact{
+  .marginTopResContact {
     margin-top: 10vw;
   }
   .marginDisTopcon1 {
@@ -356,7 +357,7 @@
     font-weight: bold;
     text-align: center;
   }
-  .textHeadWhite{
+  .textHeadWhite {
     font-size: 7vw;
     color: #ffffff;
     font-weight: bold;
@@ -385,19 +386,190 @@
     padding: 3rem 1rem;
     color: #0d6efd;
     text-decoration: none;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out;
+  }
+  .buttonSend {
+    background: #ff990f;
+    border-radius: 30px;
+    margin: 0 0.6em;
+    font-size: 3.5vw;
+    padding: 6px;
+    display: inline-block;
+    color: rgb(252, 252, 252);
+    letter-spacing: 1px;
+    width: 45vw;
+    height: 15vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    text-decoration: none;
+  }
+  .buttonSend:hover {
+    background: rgb(255, 255, 255);
+    color: #ff990f;
+  }
+
+  .radiusDetailAbout {
+    background: #404040;
+    border-radius: 0px;
+  }
+  .ClineAbout {
+    width: 40%;
+    background-color: #f68514;
+    height: 2px !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .DetailAbotus {
+    font-size: 2.5vw;
+    color: #ffffff;
+  }
+  .abotusImg {
+    height: 59vw;
+    margin-left: 0%;
+  }
+  .contentEMPImg {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, minmax(0%, auto));
+    grid-gap: 1%;
+    max-width: auto;
+    margin: auto;
+  }
+  .test {
+    width: 80%;
+    height: 80%;
+  }
 }
-.buttonSend {
+.OutService {
+  margin-top: -20% !important;
+  border-radius: 0.8rem;
+  background: #ffffff;
+  box-shadow: 1px 5px 7px #aaa8a8;
+}
+.CardOutService {
+  /* justify-content: center; */
+  margin-left: 1.9vw;
+  display: grid;
+  grid-template-columns: repeat(5, 19vw);
+  grid-template-rows: repeat(4, minmax(12vw, auto));
+  grid-gap: 0.1vw;
+}
+.CardWorkWithUs {
+  justify-content: center;
+  /* margin-left: 1.9vw; */
+  display: grid;
+  grid-template-columns: repeat(5, 17vw);
+  grid-template-rows: repeat(4, minmax(12vw, auto));
+  grid-gap: 0.1vw;
+}
+
+.Imgcircle {
+  /* height: 100% !important; */
+  /* overflow-y: hidden; */
+  border-radius: 100%;
+  background-color: rgb(183, 183, 183);
+  height: 5.5vw;
+  width: 5.5vw;
+  /* margin-left: 6.5vw; */
+}
+.NameOutService {
+  text-align: center;
+  font-size: 1.4vw;
+  font-weight: bold;
+}
+.OutServiceHeader {
+  font-size: 1.8vw;
+  font-weight: bold;
+  margin-top: 9vw;
+  margin-left: 7vw;
+}
+.OutServiceHeader2 {
+  font-size: 2vw;
+  font-weight: bold;
+  color: #fc501e;
+  margin-left: 7vw;
+}
+.dotOrang {
+  font-size: 1.8vw;
+  font-weight: bold;
+  color: #fc501e;
+}
+
+
+.WorkWithUs {
+  font-size: 1.8vw;
+  font-weight: bold;
+  margin-top: 18vw;
+  text-align: center;
+}
+.WorkWithUsFormation {
+  font-size: 2vw;
+  font-weight: bold;
+  color: #fc501e;
+  text-align: center;
+}
+.ImgWorkWithUs {
+  border-radius: 100%;
+  background-color: rgb(183, 183, 183);
+  height: 5.5vw;
+  width: 5.5vw;
+}
+.ImgBoxNum {
+  background-color: #fc501e;
+  height: 2.3vw;
+  width: 2.2vw;
+}
+.NumWWU {
+  color: #ffffff;
+  font-size: 1.5vw;
+  font-weight: bold;
+  text-align: center;
+}
+.TitleWWU{
+  text-align: center;
+  font-size: 1.4vw;
+  font-weight: bold;
+}
+.DetailWWU{
+  font-size: 1.1vw;
+  font-weight: bold;
+  color: #fc501e;
+}
+.OurSolutionHeader{
+  font-size: 1.8vw;
+  font-weight: bold;
+  margin-top: 30vw;
+  margin-left: 7vw;
+}
+.TextHeadOutSolution{
+  font-size: 3vw;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #00000053;
+}
+.TexeIf{
+  font-size: 2vw;
+  font-weight: bold;
+  color: #FF9300;
+}
+.TextHeadIf{
+  font-weight: bold;
+  color: #FF9300;
+}
+.buttonSendOutSolution {
   background: #ff990f;
-  border-radius: 30px;
+  border-radius: 10px;
   margin: 0 0.6em;
-  font-size: 3.5vw;
+  font-size: 1.2vw;
   padding: 6px;
   display: inline-block;
   color: rgb(252, 252, 252);
   letter-spacing: 1px;
-  width: 45vw;
-  height: 15vw;
+  width: 13vw;
+  height: 4vw;
   position: relative;
   display: flex;
   justify-content: center;
@@ -405,40 +577,18 @@
   transition: 0.5s;
   text-decoration: none;
 }
-.buttonSend:hover {
+.buttonSendOutSolution:hover {
   background: rgb(255, 255, 255);
   color: #ff990f;
 }
-
-.radiusDetailAbout {
-  background: #404040;
-  border-radius: 0px ;
+.ourWorksHeader{
+  font-size: 1.8vw;
+  font-weight: bold;
+  margin-left: 2vw;
 }
-.ClineAbout {
-  width: 40%;
-  background-color: #f68514;
-  height: 2px !important;
-  justify-content: center;
-  align-items: center;
-}
-.DetailAbotus {
-  font-size: 2.5vw;
-  color: #ffffff;
-}
-.abotusImg {
-  height: 59vw;
-  margin-left: 0%;
-}
-.contentEMPImg{
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(3,minmax(0%, auto));
-  grid-gap: 1%;
-  max-width: auto;
-  margin: auto;   
-}
-.test {
-  width: 80%;
-  height: 80%;
-}
+.ourWorksHeader2{
+  font-size: 2vw;
+  font-weight: bold;
+  color: #fc501e;
+  margin-left: 2vw;
 }
