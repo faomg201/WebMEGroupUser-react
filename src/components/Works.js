@@ -106,14 +106,14 @@ export default function Works() {
               `}</style>
           <div class="PageFullvh" align="center">
             <div class="row" >
-              <div class="col-12" style={{ marginTop: '10%' }}>
-                <p class="textHead ">ผลงาน</p><hr class="line Cline"></hr>
-              </div>
+
               <div class="col-12">
-
-
-
-                <div class="container" style={{marginLeft:'3.5vw'}}>
+                <div class="container" style={{ marginLeft: '3.5vw' }}>
+                  <div class="col-12" style={{ marginTop: '10%' }} align="left">
+                    <p className='ourWorksHeader'>our works
+                      <span className='dotOrang'>.</span></p>
+                    <p class="ourWorksHeader2">ผลงานของเรา</p>
+                  </div>
                   {Services.map((itemSer, index) => {
                     if (!Services) {
                       return;
@@ -124,7 +124,6 @@ export default function Works() {
                     return (
                       <div>
                         <p class="textType" align='left'>{titleN}</p>
-
                         <div class="row Cardcontent">
                           {Goals.map((item, index) => {
                             if (itemSer.service_name !== item.service_name)
