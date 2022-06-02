@@ -80,13 +80,13 @@
 }
 
 .textNEMP {
-  font-size: 2.5vw;
-  color: #f8f8f8;
+  font-size: 1.5vw;
+  color: #FC501E;
   font-weight: bold;
 }
 .textNEMP_Mbti_Q {
-  font-size: 1.5vw;
-  color: #f8f8f8;
+  font-size: 1.2vw;
+  color: #404040;
 }
 
 .TextContactHsub {
@@ -176,7 +176,7 @@
 
   /* make it smooth on iOS */
   -webkit-overflow-scrolling: touch;
-  scroll-snap-points-x: repeat(300px);
+  /* scroll-snap-points-x: repeat(300px); */
   scroll-snap-type: mandatory;
 }
 /* .sliderMedium::-webkit-scrollbar {
@@ -185,13 +185,13 @@
 .sliderMedium > div {
   /* make sure the width is honored */
   flex-shrink: 0;
-  width: 300px;
-  height: 300px;
-  line-height: 300px;
+  width: 28.5vw;
+  height: 28vw;
+  /* line-height: 300px; */
   text-align: center;
-  background: #f0f0f0;
-  margin-right: 15px;
-  border-radius: 5px;
+  /* background: #f0f0f0; */
+  /* margin-right: 15px;
+  border-radius: 5px; */
 }
 /* .marginNav{
   margin-left: 8vw;
@@ -294,6 +294,9 @@
 .test {
   width: 70%;
   height: 70%;
+}
+.marginTopRes {
+  margin-top: 5%;
 }
 @media only screen and (max-width: 568px) {
   .marSpTop {
@@ -493,6 +496,18 @@
   color: #fc501e;
   margin-left: 7vw;
 }
+.TeamHeader{
+  font-size: 1.8vw;
+  font-weight: bold;
+  margin-top: 9vw;
+  margin-left: 7vw;
+}
+.TeamHeader2 {
+  font-size: 2vw;
+  font-weight: bold;
+  color: #fc501e;
+  margin-left: 7vw;
+}
 .dotOrang {
   font-size: 1.8vw;
   font-weight: bold;
@@ -514,7 +529,7 @@
 }
 .ImgWorkWithUs {
   border-radius: 100%;
-  background-color: rgb(183, 183, 183);
+  background-color: none;
   height: 5.5vw;
   width: 5.5vw;
 }
@@ -591,4 +606,47 @@
   font-weight: bold;
   color: #fc501e;
   margin-left: 2vw;
+}
+.AboutUsHeader{
+  font-size: 1.8vw;
+  font-weight: bold;
+}
+.AboutUsHeader2{
+  font-size: 2vw;
+  font-weight: bold;
+  color: #fc501e;
+}
+.TitleTechstack{
+  font-size: 3.5vw;
+  font-weight: bold;
+}
+.DetailTechstack{
+  font-size: 1.9vw;
+  font-weight: bold;
+}
+.TitleTech{
+  text-align: center;
+  font-size: 1.4vw;
+  background: #ff990f;
+  border-radius: 99999999px;
+  margin: 15% 1.25em;
+  padding: 6px;
+  display: inline-block;
+  color: rgb(252, 252, 252);
+  letter-spacing: 1px;
+  width: 11vw;
+  height: 2.5vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  text-decoration: none;
+}
+.DetailTech{
+  font-size: 1vw;
+  color: #404040;
+}
+.shadowBox{
+  box-shadow: 1px 5px 7px #aaa8a8;
 }

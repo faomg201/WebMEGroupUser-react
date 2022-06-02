@@ -140,13 +140,13 @@ export default function Works() {
                             return (
                               <div>
                                 <FadeIn delay={index * 100}>
-                                  <div class="col" style={{ width: '19.5vw' }}>
+                                  <div class="col" style={{ width: '19.5vw'}}>
                                     <div class="card borderCard cardCardHover">
                                       {!item.goal_img ?
                                         <img src={imgEMT} width="100%" /> :
                                         <img
                                           src={staticpath}
-                                          style={{ borderRadius: '30px 30px 30px 30px' }}
+                                          style={{ borderRadius: '30px',height: '22vw' }}
                                         />
                                       }
                                       <div className="" onClick={() => PopUp(index)} id={workID(index)} style={{

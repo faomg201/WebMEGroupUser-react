@@ -5,6 +5,7 @@ import Tilt from 'react-tilt'
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-scroll'
 import { NavBarHome } from "./NavBarHome";
+import AllPage from "./AllPage";
 
 const Home = () => {
 	const histotyH = useNavigate();
@@ -13,7 +14,7 @@ const Home = () => {
 	}
 	return (
 		<>
-			<div className="marO ResPage">
+			<div className="marO ResPage" id="HomeScroll">
 				<div className='HiddenOBJ'>
 					<NavBarHome />
 				</div>				
@@ -29,12 +30,9 @@ const Home = () => {
 					<div className="marSpTop2 easeForwards ResDisplayNone">
 						{/* <a class="bgBt " onClick={() => {isLink('serve')}} role="button" >บริการ</a> */}
 						<Link to="ContactScroll" spy={true} ><a class="bgBt " onClick={() => { isLink('allpage') }} role="button" >บริการ</a></Link>
-						<a class="bgBt " onClick={() => { isLink('goals') }} role="button" >ผลงาน</a>
-						<a class="bgBt " onClick={() => { isLink('abouts') }} role="button">เกี่ยวกับเรา</a>
-						<a class="bgBt " onClick={() => { isLink('#ServeScroll') }} role="button">ติดต่อเรา</a>
-					</div>
-					<div>
-						<br /><br /><br />
+						<Link to="WorksScroll" spy={true} ><a class="bgBt" >ผลงาน</a></Link>
+						<Link to="AboutsScroll" spy={true} ><a class="bgBt" >เกี่ยวกับเรา</a></Link>
+						<Link to="ContactScroll" spy={true} ><a class="bgBt" >ติดต่อเรา</a></Link>
 					</div>
 					<div class="slider-wrapper marginTopRes">
 						<div class="slider">
@@ -50,6 +48,7 @@ const Home = () => {
 
 				</div>
 			</div>
+			<AllPage/>
 		</>
 	)
 }

@@ -1,7 +1,7 @@
 .marO {
   background-color: #FE5000;
   font-family: "SukhumvitSet-Text";
-  min-height: 100vh;
+  min-height: 50vw;
 }
 .marB {
   background-color: #404040;
@@ -148,7 +148,7 @@ div{
 .bgBt {
   background: #f96019;
   margin: 0 0.6em;
-  font-size: 1.4vw;
+  font-size: 1.3vw;
   padding: 6px;
   display: inline-block;
   color: rgb(252, 252, 252);

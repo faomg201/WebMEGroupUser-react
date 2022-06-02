@@ -4,6 +4,7 @@ import axios from 'axios';
 import FadeIn from 'react-fade-in';
 import imgEMT from '../../src/assets/Img/default-placeholder.png'
 import imgCR from '../../src/assets/Img/Path10.png'
+import imagesolution from './imagesolution'
 
 export default function Serve() {
   const [Service, fetchService] = useState([])
@@ -75,7 +76,6 @@ export default function Serve() {
           </div>
         ) : (
           <>
-
             <div className='' style={{ height: '130vw' }}>
               <br />
               <p className='OutServiceHeader'>our service
@@ -87,8 +87,40 @@ export default function Serve() {
                   height: '0px'
                 }}><img src={imgCR} width="100%" />
 
+
                   <div class="row CardOutService ">
-                    <div>
+                    {ServiceUs.map((item, index) => {
+                      const staticpath = 'http://157.245.203.125:8000/static/serviceUs/' + item.serviceUs_name + ',' + item.serviceUs_img
+                      return (
+                        <>
+                          <div>
+                            <div class="col " style={{ width: '18vw' }}>
+                              <div className='OutService' style={{ height: '10vw' }}></div>
+                              <div class="card borderCard cardCardHover ">
+                                <div className="" style={{
+                                  position: 'absolute', bottom: '5.9vw', left: 0, right: 0,
+                                  backgroundColor: 'none'
+                                }}>
+                                  <p class="NameOutService">{item.serviceUs_name}</p>
+                                </div>
+                                <div className="" style={{
+                                  position: 'absolute', bottom: '0.8vw', left: '34%', right: 0,
+                                  backgroundColor: 'none'
+                                }}>
+                                  <div class='Imgcircle' >
+                                    {!item.serviceUs_img ?
+                                      <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }}/> :
+                                      <img src={staticpath} width="100%" style={{ borderRadius: '100%' }} />
+                                    }
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </>
+                      );
+                    })}
+                    {/* <div>
                       <div class="col " style={{ width: '18vw' }}>
                         <div className='OutService' style={{ height: '10vw' }}></div>
                         <div class="card borderCard cardCardHover ">
@@ -103,7 +135,7 @@ export default function Serve() {
                             backgroundColor: 'none'
                           }}>
                             <div class='Imgcircle' >
-                              <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }}/>
+                              <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }} />
                             </div>
                           </div>
                         </div>
@@ -124,7 +156,7 @@ export default function Serve() {
                             backgroundColor: 'none'
                           }}>
                             <div class='Imgcircle' >
-                              <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }}/>
+                              <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }} />
                             </div>
                           </div>
                         </div>
@@ -145,7 +177,7 @@ export default function Serve() {
                             backgroundColor: 'none'
                           }}>
                             <div class='Imgcircle' >
-                              <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }}/>
+                              <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }} />
                             </div>
                           </div>
                         </div>
@@ -166,7 +198,7 @@ export default function Serve() {
                             backgroundColor: 'none'
                           }}>
                             <div class='Imgcircle' >
-                              <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }}/>
+                              <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }} />
                             </div>
                           </div>
                         </div>
@@ -187,12 +219,12 @@ export default function Serve() {
                             backgroundColor: 'none'
                           }}>
                             <div class='Imgcircle' >
-                              <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }}/>
+                              <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }} />
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -206,7 +238,7 @@ export default function Serve() {
                   height: '0px'
                 }}>
                   <div class="row CardWorkWithUs">
-                    {num.map(num => (
+                    {num.map((num, index) => (
                       <>
                         <div>
                           <div class="col " style={{ width: '13vw' }}>
@@ -235,10 +267,10 @@ export default function Serve() {
                                 <div class='ImgBoxNum'><p className='NumWWU'>{num}.</p></div>
                               </div>
                               <div className="" style={{
-                                position: 'absolute', bottom: '-2.4vw', left: '79%', right: 0, transition: '0.5s ease'
+                                position: 'absolute', bottom: '-2.4vw', left: '70%', right: 0, transition: '0.5s ease'
                               }}>
                                 <div class='ImgWorkWithUs' >
-                                <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }}/>
+                                  <img src={imagesolution[index].src} width="100%" />
                                 </div>
                               </div>
                             </div>
@@ -255,8 +287,8 @@ export default function Serve() {
               <div className="col-12">
                 <div
                   id="carouselExampleIndicators"
-                className="carousel slide"
-                data-bs-ride="carousel"
+                  className="carousel slide"
+                  data-bs-ride="carousel"
                 >
                   <FadeIn>
                     <div className="carousel-inner ">
@@ -294,7 +326,7 @@ export default function Serve() {
                                         <div className='col-10 TextHeadOutSolution' align='left'>{Service[0]?.service_name}</div>
                                         <div className='col-10' align='left'>
                                           <p className='textInfoSer' style={{ marginTop: '2%' }}>
-                                            <span className='TexeIf'>ถ้า</span><span>คุณคือ</span> <span className='TextHeadIf'>{Service[0]?.service_name}</span>
+                                            <span>ถ้าคุณคือ {Service[0]?.service_name}</span>
                                             <p><span>ที่</span><span>{Service[0]?.service_detail}</span></p>
                                           </p>
                                         </div>
@@ -351,7 +383,7 @@ export default function Serve() {
                                               <div className='col-10 TextHeadOutSolution' align='left'>{item.service_name}</div>
                                               <div className='col-10' align='left'>
                                                 <p className='textInfoSer' style={{ marginTop: '2%' }}>
-                                                  <span className='TexeIf'>ถ้า</span><span>คุณคือ</span> <span className='TextHeadIf'>{item.service_name}</span>
+                                                  <span>ถ้าคุณคือ {item.service_name}</span>
                                                   <p><span>ที่</span><span>{item.service_detail}</span></p>
                                                 </p>
                                               </div>
@@ -570,7 +602,7 @@ export default function Serve() {
                       data-bs-target="#carouselExampleIndicators"
                       data-bs-slide="next"
                     >
-                       <span
+                      <span
                         className="carousel-control-next-icon sizepre-next"
                         aria-hidden="true"
                       ></span>
