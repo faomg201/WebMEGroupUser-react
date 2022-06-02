@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { TopbarContact } from "./TopbarContact";
+import imgEMT from '../../src/assets/Img/default-placeholder.png'
 
 import axios from 'axios';
 import {
@@ -86,7 +87,44 @@ export default function Contact() {
         </div>
       ) : (
         <div>
-          <div align="center" style={{minHeight: '100vh'}}>
+
+          <svg width="1167" height="811" viewBox="0 0 1167 811" fill="url(#img1)" xmlns="http://www.w3.org/2000/svg" >
+
+            <path d="M743.426 808.179C1133.27 756.326 1319.54 115.16 1014.3 21.245C709.065 -72.6697 696.492 186.376 183.993 144.877C-328.507 103.378 353.581 860.032 743.426 808.179Z"  />
+           
+              <pattern id="img1" width="1" height="1">
+              <image id="img1"
+              href=
+              "https://www.rd.com/wp-content/uploads/2021/01/GettyImages-1175550351.jpg"
+              width="100%" height="100%" />
+              </pattern>
+            
+          </svg>
+
+          <div className=''>
+            <p className='TeamHeader'>our blog
+              <span className='dotOrang'>.</span></p>
+            <p class="TeamHeader2">บล็อกของเรา</p>
+            <p style={{ marginLeft: '9vw', fontSize: '1.2vw' }}>รู้จักเราให้มากขึ้นผ่านประสบการณ์ของเรา</p>
+            <div class="container bg-warning">
+              <div class="col" style={{ marginTop: '5%', marginLeft: '1%' }}>
+              </div>
+              <div class="sliderMedium">
+                <div>
+                  <div className='' style={{ height: '20vw' }}>
+                    <img src={imgEMT} width="100%" style={{ height: '15vw', width: '15vw', borderRadius: '100%' }} />
+                    <div style={{ marginTop: '8%' }}>
+                      <h class="textNEMP" >d</h>
+                      <p class="textNEMP_Mbti_Q" >d</p>
+                      <p class="textNEMP_Mbti_Q" style={{ marginTop: '-5%' }}>d</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div style={{ minHeight: '100vh' }}>
             {/* <div class="row" >
               <div class="col-12" style={{ marginTop: '10%' }}>
                 <h class="textHead">บล็อกของเรา</h><hr class="line Cline"></hr>
@@ -126,9 +164,10 @@ export default function Contact() {
               </div>
             </div> */}
             <div class="row" >
-              <div class="col-12 " style={{ marginTop: '10%' }}>
-                <p class="textHead marginTopResContact">ติดต่อเรา</p><hr class="line Cline ResDisplayNone"></hr>
-              </div>
+              <p className='OutServiceHeader'>contact us
+                <span className='dotOrang'>.</span></p>
+              <p class="OutServiceHeader2">ติดต่อเรา</p>
+
               <div class="col-12">
                 {Location.map((item) => {
                   function Map() {
@@ -152,7 +191,7 @@ export default function Contact() {
                     <div class="row">
                       <div class="container">
                         <div className="row marSpRight4" align='left'>
-                          <div class="col-12 marginDisTopcon1" >
+                          <div class="col-12 marginDisTopcon1" style={{ marginLeft: '3vw' }}>
                             <p><span className='TextContactHsub'>โทร {item.enterprise_phone}</span></p>
                             <p><span className='TextContactHsub'>สามารถติดต่อเราได้ {item.enterprise_servicetime}</span></p>
                           </div>
@@ -160,7 +199,7 @@ export default function Contact() {
                         <FadeIn>
                           <div class="row justify-content-md-center ResDisplayNone">
                             <div class="col-1"></div>
-                            <div class="col-4">
+                            <div class="col-4 ">
                               <div style={{ width: "50vm", height: "30vw" }} >
                                 <WrappendMap
                                   googleMapURL={
@@ -174,21 +213,21 @@ export default function Contact() {
                                     <div style={{ height: "100%" }} />
                                   }
                                   mapElement={
-                                    <div style={{ height: "100%", borderRadius: '50px 50px 50px 50px' }} />
+                                    <div style={{ height: "100%", borderRadius: '50px' }} className='shadowBox' />
                                   }
                                 />
                               </div>
                             </div>
-                            <div class="col-6 bg-light" style={{ borderRadius: '50px 50px 50px 50px' }} align='left'>
+
+                            <div class="col-6 shadowBox" style={{ borderRadius: '50px' }} align='left' >
                               <div className="marSpTop3">
-                                <p><span className='TextContactHsub'>ชื่อนิติบุคคลผู้เสียภาษี</span>
-                                  <span className='tab textInfo'>{item.enterprise_facebook}</span></p>
+                                <p><span className='TextContactHsub'>ชื่อนิติบุคคลผู้เสียภาษี</span></p>
                                 <p>
                                   <span className='TextContactHsub'>ที่อยู่</span> &nbsp; <span className='textInfo'>{item.enterprise_address}</span>
                                 </p>
                                 <p>
-                                  <span className='TextContactHsub'>เวลาทำการ</span>
-                                  <span className='tab'></span> &nbsp;<span className='textInfo'>{item.enterprise_servicetime}</span>
+                                  <span className='TextContactHsub'>เวลาทำการ</span><br />
+                                  <span className='tab'></span><span className='textInfo'>{item.enterprise_servicetime}</span>
                                 </p>
                                 <div align='center' className='marginTopCon'><a class="buttonSend" role="button" >ส่งข้อความ</a></div>
                               </div>
@@ -210,12 +249,12 @@ export default function Contact() {
                                     <div style={{ height: "100%" }} />
                                   }
                                   mapElement={
-                                    <div style={{ height: "100%"}} />
+                                    <div style={{ height: "100%" }} />
                                   }
                                 />
                               </div>
                             </div>
-                            <div class="col-12 bg-light" align='left' style={{ height: "30vh"}}>
+                            <div class="col-12 bg-light" align='left' style={{ height: "30vh" }}>
                               <div className="marSpTop3">
                                 <p><span className='TextContactHsub'><b>ชื่อนิติบุคคลผู้เสียภาษี</b></span>
                                   <span className='tab textInfo'>{item.enterprise_facebook}</span></p>

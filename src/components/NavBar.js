@@ -10,7 +10,7 @@ export const NavBar = () => {
     // const 
     return (
         <>
-            <nav class="navbar fixed-top navbar-expand-lg navbar-light BGLightNav">
+            <nav class="navbar sticky-top navbar-expand-lg navbar-light BGLightNav">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -18,7 +18,8 @@ export const NavBar = () => {
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav">
                             <li className="nav-item HiddenResfixed marginNav">
-                                <a className="nav-link hoverBarBgBlack marginNav" onClick={() => { isLink('') }}>หน้าแรก</a>
+                                {/* <a className="nav-link hoverBarBgBlack marginNav" onClick={() => { isLink('') }}>หน้าแรก</a> */}
+                                <Link to="HomeScroll" spy={true} ><a className="nav-link hoverBarBgBlack" >หน้าแรก</a></Link>
                             </li>
                             <li className="nav-item HiddenResfixed">
                                 <Link to="ServeScroll" spy={true} ><a className="nav-link hoverBarBgWhite" >บริการ</a></Link>
