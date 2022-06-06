@@ -5,7 +5,12 @@ import Tilt from 'react-tilt'
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-scroll'
 import { NavBarHome } from "./NavBarHome";
-import AllPage from "./AllPage";
+import { NavBar } from "./NavBar";
+
+import Serve from "./Serve";
+import Works from "./Works";
+import Abouts from "./Abouts";
+import Contact from "./Contact";
 
 const Home = () => {
 	const histotyH = useNavigate();
@@ -29,7 +34,7 @@ const Home = () => {
 					</Tilt>
 					<div className="marSpTop2 easeForwards ResDisplayNone">
 						{/* <a class="bgBt " onClick={() => {isLink('serve')}} role="button" >บริการ</a> */}
-						<Link to="ContactScroll" spy={true} ><a class="bgBt " onClick={() => { isLink('allpage') }} role="button" >บริการ</a></Link>
+						<Link to="ServeScroll" spy={true} ><a class="bgBt">บริการ</a></Link>
 						<Link to="WorksScroll" spy={true} ><a class="bgBt" >ผลงาน</a></Link>
 						<Link to="AboutsScroll" spy={true} ><a class="bgBt" >เกี่ยวกับเรา</a></Link>
 						<Link to="ContactScroll" spy={true} ><a class="bgBt" >ติดต่อเรา</a></Link>
@@ -48,7 +53,19 @@ const Home = () => {
 
 				</div>
 			</div>
-			<AllPage/>
+			<NavBar />
+            <div id="ServeScroll" style={{ overflow: 'hidden' }}>
+                <Serve />
+            </div>
+            <div id="WorksScroll" style={{ overflow: 'hidden' }}>
+                <Works />
+            </div>
+            <div id="AboutsScroll" style={{ overflow: 'hidden' }}>
+                <Abouts />
+            </div>
+            <div id="ContactScroll" style={{ overflow: 'hidden' }}>
+                <Contact />
+            </div>
 		</>
 	)
 }

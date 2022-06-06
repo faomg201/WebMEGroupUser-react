@@ -1,10 +1,10 @@
 .hoverBarBgWhite {
-  color: #ff9300 !important;;
+  color: #ff9300 !important;
   transition: 0.5s;
   font-size: 1.5vw;
 }
 .hoverBarBgWhite:hover {
-  color: #f6851483;
+  color: #f6851483!important;
   transition: 0.5s;
 }
 .hoverBarBgWhitebord {
@@ -19,12 +19,12 @@
 }
 
 .hoverBarBgBlack {
-  color: #ffffff;
+  color: #ff8000 !important ;
   transition: 0.5s;
   font-size: 1.5vw;
 }
 .hoverBarBgBlack:hover {
-  color: #f6851483;
+  color: #f6851483!important;
   transition: 0.5s;
 }
 .hoverBarBgBlackBord {

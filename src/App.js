@@ -9,7 +9,6 @@ import Works from './components/Works';
 import  Serve  from './components/Serve';
 import Abouts from './components/Abouts';
 import Contact from './components/Contact';
-import AllPage from './components/AllPage';
 
 import Workbyid from './components/Workbyid';
 class App extends Component {
@@ -28,7 +27,6 @@ class App extends Component {
           <Route path='/goals' element={<Works/>}/>
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/goals/:id' element={<Workbyid/>}/>
-          <Route path='/allpage' element={<AllPage/>}/>
         </Routes>
       </Router>
       // <div className='App'>

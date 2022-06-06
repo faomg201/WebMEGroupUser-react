@@ -19,24 +19,24 @@ export default function Contact() {
   // console.log(mediumData?.feed.image);
   // console.log(mediumData?.items[0].author);
   // console.log(mediumData.data.feed.image);
-  console.log(LinkBlog);
+  // console.log(LinkBlog);
+  const APIURL = process.env.REACT_APP_APIURL;
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      console.log('This will run after 5 second!')
     }, 3000);
     getData()
     return () => clearTimeout(timer);
 
   }, [])
   const getData = () => {
-    axios.get('http://157.245.203.125:8000/contractus')
+    axios.get(APIURL+`/contractus`)
       .then((res) => {
         setStatus(true);
         // console.log(res)
         fetchLocation(res.data.data)
       })
-    // axios.get('http://157.245.203.125:8000/MyBlog')
+    // axios.get(APIURL+`/MyBlog`)
     //   .then((res) => {
     //     setStatus(true);
     //     fetchLinkBlog(res.data.data)
@@ -86,21 +86,7 @@ export default function Contact() {
           </body>
         </div>
       ) : (
-        <div>
-
-          <svg width="1167" height="811" viewBox="0 0 1167 811" fill="url(#img1)" xmlns="http://www.w3.org/2000/svg" >
-
-            <path d="M743.426 808.179C1133.27 756.326 1319.54 115.16 1014.3 21.245C709.065 -72.6697 696.492 186.376 183.993 144.877C-328.507 103.378 353.581 860.032 743.426 808.179Z"  />
-           
-              <pattern id="img1" width="1" height="1">
-              <image id="img1"
-              href=
-              "https://www.rd.com/wp-content/uploads/2021/01/GettyImages-1175550351.jpg"
-              width="100%" height="100%" />
-              </pattern>
-            
-          </svg>
-
+        <>
           <div className=''>
             <p className='TeamHeader'>our blog
               <span className='dotOrang'>.</span></p>
@@ -278,7 +264,7 @@ export default function Contact() {
               <div className='ResDisplayNone' style={{ marginTop: '5%' }}></div>
             </div>
           </div>
-        </div>
+        </>
       )
       }
     </div >
