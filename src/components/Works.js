@@ -15,22 +15,23 @@ export default function Works() {
   const [Services, fetchServices] = useState([])
   const [status, setStatus] = useState(false);
 
+  const APIURL = process.env.REACT_APP_APIURL;
+
   useEffect(() => {
     const timer = setTimeout(() => {
-      console.log('This will run after 5 second!')
     }, 3000);
     getData()
     return () => clearTimeout(timer);
 
   }, [])
   const getData = () => {
-    axios.get('http://157.245.203.125:8000/services')
+    axios.get(APIURL+`/services`)
       .then((res) => {
         setStatus(true);
         // console.log(res)
         fetchServices(res.data.data)
       })
-    axios.get('http://157.245.203.125:8000/webgoals')
+    axios.get(APIURL+`/webgoals`)
       .then((res) => {
         setStatus(true);
         // console.log(res)
@@ -106,10 +107,9 @@ export default function Works() {
               `}</style>
           <div class="PageFullvh" align="center">
             <div class="row" >
-
               <div class="col-12">
                 <div class="container" style={{ marginLeft: '3.5vw' }}>
-                  <div class="col-12" style={{ marginTop: '10%' }} align="left">
+                  <div class="col-12" style={{ marginTop: '5%' }} align="left">
                     <p className='ourWorksHeader'>our works
                       <span className='dotOrang'>.</span></p>
                     <p class="ourWorksHeader2">ผลงานของเรา</p>
@@ -128,9 +128,8 @@ export default function Works() {
                           {Goals.map((item, index) => {
                             if (itemSer.service_name !== item.service_name)
                               return;
-                            console.log(Goals);
                             const staticpath =
-                              "http://157.245.203.125:8000/static/goals/" +
+                              APIURL+`/static/goals/` +
                               item.goal_title +
                               "," +
                               item.goal_img;

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { TopbarService } from "./TopbarService";
 import axios from 'axios';
 import FadeIn from 'react-fade-in';
 import imgEMT from '../../src/assets/Img/default-placeholder.png'
@@ -10,23 +9,23 @@ export default function Serve() {
   const [Service, fetchService] = useState([])
   const [ServiceUs, fetchServiceUs] = useState([])
   const [status, setStatus] = useState(false);
+  const APIURL = process.env.REACT_APP_APIURL;
   useEffect(() => {
     const timer = setTimeout(() => {
-      console.log('This will run after 5 second!')
     }, 5000);
     getData()
     return () => clearTimeout(timer);
 
   }, [])
   const getData = () => {
-    axios.get('http://157.245.203.125:8000/services')
+    axios.get(APIURL+`/services`)
       .then((res) => {
         setStatus(true);
         // console.log(res)
         fetchService(res.data.data)
         // console.log(res.data.data);
       })
-    axios.get('http://157.245.203.125:8000/serviceus')
+    axios.get(APIURL+`/serviceus`)
       .then((res) => {
         setStatus(true);
         // console.log(res)
@@ -90,7 +89,7 @@ export default function Serve() {
 
                   <div class="row CardOutService ">
                     {ServiceUs.map((item, index) => {
-                      const staticpath = 'http://157.245.203.125:8000/static/serviceUs/' + item.serviceUs_name + ',' + item.serviceUs_img
+                      const staticpath = APIURL+`/static/serviceUs/` + item.serviceUs_name + ',' + item.serviceUs_img
                       return (
                         <>
                           <div>
@@ -109,7 +108,7 @@ export default function Serve() {
                                 }}>
                                   <div class='Imgcircle' >
                                     {!item.serviceUs_img ?
-                                      <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }}/> :
+                                      <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }} /> :
                                       <img src={staticpath} width="100%" style={{ borderRadius: '100%' }} />
                                     }
                                   </div>
@@ -242,8 +241,9 @@ export default function Serve() {
                       <>
                         <div>
                           <div class="col " style={{ width: '13vw' }}>
-                            <div className='OutService' style={{ height: '15vw' }}></div>
-                            <div class="card borderCard cardCardHover ">
+                            <div className='OutService' style={{ height: '0vw' }}></div>
+                            <img src={imagesolution[index].src} width="100%" />
+                            {/* <div class="card borderCard cardCardHover ">
                               <div className="" style={{
                                 position: 'absolute', bottom: '10.5vw', left: 0, right: 0,
                                 backgroundColor: 'none'
@@ -273,7 +273,7 @@ export default function Serve() {
                                   <img src={imagesolution[index].src} width="100%" />
                                 </div>
                               </div>
-                            </div>
+                            </div> */}
                           </div>
                         </div>
                       </>
@@ -287,8 +287,8 @@ export default function Serve() {
               <div className="col-12">
                 <div
                   id="carouselExampleIndicators"
-                  className="carousel slide"
-                  data-bs-ride="carousel"
+                className="carousel slide"
+                data-bs-ride="carousel"
                 >
                   <FadeIn>
                     <div className="carousel-inner ">
@@ -303,12 +303,26 @@ export default function Serve() {
                                 <div className="row justify-content-md-center" >
 
                                   <div style={{ marginTop: '1%' }}></div>
+                                  <div className="col-1" ></div>
                                   <div className="col-4" >
                                     <div className='' style={{ height: '100%' }}>
-                                      {!Service[0]?.service_img ?
+                                      <svg width="37vw" viewBox="0 0 1167 811" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M743.426 808.179C1133.27 756.326 1319.54 115.16 1014.3 21.245C709.065 -72.6697 696.492 186.376 183.993 144.877C-328.507 103.378 353.581 860.032 743.426 808.179Z" fill='url(#img1)' />
+                                        <pattern id="img1" width="1" height="1">
+                                          {/* <image 
+                                            href={imgEMT}
+                                            width="1167" height="811" /> */}
+                                          <image href={APIURL+`/static/services/` +
+                                            Service[0]?.service_name +
+                                            "," +
+                                            Service[0]?.service_img} width="100%" />
+                                        </pattern>
+
+                                      </svg>
+                                      {/* {!Service[0]?.service_img ?
                                         <img src={imgEMT} width="100%" /> : <img
                                           src={
-                                            "http://157.245.203.125:8000/static/services/" +
+                                            APIURL+`/static/services/` +
                                             Service[0]?.service_name +
                                             "," +
                                             Service[0]?.service_img
@@ -316,9 +330,10 @@ export default function Serve() {
                                           style={{ borderRadius: '100%' }}
 
                                         />
-                                      }
+                                      } */}
                                     </div>
                                   </div>
+                                  <div className="col-1" ></div>
                                   <div className="col-6 " >
                                     {/* bg-warning */}
                                     <div className='' style={{ borderRadius: '30px', height: '100%' }}>
@@ -346,9 +361,9 @@ export default function Serve() {
                       </div>
                       {Service
                         .filter((f, idx) => idx > 0)
-                        .map((item) => {
+                        .map((item,index) => {
                           const staticpath =
-                            "http://157.245.203.125:8000/static/services/" +
+                            APIURL+`/static/services/` +
                             item.service_name +
                             "," +
                             item.service_img;
@@ -364,18 +379,27 @@ export default function Serve() {
                                       <div className="row justify-content-md-center" >
 
                                         <div style={{ marginTop: '1%' }}></div>
+                                        <div className="col-1" ></div>
                                         <div className="col-4" >
                                           <div className='' style={{ height: '100%' }}>
-                                            <div className='' style={{ height: '100%' }}>
+                                            <svg width="37vw" viewBox="0 0 1167 811" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path d="M743.426 808.179C1133.27 756.326 1319.54 115.16 1014.3 21.245C709.065 -72.6697 696.492 186.376 183.993 144.877C-328.507 103.378 353.581 860.032 743.426 808.179Z" fill={`url(#${index})`} />
+                                              <pattern id={(index)} width="1" height="1">
+                                              <image href={staticpath} width="100%" />
+                                              </pattern>
+
+                                            </svg>
+                                            {/* <div className='' style={{ height: '100%' }}>
                                               {!item.service_img ?
                                                 <img src={imgEMT} width="100%" /> : <img
                                                   src={staticpath}
                                                   width="100%" style={{ borderRadius: '100%' }}
                                                 />
                                               }
-                                            </div>
+                                            </div> */}
                                           </div>
                                         </div>
+                                        <div className="col-1" ></div>
                                         <div className="col-6 " >
                                           <div className='col-6'></div>
                                           <div className='bg-none' style={{ borderRadius: '30px', height: '100%' }}>
@@ -443,7 +467,7 @@ export default function Serve() {
                   <div className="container" style={{ marginTop: '10%' }}>
                     <div className='row justify-content-md-center gap-3'>
                       {ServiceUs.map((item, index) => {
-                        const staticpath = 'http://157.245.203.125:8000/static/serviceUs/' + item.serviceUs_name + ',' + item.serviceUs_img
+                        const staticpath = APIURL+`/static/serviceUs/` + item.serviceUs_name + ',' + item.serviceUs_img
                         return (
                           <>
                             <div style={{ width: '23vw' }}>
@@ -514,7 +538,7 @@ export default function Serve() {
                                         {!Service[0]?.service_img ?
                                           <img src={imgEMT} width="100%" /> : <img
                                             src={
-                                              "http://157.245.203.125:8000/static/services/" +
+                                              APIURL+`/static/services/` +
                                               Service[0]?.service_name +
                                               "," +
                                               Service[0]?.service_img
@@ -537,7 +561,7 @@ export default function Serve() {
                           .filter((f, idx) => idx > 0)
                           .map((item) => {
                             const staticpath =
-                              "http://157.245.203.125:8000/static/services/" +
+                              APIURL+`/static/services/` +
                               item.service_name +
                               "," +
                               item.service_img;

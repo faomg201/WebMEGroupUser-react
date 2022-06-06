@@ -8,28 +8,31 @@ export default function Abouts() {
   const [Enterprises, fetchEnterprises] = useState([])
   const [aboutUsImg, fetchaboutUsImg] = useState([])
   const [status, setStatus] = useState(false);
+  const APIURL = process.env.REACT_APP_APIURL;
+  
   useEffect(() => {
     const timer = setTimeout(() => {
-      console.log('This will run after 5 second!')
     }, 3000);
     getData()
     return () => clearTimeout(timer);
 
   }, [])
+  // console.log( `${REACT_APP_APIURL}`);
   const getData = () => {
-    axios.get('http://157.245.203.125:8000/employees')
+    // ${REACT_APP_APIURL}
+    axios.get(APIURL+`/employees`)
       .then((res) => {
         setStatus(true);
         // console.log(res)
         fetchEmployees(res.data.data)
       })
-    axios.get('http://157.245.203.125:8000/enterprises')
+    axios.get(APIURL+`/enterprises`)
       .then((res) => {
         setStatus(true);
         // console.log(res)
         fetchEnterprises(res.data.data)
       })
-    axios.get('http://157.245.203.125:8000/aboutUs/image')
+    axios.get(APIURL+`/aboutUs/image`)
       .then((res) => {
         setStatus(true);
         // console.log(res)
@@ -78,14 +81,15 @@ export default function Abouts() {
 
       ) : (
         <>
-          <div class="bg-light ResDisplayNone">
-            <div class="row" >
+        
+          <div className="bg-light ResDisplayNone">
+            <div className="row" >
               <div className='col-7 radiusDetailAbout' style={{ height: '49.07vw' }}>
-                <div class="col" style={{ marginTop: '10%', marginLeft: '12%' }}>
+                <div className="col" style={{ marginTop: '5%', marginLeft: '12%' }}>
                   <p className='AboutUsHeader'>about us
                     <span className='dotOrang'>.</span></p>
-                  <p class="AboutUsHeader2">เกี่ยวกับเรา</p>
-                  <p class="DetailAbotus" style={{ marginTop: '5%' }}><span class="tab"></span>{Enterprises.enterprise_detail}
+                  <p className="AboutUsHeader2">เกี่ยวกับเรา</p>
+                  <p className="DetailAbotus" style={{ marginTop: '5%' }}><span className="tab"></span>{Enterprises.enterprise_detail}
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
                     has been the industry’s standard dummy text ever since the 1500s, when an unknown printer
                     took a galley of type and scrambled it to make a type specimen book. It has survived not only
@@ -96,34 +100,34 @@ export default function Abouts() {
                   </p>
                 </div>
               </div>
-              <div class="col-sm-5">
+              <div className="col-sm-5">
                 <div id="carouselExampleCaptions"
-                  class="carousel slide "
+                  className="carousel slide "
                   data-bs-ride="carousel"
                 >
-                  <div class="carousel-inner" style={{ height: '49.07vw' }}>
-                    <div class="carousel-item active">
-                      <div class="container" align="center">
+                  <div className="carousel-inner" style={{ height: '49.07vw' }}>
+                    <div className="carousel-item active">
+                      <div className="container" align="center">
                         {!aboutUsImg[0]?.image_name ?
                           <img src={imgEMT} width="100%" /> :
                           <img src={
-                            'http://157.245.203.125:8000/static/aboutUs/' +
+                            APIURL+`/static/aboutUs/` +
                             aboutUsImg[0]?.image_name
-                          } class="abotusImg" />
+                          } className="abotusImg" />
                         }
                       </div>
                     </div>
                     {
                       aboutUsImg.filter((f, idx) => idx > 0).map((item) => {
-                        const staticpath = 'http://157.245.203.125:8000/static/aboutUs/' + item.image_name
+                        const staticpath = APIURL+`/static/aboutUs/` + item.image_name
                         return (
-                          <div class="carousel-item">
-                            <div class="container" align="center">
+                          <div className="carousel-item">
+                            <div className="container" align="center">
                               {!item.image_name ?
                                 <img src={imgEMT} width="100%" /> :
                                 <img
                                   src={staticpath}
-                                  class="abotusImg"
+                                  className="abotusImg"
                                 />
                               }
                             </div>
@@ -131,60 +135,60 @@ export default function Abouts() {
                         );
                       })}
                   </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                    {/* <span class="carousel-control-prev-icon" aria-hidden="true"></span> */}
-                    <span class="visually-hidden">Previous</span>
+                  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    {/* <span className="carousel-control-prev-icon" aria-hidden="true"></span> */}
+                    <span className="visually-hidden">Previous</span>
                   </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                    {/* <span class="carousel-control-next-icon" aria-hidden="true"></span> */}
-                    <span class="visually-hidden">Next</span>
+                  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    {/* <span className="carousel-control-next-icon" aria-hidden="true"></span> */}
+                    <span className="visually-hidden">Next</span>
                   </button>
                 </div>
               </div>
             </div>
           </div>
-          <div class="bg-light HiddenOBJ">
-            <div class="row" >
+          <div className="bg-light HiddenOBJ">
+            <div className="row" >
               <div className='col-12 radiusDetailAbout' style={{ height: '58.41vw' }}>
-                <div class="col-12" style={{ marginTop: '15%' }} align='center'>
-                  <p class="textHeadWhite" >เกี่ยวกับเรา</p><hr align='center' class="line ClineAbout"></hr>
+                <div className="col-12" style={{ marginTop: '15%' }} align='center'>
+                  <p className="textHeadWhite" >เกี่ยวกับเรา</p><hr align='center' className="line ClineAbout"></hr>
                 </div>
-                <div class="row">
+                <div className="row">
                   <div className='col-1'></div>
-                  <div class="col-10">
-                    <p class="DetailAbotus"><span class="tab"></span>{Enterprises.enterprise_detail}</p>
+                  <div className="col-10">
+                    <p className="DetailAbotus"><span className="tab"></span>{Enterprises.enterprise_detail}</p>
                   </div>
                   <div className='col-1'></div>
                 </div>
               </div>
-              <div class="col-sm-12" >
+              <div className="col-sm-12" >
                 <div id="carouselExampleCaptions"
-                  class="carousel slide "
+                  className="carousel slide "
                   data-bs-ride="carousel"
                 >
-                  <div class="carousel-inner" >
-                    <div class="carousel-item active" >
-                      <div class="container" align="center">
+                  <div className="carousel-inner" >
+                    <div className="carousel-item active" >
+                      <div className="container" align="center">
                         {!aboutUsImg[0]?.image_name ?
                           <img src={imgEMT} width="100%" /> :
                           <img src={
-                            'http://157.245.203.125:8000/static/aboutUs/' +
+                            APIURL+`/static/aboutUs/` +
                             aboutUsImg[0]?.image_name
-                          } class="abotusImg" />
+                          } className="abotusImg" />
                         }
                       </div>
                     </div>
                     {
                       aboutUsImg.filter((f, idx) => idx > 0).map((item) => {
-                        const staticpath = 'http://157.245.203.125:8000/static/aboutUs/' + item.image_name
+                        const staticpath = APIURL+`/static/aboutUs/` + item.image_name
                         return (
-                          <div class="carousel-item">
-                            <div class="container" align="center">
+                          <div className="carousel-item">
+                            <div className="container" align="center">
                               {!item.image_name ?
                                 <img src={imgEMT} width="100%" /> :
                                 <img
                                   src={staticpath}
-                                  class="abotusImg"
+                                  className="abotusImg"
                                 />
                               }
                             </div>
@@ -192,13 +196,13 @@ export default function Abouts() {
                         );
                       })}
                   </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                    {/* <span class="carousel-control-prev-icon" aria-hidden="true"></span> */}
-                    <span class="visually-hidden">Previous</span>
+                  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    {/* <span className="carousel-control-prev-icon" aria-hidden="true"></span> */}
+                    <span className="visually-hidden">Previous</span>
                   </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                    {/* <span class="carousel-control-next-icon" aria-hidden="true"></span> */}
-                    <span class="visually-hidden">Next</span>
+                  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    {/* <span className="carousel-control-next-icon" aria-hidden="true"></span> */}
+                    <span className="visually-hidden">Next</span>
                   </button>
                 </div>
               </div>
@@ -207,16 +211,15 @@ export default function Abouts() {
           <div className=''>
             <p className='TeamHeader'>our team
                   <span className='dotOrang'>.</span></p>
-                <p class="TeamHeader2">ทีมของเรา</p>
-            <div class="container ">
-              <div class="col" style={{ marginTop: '10%', marginLeft: '1%' }}>
+                <p className="TeamHeader2">ทีมของเรา</p>
+            <div className="container ">
+              <div className="col" style={{ marginTop: '10%', marginLeft: '1%' }}>
                 
               </div>
-
               <br /><br />
-              <div class="sliderMedium">
+              <div className="sliderMedium">
                 {Employees.map((item) => {
-                  const staticpath = 'http://157.245.203.125:8000/static/employees/' + item.emp_fname + ',' + item.emp_lname + ',' + item.emp_img
+                  const staticpath = APIURL+`/static/employees/` + item.emp_fname + ',' + item.emp_lname + ',' + item.emp_img
                   // console.log(staticpath);
                   return (
                     < >
@@ -224,9 +227,9 @@ export default function Abouts() {
                         <div className='' style={{ height: '20vw' }}>
                           <img src={staticpath} width="100%" style={{ height: '15vw', width: '15vw', borderRadius: '100%' }} />
                           <div style={{ marginTop: '8%' }}>
-                            <h class="textNEMP" >{item.emp_fname} {item.emp_lname} #{item.mbti_name}</h>
-                            <p class="textNEMP_Mbti_Q" >{item.emp_class}</p>
-                            <p class="textNEMP_Mbti_Q" style={{ marginTop: '-5%' }}>{item.emp_quote}</p>
+                            <h className="textNEMP" >{item.emp_fname} {item.emp_lname} #{item.mbti_name}</h>
+                            <p className="textNEMP_Mbti_Q" >{item.emp_class}</p>
+                            <p className="textNEMP_Mbti_Q" style={{ marginTop: '-5%' }}>{item.emp_quote}</p>
                           </div>
                         </div>
                       </div>
@@ -239,15 +242,15 @@ export default function Abouts() {
           <div className='none' style={{ height: '50vw' }}>
             <p className='OutServiceHeader'>our technology
               <span className='dotOrang'>.</span></p>
-            <p class="OutServiceHeader2">ความเชี่ยวชาญของเรา</p>
-            <div class="card borderCard">
+            <p className="OutServiceHeader2">ความเชี่ยวชาญของเรา</p>
+            <div className="card borderCard">
               <div className="" style={{
                 position: 'absolute', bottom: '0vw', left: 0, right: 0,
                 height: '0px'
               }}>
                 <div>
-                  <div class="col " style={{ width: '40vw', marginLeft: '7vw' }}>
-                    <div class="card borderCard cardCardHover ">
+                  <div className="col " style={{ width: '40vw', marginLeft: '7vw' }}>
+                    <div className="card borderCard cardCardHover ">
                       <div className="" style={{
                         position: 'absolute', bottom: '-14vw', left: 0, right: 0,
                         backgroundColor: 'none'
@@ -263,7 +266,7 @@ export default function Abouts() {
                       </div>
                       <div className="" style={{ position: 'absolute', bottom: '-28vw', left: '13%', right: 0, height: '100%' }}>
                         <div className='col-12' >
-                          <a class="buttonSendOutSolution" role="button" >สอบถามเพิ่มเติม</a>
+                          <a className="buttonSendOutSolution" role="button" >สอบถามเพิ่มเติม</a>
                         </div>
                       </div>
                     </div>
@@ -271,21 +274,21 @@ export default function Abouts() {
                 </div>
               </div>
             </div>
-            <div class="card borderCard cardCardHover ">
+            <div className="card borderCard cardCardHover ">
               <div className="" style={{
                 position: 'absolute', bottom: '-24vw', left: '64%', right: 0,
                 height: '0px'
               }}>
-                <div class="row CardWorkWithUs">
+                <div className="row CardWorkWithUs">
                   <div>
-                    <div class="col " style={{ width: '14.5vw' }}>
+                    <div className="col " style={{ width: '14.5vw' }}>
                       <div className='OutService' style={{ height: '17vw' }}></div>
-                      <div class="card borderCard cardCardHover ">
+                      <div className="card borderCard cardCardHover ">
                         <div className="" style={{
                           position: 'absolute', bottom: '10.5vw', left: 0, right: 0,
                           backgroundColor: 'none'
                         }}>
-                          <p class="TitleTech" >Font-end</p>
+                          <p className="TitleTech" >Font-end</p>
                         </div>
                         {/* <div className="" style={{
                           position: 'absolute', bottom: '8vw', left: 0, right: 0,
@@ -293,7 +296,7 @@ export default function Abouts() {
                         }}>
                           <div className='row'>
                             <div className='col-1'></div>
-                            <div className='col-10'><p class="DetailWWU">detail</p></div>
+                            <div className='col-10'><p className="DetailWWU">detail</p></div>
                             <div className='col-1'></div>
                           </div>
                         </div> */}
@@ -306,16 +309,16 @@ export default function Abouts() {
                 position: 'absolute', bottom: '-23vw', left: '98%', right: 0,
                 height: '0px'
               }}>
-                <div class="row CardWorkWithUs">
+                <div className="row CardWorkWithUs">
                   <div>
-                    <div class="col " style={{ width: '14.5vw' }}>
+                    <div className="col " style={{ width: '14.5vw' }}>
                       <div className='OutService' style={{ height: '17vw' }}></div>
-                      <div class="card borderCard cardCardHover ">
+                      <div className="card borderCard cardCardHover ">
                         <div className="" style={{
                           position: 'absolute', bottom: '10.5vw', left: 0, right: 0,
                           backgroundColor: 'none'
                         }}>
-                          <p class="TitleTech">Platform</p>
+                          <p className="TitleTech">Platform</p>
                         </div>
                       </div>
                     </div>
@@ -326,16 +329,16 @@ export default function Abouts() {
                 position: 'absolute', bottom: '-24vw', left: '116%', right: 0,
                 height: '0px'
               }}>
-                <div class="row CardWorkWithUs">
+                <div className="row CardWorkWithUs">
                   <div>
-                    <div class="col " style={{ width: '14.5vw' }}>
+                    <div className="col " style={{ width: '14.5vw' }}>
                       <div className='OutService' style={{ height: '17vw' }}></div>
-                      <div class="card borderCard cardCardHover ">
+                      <div className="card borderCard cardCardHover ">
                         <div className="" style={{
                           position: 'absolute', bottom: '10.5vw', left: 0, right: 0,
                           backgroundColor: 'none'
                         }}>
-                          <p class="TitleTech">Back-end</p>
+                          <p className="TitleTech">Back-end</p>
                         </div>
                         {/* <div className="" style={{
                           position: 'absolute', bottom: '8vw', left: 0, right: 0,
@@ -343,7 +346,7 @@ export default function Abouts() {
                         }}>
                           <div className='row'>
                             <div className='col-1'></div>
-                            <div className='col-10'><p class="DetailWWU">detail</p></div>
+                            <div className='col-10'><p className="DetailWWU">detail</p></div>
                             <div className='col-1'></div>
                           </div>
                         </div> */}
@@ -356,24 +359,24 @@ export default function Abouts() {
                 position: 'absolute', bottom: '-3.5vw', left: '80%', right: 0,
                 height: '0px'
               }}>
-                <div class="row CardWorkWithUs">
+                <div className="row CardWorkWithUs">
                   <div>
-                    <div class="col " style={{ width: '14.5vw' }}>
+                    <div className="col " style={{ width: '14.5vw' }}>
                       <div className='OutService' style={{ height: '17vw' }}></div>
-                      <div class="card borderCard cardCardHover ">
+                      <div className="card borderCard cardCardHover ">
                         <div className="" style={{
                           position: 'absolute', bottom: '10.5vw', left: 0, right: 0,
                           backgroundColor: 'none'
                         }}>
-                          <p class="TitleTech">New tech</p>
+                          <p className="TitleTech">New tech</p>
                         </div>
                         <div className="" style={{
                           position: 'absolute', bottom: '4.5vw', left: 0, right: 0,
                           backgroundColor: 'none'
                         }}>
                           <div className='row' align='center '>
-                            <div className='col-6'><p class="DetailTech">machine learning</p></div>
-                            <div className='col-6'><p class="DetailTech">artificial intelligence</p></div>
+                            <div className='col-6'><p className="DetailTech">machine learning</p></div>
+                            <div className='col-6'><p className="DetailTech">artificial intelligence</p></div>
                             
                             
                           </div>
@@ -387,16 +390,16 @@ export default function Abouts() {
                 position: 'absolute', bottom: '-2.5vw', left: '107%', right: 0,
                 height: '0px'
               }}>
-                <div class="row CardWorkWithUs">
+                <div className="row CardWorkWithUs">
                   <div>
-                    <div class="col " style={{ width: '14.5vw' }}>
+                    <div className="col " style={{ width: '14.5vw' }}>
                       <div className='OutService' style={{ height: '17vw' }}></div>
-                      <div class="card borderCard cardCardHover ">
+                      <div className="card borderCard cardCardHover ">
                         <div className="" style={{
                           position: 'absolute', bottom: '10.5vw', left: 0, right: 0,
                           backgroundColor: 'none'
                         }}>
-                          <p class="TitleTech">Mobile</p>
+                          <p className="TitleTech">Mobile</p>
                         </div>
                         {/* <div className="" style={{
                           position: 'absolute', bottom: '8vw', left: 0, right: 0,
@@ -404,7 +407,7 @@ export default function Abouts() {
                         }}>
                           <div className='row'>
                             <div className='col-1'></div>
-                            <div className='col-10'><p class="DetailWWU">detail</p></div>
+                            <div className='col-10'><p className="DetailWWU">detail</p></div>
                             <div className='col-1'></div>
                           </div>
                         </div> */}
@@ -415,7 +418,6 @@ export default function Abouts() {
               </div>
             </div>
           </div>
-
         </>
       )
       }
