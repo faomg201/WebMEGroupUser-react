@@ -331,6 +331,7 @@ a {
 .marginTopRes {
   margin-top: 5%;
 }
+
 @media only screen and (max-width: 568px) {
   .marSpTop {
     margin-top: 35vh;
@@ -417,6 +418,7 @@ a {
     font-size: 2.5vw;
     color: #000000;
   }
+  
   .nav-link {
     display: block;
     padding: 3rem 1rem;

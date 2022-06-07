@@ -300,7 +300,7 @@ export default function Contact() {
                               </div>
                             </div>
 
-                            <div class="col-6 shadowBox" style={{ borderRadius: '50px' }} align='left' >
+                            <div class="col-6 shadowBox bg-light" style={{ borderRadius: '50px' }} align='left' >
                               <div className="marSpTop3">
                                 <p><span className='TextContactHsub'>ชื่อนิติบุคคลผู้เสียภาษี</span></p>
                                 <p>
@@ -315,7 +315,7 @@ export default function Contact() {
                             </div>
                             <div class="col-1"></div>
                           </div>
-                          <div class="row justify-content-md-center bg-light HiddenOBJ">
+                          <div class="row justify-content-md-center  HiddenOBJ">
                             <div class="col-12">
                               <div style={{ width: "100vw", height: "45vh" }} >
                                 <WrappendMap
@@ -335,7 +335,7 @@ export default function Contact() {
                                 />
                               </div>
                             </div>
-                            <div class="col-12 bg-light" align='left' style={{ height: "30vh" }}>
+                            <div class="col-12" align='left' style={{ height: "30vh" }}>
                               <div className="marSpTop3">
                                 <p><span className='TextContactHsub'><b>ชื่อนิติบุคคลผู้เสียภาษี</b></span>
                                   <span className='tab textInfo'>{item.enterprise_facebook}</span></p>
