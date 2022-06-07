@@ -156,8 +156,8 @@ export default function Works() {
                                           borderRadius: '30px',
                                           backgroundColor: 'white'
                                         }}>
-                                          <p class="card-text">{item.goal_title}</p>
-                                          <p class="description" align='left' >{item.goal_detail}      Lorem Ipsum is simply dummy text of the
+                                          <p class="card-text workTitle">{item.goal_title}</p>
+                                          <p class="description workDetail" align='left' >{item.goal_detail}      Lorem Ipsum is simply dummy text of the
                                             printing and typesetting industry. Lorem
                                             Ipsum has been the industry’s standard
                                             dummy text ever since the 1500s, when an

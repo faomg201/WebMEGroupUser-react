@@ -10,7 +10,7 @@ export const NavBar = () => {
     // const 
     return (
         <>
-            <nav class="navbar sticky-top navbar-expand-lg navbar-light BGLightNav">
+            <nav class="navbar sticky-top navbar-expand-lg navbar-light BGLightNav ResDisplayNone">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
