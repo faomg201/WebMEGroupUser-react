@@ -30,7 +30,7 @@ export default function Contact() {
 
   }, [])
   const getData = () => {
-    axios.get(APIURL+`/contractus`)
+    axios.get(APIURL + `/contractus`)
       .then((res) => {
         setStatus(true);
         // console.log(res)
@@ -92,21 +92,116 @@ export default function Contact() {
               <span className='dotOrang'>.</span></p>
             <p class="TeamHeader2">บล็อกของเรา</p>
             <p style={{ marginLeft: '9vw', fontSize: '1.2vw' }}>รู้จักเราให้มากขึ้นผ่านประสบการณ์ของเรา</p>
-            <div class="container bg-warning">
-              <div class="col" style={{ marginTop: '5%', marginLeft: '1%' }}>
-              </div>
-              <div class="sliderMedium">
-                <div>
+            <div class="container">
+              <div class="sliderBlog">
+                <div style={{ marginLeft: '1%'}}>
                   <div className='' style={{ height: '20vw' }}>
-                    <img src={imgEMT} width="100%" style={{ height: '15vw', width: '15vw', borderRadius: '100%' }} />
-                    <div style={{ marginTop: '8%' }}>
-                      <h class="textNEMP" >d</h>
-                      <p class="textNEMP_Mbti_Q" >d</p>
-                      <p class="textNEMP_Mbti_Q" style={{ marginTop: '-5%' }}>d</p>
+                    <div className='OurBlog' style={{ height: '20vw', width: '28vw' }}></div>
+                    <div className="card borderCard">
+                      <div className="" style={{
+                        position: 'absolute', bottom: '5.5vw', left: '0.98vw', right: 0,
+                        backgroundColor: 'none', width: '26vw', height: '13.5vw'
+                      }}>
+                        <img src={imgEMT} width="100%" style={{ height: '13.5vw' }} />
+                      </div>
+                      <div className="" style={{
+                        position: 'absolute', bottom: '0.8vw', left: '0.98vw', right: 0,
+                        backgroundColor: 'none'
+                      }}>
+                        <div class='ImgcircleBlog' >
+                          <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }} />
+                        </div>
+                      </div>
+                      <div className="" style={{
+                        position: 'absolute', bottom: '0.5vw', left: '-15vw', right: 0,
+                        backgroundColor: 'none'
+                      }}>
+                        <p class="NameBlog">Name</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-
+                <div>
+                  <div className='' style={{ height: '20vw' }}>
+                    <div className='OurBlog' style={{ height: '20vw', width: '28vw' }}></div>
+                    <div className="card borderCard">
+                      <div className="" style={{
+                        position: 'absolute', bottom: '5.5vw', left: '0.98vw', right: 0,
+                        backgroundColor: 'none', width: '26vw', height: '13.5vw'
+                      }}>
+                        <img src={imgEMT} width="100%" style={{ height: '13.5vw' }} />
+                      </div>
+                      <div className="" style={{
+                        position: 'absolute', bottom: '0.8vw', left: '0.98vw', right: 0,
+                        backgroundColor: 'none'
+                      }}>
+                        <div class='ImgcircleBlog' >
+                          <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }} />
+                        </div>
+                      </div>
+                      <div className="" style={{
+                        position: 'absolute', bottom: '0.5vw', left: '-15vw', right: 0,
+                        backgroundColor: 'none'
+                      }}>
+                        <p class="NameBlog">Name</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div className='' style={{ height: '20vw' }}>
+                    <div className='OurBlog' style={{ height: '20vw', width: '28vw' }}></div>
+                    <div className="card borderCard">
+                      <div className="" style={{
+                        position: 'absolute', bottom: '5.5vw', left: '0.98vw', right: 0,
+                        backgroundColor: 'none', width: '26vw', height: '13.5vw'
+                      }}>
+                        <img src={imgEMT} width="100%" style={{ height: '13.5vw' }} />
+                      </div>
+                      <div className="" style={{
+                        position: 'absolute', bottom: '0.8vw', left: '0.98vw', right: 0,
+                        backgroundColor: 'none'
+                      }}>
+                        <div class='ImgcircleBlog' >
+                          <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }} />
+                        </div>
+                      </div>
+                      <div className="" style={{
+                        position: 'absolute', bottom: '0.5vw', left: '-15vw', right: 0,
+                        backgroundColor: 'none'
+                      }}>
+                        <p class="NameBlog">Name</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div className='' style={{ height: '20vw' }}>
+                    <div className='OurBlog' style={{ height: '20vw', width: '28vw' }}></div>
+                    <div className="card borderCard">
+                      <div className="" style={{
+                        position: 'absolute', bottom: '5.5vw', left: '0.98vw', right: 0,
+                        backgroundColor: 'none', width: '26vw', height: '13.5vw'
+                      }}>
+                        <img src={imgEMT} width="100%" style={{ height: '13.5vw' }} />
+                      </div>
+                      <div className="" style={{
+                        position: 'absolute', bottom: '0.8vw', left: '0.98vw', right: 0,
+                        backgroundColor: 'none'
+                      }}>
+                        <div class='ImgcircleBlog' >
+                          <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }} />
+                        </div>
+                      </div>
+                      <div className="" style={{
+                        position: 'absolute', bottom: '0.5vw', left: '-15vw', right: 0,
+                        backgroundColor: 'none'
+                      }}>
+                        <p class="NameBlog">Name</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

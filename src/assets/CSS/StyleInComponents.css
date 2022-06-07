@@ -188,7 +188,18 @@ a {
   transform: translateY(35%); /*38% 110px*/
   opacity: 1;
 }
-
+.sliderBlog{
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: mandatory;
+}
+.sliderBlog > div {
+  flex-shrink: 0;
+  width: 30vw;
+  height: 23vw;
+  text-align: center;
+}
 .sliderMedium {
   /* line them up horizontally */
   display: flex;
@@ -344,7 +355,7 @@ a {
     margin-right: 5%;
   }
   .marginTopRes {
-    margin-top: -10%;
+    margin-top: 10%;
   }
   .marginTopResContact {
     margin-top: 10vw;
@@ -469,6 +480,12 @@ a {
     height: 80%;
   }
 }
+.OurBlog {
+  margin-top: 3% !important;
+  border-radius: 1vw;
+  background: #ffffff;
+  box-shadow: 1px 5px 7px #aaa8a8;
+}
 .OutService {
   margin-top: -20% !important;
   border-radius: 0.8rem;
@@ -500,6 +517,18 @@ a {
   height: 5.5vw;
   width: 5.5vw;
   /* margin-left: 6.5vw; */
+}
+.ImgcircleBlog {
+  /* height: 100% !important; */
+  /* overflow-y: hidden; */
+  border-radius: 100%;
+  /* background-color: rgb(183, 183, 183); */
+  height: 4vw;
+  width: 4vw;
+  /* margin-left: 6.5vw; */
+}
+.NameBlog {
+  font-size: 1vw;
 }
 .NameOutService {
   text-align: center;
@@ -671,4 +700,10 @@ a {
 }
 .shadowBox{
   box-shadow: 1px 5px 7px #aaa8a8;
+}
+.workTitle{
+  font-size: 1.2vw;
+}
+.workDetail{
+  font-size: 1vw;
 }
