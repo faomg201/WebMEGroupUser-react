@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.703646e4.css",
-    "main.js": "/static/js/main.7fd62393.js",
+    "main.css": "/static/css/main.8032f30b.css",
+    "main.js": "/static/js/main.6a783d98.js",
     "static/media/SukhumvitSet-Text.ttf": "/static/media/SukhumvitSet-Text.1012e8c02719f8cb0293.ttf",
     "static/media/Path10.png": "/static/media/Path10.a6794130c05c7ebd2b03.png",
+    "static/media/Product.png": "/static/media/Product.1ea52e612d7fa16e91c7.png",
+    "static/media/Launch.png": "/static/media/Launch.51ead5086f78ec8603ed.png",
+    "static/media/Pivot.png": "/static/media/Pivot.348a071f93f5c7da0379.png",
+    "static/media/Sketch.png": "/static/media/Sketch.c36413f66476d2972878.png",
+    "static/media/Build up.png": "/static/media/Build up.7125b088f8ec4dfbaf52.png",
     "index.html": "/index.html",
-    "main.703646e4.css.map": "/static/css/main.703646e4.css.map",
-    "main.7fd62393.js.map": "/static/js/main.7fd62393.js.map"
+    "main.8032f30b.css.map": "/static/css/main.8032f30b.css.map",
+    "main.6a783d98.js.map": "/static/js/main.6a783d98.js.map"
   },
   "entrypoints": [
-    "static/css/main.703646e4.css",
-    "static/js/main.7fd62393.js"
+    "static/css/main.8032f30b.css",
+    "static/js/main.6a783d98.js"
   ]
 }
