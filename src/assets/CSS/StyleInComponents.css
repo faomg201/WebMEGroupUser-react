@@ -1,9 +1,9 @@
-html{
-  overflow-y: overlay;   
-}         
+html {
+  overflow-y: overlay;
+}
 ::-webkit-scrollbar {
   width: 14px;
-}         
+}
 ::-webkit-scrollbar-thumb {
   border: 4px solid rgba(0, 0, 0, 0);
   background-clip: padding-box;
@@ -103,7 +103,7 @@ a {
 
 .textNEMP {
   font-size: 1.5vw;
-  color: #FC501E;
+  color: #fc501e;
   font-weight: bold;
 }
 .textNEMP_Mbti_Q {
@@ -188,7 +188,7 @@ a {
   transform: translateY(35%); /*38% 110px*/
   opacity: 1;
 }
-.sliderBlog{
+.sliderBlog {
   display: flex;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -201,12 +201,8 @@ a {
   text-align: center;
 }
 .sliderMedium {
-  /* line them up horizontally */
   display: flex;
-
-  /* allow for scrolling */
   overflow-x: auto;
-
   /* make it smooth on iOS */
   -webkit-overflow-scrolling: touch;
   /* scroll-snap-points-x: repeat(300px); */
@@ -332,6 +328,261 @@ a {
   margin-top: 5%;
 }
 
+.OurBlog {
+  margin-top: 3% !important;
+  border-radius: 1vw;
+  background: #ffffff;
+  box-shadow: 1px 5px 7px #aaa8a8;
+}
+.OutService {
+  margin-top: -20% !important;
+  border-radius: 0.8rem;
+  background: #ffffff;
+  box-shadow: 1px 5px 7px #aaa8a8;
+}
+.CardOutService {
+  /* justify-content: center; */
+  margin-left: 1.9vw;
+  display: grid;
+  grid-template-columns: repeat(5, 19vw);
+  grid-template-rows: repeat(4, minmax(12vw, auto));
+  grid-gap: 0.1vw;
+}
+.CardWorkWithUs {
+  justify-content: center;
+  /* margin-left: 1.9vw; */
+  display: grid;
+  grid-template-columns: repeat(5, 17vw);
+  grid-template-rows: repeat(4, minmax(12vw, auto));
+  grid-gap: 0.1vw;
+}
+
+.Imgcircle {
+  /* height: 100% !important; */
+  /* overflow-y: hidden; */
+  border-radius: 100%;
+  background-color: rgb(183, 183, 183);
+  height: 5.5vw;
+  width: 5.5vw;
+  /* margin-left: 6.5vw; */
+}
+.ImgcircleBlog {
+  /* height: 100% !important; */
+  /* overflow-y: hidden; */
+  border-radius: 100%;
+  /* background-color: rgb(183, 183, 183); */
+  height: 4vw;
+  width: 4vw;
+  /* margin-left: 6.5vw; */
+}
+.NameBlog {
+  font-size: 1vw;
+}
+.NameOutService {
+  text-align: center;
+  font-size: 1.4vw;
+  font-weight: bold;
+}
+.OutServiceHeader {
+  font-size: 1.8vw;
+  font-weight: bold;
+  margin-top: 2vw;
+  margin-left: 7vw;
+}
+.OutServiceHeader2 {
+  font-size: 2vw;
+  font-weight: bold;
+  color: #fc501e;
+  margin-left: 7vw;
+}
+.TeamHeader {
+  font-size: 1.8vw;
+  font-weight: bold;
+  margin-top: 3vw;
+  margin-left: 7vw;
+}
+.TeamHeader2 {
+  font-size: 2vw;
+  font-weight: bold;
+  color: #fc501e;
+  margin-left: 7vw;
+}
+.dotOrang {
+  font-size: 1.8vw;
+  font-weight: bold;
+  color: #fc501e;
+}
+
+.WorkWithUs {
+  font-size: 1.8vw;
+  font-weight: bold;
+  margin-top: 18vw;
+  text-align: center;
+}
+.WorkWithUsFormation {
+  font-size: 2vw;
+  font-weight: bold;
+  color: #fc501e;
+  text-align: center;
+}
+.ImgWorkWithUs {
+  border-radius: 100%;
+  background-color: none;
+  height: 5.5vw;
+  width: 5.5vw;
+}
+.ImgBoxNum {
+  background-color: #fc501e;
+  height: 2.3vw;
+  width: 2.2vw;
+}
+.NumWWU {
+  color: #ffffff;
+  font-size: 1.5vw;
+  font-weight: bold;
+  text-align: center;
+}
+.TitleWWU {
+  text-align: center;
+  font-size: 1.4vw;
+  font-weight: bold;
+}
+.DetailWWU {
+  font-size: 1.1vw;
+  font-weight: bold;
+  color: #fc501e;
+}
+.OurSolutionHeader {
+  font-size: 1.8vw;
+  font-weight: bold;
+  margin-top: 30vw;
+  margin-left: 7vw;
+}
+.TextHeadOutSolution {
+  font-size: 3vw;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #00000053;
+}
+.TexeIf {
+  font-size: 2vw;
+  font-weight: bold;
+  color: #ff9300;
+}
+.TextHeadIf {
+  font-weight: bold;
+  color: #ff9300;
+}
+.buttonSendOutSolution {
+  background: #ff990f;
+  border-radius: 10px;
+  margin: 0 0.6em;
+  font-size: 1.2vw;
+  padding: 6px;
+  display: inline-block;
+  color: rgb(252, 252, 252);
+  letter-spacing: 1px;
+  width: 13vw;
+  height: 4vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  text-decoration: none;
+}
+.buttonSendOutSolution:hover {
+  background: rgb(255, 255, 255);
+  color: #ff990f;
+}
+.ourWorksHeader {
+  font-size: 1.8vw;
+  font-weight: bold;
+  margin-left: 2vw;
+}
+.ourWorksHeader2 {
+  font-size: 2vw;
+  font-weight: bold;
+  color: #fc501e;
+  margin-left: 2vw;
+}
+.AboutUsHeader {
+  font-size: 1.8vw;
+  font-weight: bold;
+}
+.AboutUsHeader2 {
+  font-size: 2vw;
+  font-weight: bold;
+  color: #fc501e;
+}
+.TitleTechstack {
+  font-size: 3.5vw;
+  font-weight: bold;
+}
+.DetailTechstack {
+  font-size: 1.9vw;
+  font-weight: bold;
+}
+.TitleTech {
+  text-align: center;
+  font-size: 1.4vw;
+  background: #ff990f;
+  border-radius: 99999999px;
+  margin: 15% 1.25em;
+  padding: 6px;
+  display: inline-block;
+  color: rgb(252, 252, 252);
+  letter-spacing: 1px;
+  width: 11vw;
+  height: 2.5vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  text-decoration: none;
+}
+.DetailTech {
+  font-size: 1vw;
+  color: #404040;
+}
+.shadowBox {
+  box-shadow: 1px 5px 7px #aaa8a8;
+}
+.workTitle {
+  font-size: 1.2vw;
+}
+.workDetail {
+  font-size: 1vw;
+}
+.marginLeftConTitle {
+  margin-left: 3vw;
+}
+.Cardcontent {
+  display: grid;
+  grid-template-columns: repeat(4, 21vw);
+  grid-template-rows: repeat(4, minmax(0px, auto));
+  grid-gap: 2vw;
+}
+.widthCardWork {
+  width: 19.5vw;
+}
+.ImgcardWork {
+  border-radius: 30px;
+  height: 20vw;
+}
+.ImgAbouUs {
+  height: 15vw;
+  width: 15vw;
+  border-radius: 100%;
+  margin-top: 1%;
+}
+.marTopAboutus{
+  margin-top: -5%;
+}
+.detailBlog{
+  margin-left: 9vw;
+  font-size: 1.2vw;
+}
 @media only screen and (max-width: 568px) {
   .marSpTop {
     margin-top: 35vh;
@@ -414,11 +665,25 @@ a {
     color: #000000;
     font-weight: normal;
   }
+  .OutServiceHeader {
+    font-size: 3.5vw;
+    font-weight: bold;
+    margin-top: 2vw;
+    margin-left: 0vw;
+    text-align: center;
+  }
+  .OutServiceHeader2 {
+    text-align: center;
+    font-size: 4vw;
+    font-weight: bold;
+    color: #fc501e;
+    margin-left: 0vw;
+  }
   .textInfo {
     font-size: 2.5vw;
     color: #000000;
   }
-  
+
   .nav-link {
     display: block;
     padding: 3rem 1rem;
@@ -465,10 +730,6 @@ a {
     font-size: 2.5vw;
     color: #ffffff;
   }
-  .abotusImg {
-    height: 59vw;
-    margin-left: 0%;
-  }
   .contentEMPImg {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -481,231 +742,116 @@ a {
     width: 80%;
     height: 80%;
   }
-}
-.OurBlog {
-  margin-top: 3% !important;
-  border-radius: 1vw;
-  background: #ffffff;
-  box-shadow: 1px 5px 7px #aaa8a8;
-}
-.OutService {
-  margin-top: -20% !important;
-  border-radius: 0.8rem;
-  background: #ffffff;
-  box-shadow: 1px 5px 7px #aaa8a8;
-}
-.CardOutService {
-  /* justify-content: center; */
-  margin-left: 1.9vw;
-  display: grid;
-  grid-template-columns: repeat(5, 19vw);
-  grid-template-rows: repeat(4, minmax(12vw, auto));
-  grid-gap: 0.1vw;
-}
-.CardWorkWithUs {
-  justify-content: center;
-  /* margin-left: 1.9vw; */
-  display: grid;
-  grid-template-columns: repeat(5, 17vw);
-  grid-template-rows: repeat(4, minmax(12vw, auto));
-  grid-gap: 0.1vw;
-}
 
-.Imgcircle {
-  /* height: 100% !important; */
-  /* overflow-y: hidden; */
-  border-radius: 100%;
-  background-color: rgb(183, 183, 183);
-  height: 5.5vw;
-  width: 5.5vw;
-  /* margin-left: 6.5vw; */
-}
-.ImgcircleBlog {
-  /* height: 100% !important; */
-  /* overflow-y: hidden; */
-  border-radius: 100%;
-  /* background-color: rgb(183, 183, 183); */
-  height: 4vw;
-  width: 4vw;
-  /* margin-left: 6.5vw; */
-}
-.NameBlog {
-  font-size: 1vw;
-}
-.NameOutService {
-  text-align: center;
-  font-size: 1.4vw;
-  font-weight: bold;
-}
-.OutServiceHeader {
-  font-size: 1.8vw;
-  font-weight: bold;
-  margin-top: 2vw;
-  margin-left: 7vw;
-}
-.OutServiceHeader2 {
-  font-size: 2vw;
-  font-weight: bold;
-  color: #fc501e;
-  margin-left: 7vw;
-}
-.TeamHeader{
-  font-size: 1.8vw;
-  font-weight: bold;
-  margin-top: 3vw;
-  margin-left: 7vw;
-}
-.TeamHeader2 {
-  font-size: 2vw;
-  font-weight: bold;
-  color: #fc501e;
-  margin-left: 7vw;
-}
-.dotOrang {
-  font-size: 1.8vw;
-  font-weight: bold;
-  color: #fc501e;
-}
+  .sliderWorkRes {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: mandatory;
+  }
+  .sliderWorkRes > div {
+    flex-shrink: 0;
+    width: 30vw;
+    height: 95vw;
+    text-align: center;
+  }
+  .sliderWorkRes::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+  .Cardcontent {
+    display: grid;
+    grid-template-columns: repeat(99, 85vw);
+    grid-template-rows: repeat(4, minmax(0px, auto));
+  }
+  .widthCardWork {
+    width: 80vw;
+  }
+  .ImgcardWork {
+    border-radius: 30px;
+    height: 85vw;
+  }
+  .margiLeftWorkcard {
+    margin-left: 2%;
+  }
+  .ourWorksHeader {
+    font-size: 3.5vw;
+    font-weight: bold;
+    margin-left: 2vw;
+  }
+  .ourWorksHeader2 {
+    font-size: 4vw;
+    font-weight: bold;
+    color: #fc501e;
+    margin-left: 2vw;
+  }
+  .textType {
+    font-size: 3.5vw;
+    color: #000000;
+    margin-left: 2vw;
+  }
+  .workTitle {
+    font-size: 3.5vw;
+    font-weight: bold;
+  }
+  .workDetail {
+    font-size: 3vw;
+  }
+  .abotusImg {
+    height: 101vw;
+    margin-left: -6.1vw;
+  }
+  .TeamHeader {
+    font-size: 3.5vw;
+    font-weight: bold;
+    margin-top: 3vw;
+    margin-left: 7vw;
+  }
+  .TeamHeader2 {
+    font-size: 4vw;
+    font-weight: bold;
+    color: #fc501e;
+    margin-left: 7vw;
+  }
 
-
-.WorkWithUs {
-  font-size: 1.8vw;
-  font-weight: bold;
-  margin-top: 18vw;
-  text-align: center;
-}
-.WorkWithUsFormation {
-  font-size: 2vw;
-  font-weight: bold;
-  color: #fc501e;
-  text-align: center;
-}
-.ImgWorkWithUs {
-  border-radius: 100%;
-  background-color: none;
-  height: 5.5vw;
-  width: 5.5vw;
-}
-.ImgBoxNum {
-  background-color: #fc501e;
-  height: 2.3vw;
-  width: 2.2vw;
-}
-.NumWWU {
-  color: #ffffff;
-  font-size: 1.5vw;
-  font-weight: bold;
-  text-align: center;
-}
-.TitleWWU{
-  text-align: center;
-  font-size: 1.4vw;
-  font-weight: bold;
-}
-.DetailWWU{
-  font-size: 1.1vw;
-  font-weight: bold;
-  color: #fc501e;
-}
-.OurSolutionHeader{
-  font-size: 1.8vw;
-  font-weight: bold;
-  margin-top: 30vw;
-  margin-left: 7vw;
-}
-.TextHeadOutSolution{
-  font-size: 3vw;
-  font-weight: bold;
-  text-shadow: 2px 2px 2px #00000053;
-}
-.TexeIf{
-  font-size: 2vw;
-  font-weight: bold;
-  color: #FF9300;
-}
-.TextHeadIf{
-  font-weight: bold;
-  color: #FF9300;
-}
-.buttonSendOutSolution {
-  background: #ff990f;
-  border-radius: 10px;
-  margin: 0 0.6em;
-  font-size: 1.2vw;
-  padding: 6px;
-  display: inline-block;
-  color: rgb(252, 252, 252);
-  letter-spacing: 1px;
-  width: 13vw;
-  height: 4vw;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s;
-  text-decoration: none;
-}
-.buttonSendOutSolution:hover {
-  background: rgb(255, 255, 255);
-  color: #ff990f;
-}
-.ourWorksHeader{
-  font-size: 1.8vw;
-  font-weight: bold;
-  margin-left: 2vw;
-}
-.ourWorksHeader2{
-  font-size: 2vw;
-  font-weight: bold;
-  color: #fc501e;
-  margin-left: 2vw;
-}
-.AboutUsHeader{
-  font-size: 1.8vw;
-  font-weight: bold;
-}
-.AboutUsHeader2{
-  font-size: 2vw;
-  font-weight: bold;
-  color: #fc501e;
-}
-.TitleTechstack{
-  font-size: 3.5vw;
-  font-weight: bold;
-}
-.DetailTechstack{
-  font-size: 1.9vw;
-  font-weight: bold;
-}
-.TitleTech{
-  text-align: center;
-  font-size: 1.4vw;
-  background: #ff990f;
-  border-radius: 99999999px;
-  margin: 15% 1.25em;
-  padding: 6px;
-  display: inline-block;
-  color: rgb(252, 252, 252);
-  letter-spacing: 1px;
-  width: 11vw;
-  height: 2.5vw;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s;
-  text-decoration: none;
-}
-.DetailTech{
-  font-size: 1vw;
-  color: #404040;
-}
-.shadowBox{
-  box-shadow: 1px 5px 7px #aaa8a8;
-}
-.workTitle{
-  font-size: 1.2vw;
-}
-.workDetail{
-  font-size: 1vw;
+  .sliderAboutUs {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: mandatory;
+  }
+  .sliderAboutUs > div {
+    flex-shrink: 0;
+    width: 86vw;
+    height: 90vw;
+    text-align: center;
+  }
+  .sliderAboutUs::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+  .ImgAbouUs {
+    height: 50vw;
+    width: 50vw;
+  }
+  .CardAboutus{
+    display: grid;
+    grid-template-columns: repeat(99, 100vw);
+    grid-template-rows: repeat(4, minmax(0px, auto));
+  }
+  .textNEMP {
+    font-size: 4.5vw;
+    color: #fc501e;
+    font-weight: bold;
+  }
+  .textNEMP_Mbti_Q {
+    font-size: 3.5vw;
+    color: #404040;
+  }
+  .marTopAboutus{
+    margin-top: -3%;
+  }
+  .detailBlog{
+    font-size: 3vw;
+    color: #000000;
+    font-weight: normal;
+  }
 }

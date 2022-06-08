@@ -9,7 +9,7 @@ export default function Abouts() {
   const [aboutUsImg, fetchaboutUsImg] = useState([])
   const [status, setStatus] = useState(false);
   const APIURL = process.env.REACT_APP_APIURL;
-  
+
   useEffect(() => {
     const timer = setTimeout(() => {
     }, 3000);
@@ -20,19 +20,19 @@ export default function Abouts() {
   // console.log( `${REACT_APP_APIURL}`);
   const getData = () => {
     // ${REACT_APP_APIURL}
-    axios.get(APIURL+`/employees`)
+    axios.get(APIURL + `/employees`)
       .then((res) => {
         setStatus(true);
         // console.log(res)
         fetchEmployees(res.data.data)
       })
-    axios.get(APIURL+`/enterprises`)
+    axios.get(APIURL + `/enterprises`)
       .then((res) => {
         setStatus(true);
         // console.log(res)
         fetchEnterprises(res.data.data)
       })
-    axios.get(APIURL+`/aboutUs/image`)
+    axios.get(APIURL + `/aboutUs/image`)
       .then((res) => {
         setStatus(true);
         // console.log(res)
@@ -81,7 +81,7 @@ export default function Abouts() {
 
       ) : (
         <>
-        
+
           <div className="bg-light ResDisplayNone">
             <div className="row" >
               <div className='col-7 radiusDetailAbout' style={{ height: '49.07vw' }}>
@@ -111,7 +111,7 @@ export default function Abouts() {
                         {!aboutUsImg[0]?.image_name ?
                           <img src={imgEMT} width="100%" /> :
                           <img src={
-                            APIURL+`/static/aboutUs/` +
+                            APIURL + `/static/aboutUs/` +
                             aboutUsImg[0]?.image_name
                           } className="abotusImg" />
                         }
@@ -119,7 +119,7 @@ export default function Abouts() {
                     </div>
                     {
                       aboutUsImg.filter((f, idx) => idx > 0).map((item) => {
-                        const staticpath = APIURL+`/static/aboutUs/` + item.image_name
+                        const staticpath = APIURL + `/static/aboutUs/` + item.image_name
                         return (
                           <div className="carousel-item">
                             <div className="container" align="center">
@@ -172,7 +172,7 @@ export default function Abouts() {
                         {!aboutUsImg[0]?.image_name ?
                           <img src={imgEMT} width="100%" /> :
                           <img src={
-                            APIURL+`/static/aboutUs/` +
+                            APIURL + `/static/aboutUs/` +
                             aboutUsImg[0]?.image_name
                           } className="abotusImg" />
                         }
@@ -180,7 +180,7 @@ export default function Abouts() {
                     </div>
                     {
                       aboutUsImg.filter((f, idx) => idx > 0).map((item) => {
-                        const staticpath = APIURL+`/static/aboutUs/` + item.image_name
+                        const staticpath = APIURL + `/static/aboutUs/` + item.image_name
                         return (
                           <div className="carousel-item">
                             <div className="container" align="center">
@@ -210,22 +210,21 @@ export default function Abouts() {
           </div>
           <div className=''>
             <p className='TeamHeader'>our team
-                  <span className='dotOrang'>.</span></p>
-                <p className="TeamHeader2">ทีมของเรา</p>
-            <div className="container ">
-              <div className="col" style={{ marginTop: '10%', marginLeft: '1%' }}>
-                
+              <span className='dotOrang'>.</span></p>
+            <p className="TeamHeader2">ทีมของเรา</p>
+            <div className="container">
+              <div className="col" style={{ marginTop: '1%', marginLeft: '1%' }}>
               </div>
               <br /><br />
-              <div className="sliderMedium">
+              <div className="sliderMedium ResDisplayNone">
                 {Employees.map((item) => {
-                  const staticpath = APIURL+`/static/employees/` + item.emp_fname + ',' + item.emp_lname + ',' + item.emp_img
+                  const staticpath = APIURL + `/static/employees/` + item.emp_fname + ',' + item.emp_lname + ',' + item.emp_img
                   // console.log(staticpath);
                   return (
                     < >
                       <div>
-                        <div className='' style={{ height: '20vw' }}>
-                          <img src={staticpath} width="100%" style={{ height: '15vw', width: '15vw', borderRadius: '100%' }} />
+                        <div style={{ height: '20vw' }}>
+                          <img src={staticpath} width="100%" className='ImgAbouUs' />
                           <div style={{ marginTop: '8%' }}>
                             <h className="textNEMP" >{item.emp_fname} {item.emp_lname} #{item.mbti_name}</h>
                             <p className="textNEMP_Mbti_Q" >{item.emp_class}</p>
@@ -237,9 +236,34 @@ export default function Abouts() {
                   );
                 })}
               </div>
+              <div class="sliderAboutUs HiddenOBJ">
+                <div>
+                  <div class="row CardAboutus">
+                  {Employees.map((item) => {
+                  const staticpath = APIURL + `/static/employees/` + item.emp_fname + ',' + item.emp_lname + ',' + item.emp_img
+                  // console.log(staticpath);
+                  return (
+                    < >
+                      <div>
+                        <div style={{ height: '20vw' }}>
+                          <img src={staticpath} width="100%" className='ImgAbouUs' />
+                          <div style={{ marginTop: '8%' }}>
+                            <h className="textNEMP" >{item.emp_fname} {item.emp_lname} #{item.mbti_name}</h>
+                            <p className="textNEMP_Mbti_Q" >{item.emp_class}</p>
+                            <p className="textNEMP_Mbti_Q marTopAboutus">{item.emp_quote}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  );
+                })}
+
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div className='none' style={{ height: '50vw' }}>
+          <div className='none' style={{ height: '60vw' }}>
             <p className='OutServiceHeader'>our technology
               <span className='dotOrang'>.</span></p>
             <p className="OutServiceHeader2">ความเชี่ยวชาญของเรา</p>
@@ -377,8 +401,8 @@ export default function Abouts() {
                           <div className='row' align='center '>
                             <div className='col-6'><p className="DetailTech">machine learning</p></div>
                             <div className='col-6'><p className="DetailTech">artificial intelligence</p></div>
-                            
-                            
+
+
                           </div>
                         </div>
                       </div>
