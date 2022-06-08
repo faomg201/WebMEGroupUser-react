@@ -25,13 +25,13 @@ export default function Works() {
 
   }, [])
   const getData = () => {
-    axios.get(APIURL+`/services`)
+    axios.get(APIURL + `/services`)
       .then((res) => {
         setStatus(true);
         // console.log(res)
         fetchServices(res.data.data)
       })
-    axios.get(APIURL+`/webgoals`)
+    axios.get(APIURL + `/webgoals`)
       .then((res) => {
         setStatus(true);
         // console.log(res)
@@ -97,14 +97,6 @@ export default function Works() {
         </div>
       ) : (
         <>
-          <style jsx>{`
-                .Cardcontent {
-                  display:grid;
-                  grid-template-columns: repeat(4, 21vw);
-                  grid-template-rows: repeat(4, minmax(0px, auto));
-                  grid-gap: 2vw;
-                }
-              `}</style>
           <div class="PageFullvh" align="center">
             <div class="row" >
               <div class="col-12">
@@ -124,62 +116,67 @@ export default function Works() {
                     return (
                       <div>
                         <p class="textType" align='left'>{titleN}</p>
-                        <div class="row Cardcontent">
-                          {Goals.map((item, index) => {
-                            if (itemSer.service_name !== item.service_name)
-                              return;
-                            const staticpath =
-                              APIURL+`/static/goals/` +
-                              item.goal_title +
-                              "," +
-                              item.goal_img;
-                            var titleN = ""
-                            if (itemSer.service_name == item.service_name) titleN = itemSer.service_name
-                            else titleN = " "
-                            return (
-                              <div>
-                                <FadeIn delay={index * 100}>
-                                  <div class="col" style={{ width: '19.5vw'}}>
-                                    <div class="card borderCard cardCardHover">
-                                      {!item.goal_img ?
-                                        <img src={imgEMT} width="100%" /> :
-                                        <img
-                                          src={staticpath}
-                                          style={{ borderRadius: '30px',height: '22vw' }}
-                                        />
-                                      }
-                                      <div className="" onClick={() => PopUp(index)} id={workID(index)} style={{
-                                        position: 'absolute', bottom: '0px', left: 0, right: 0, transition: '0.5s ease',
-                                        height: '55px'
-                                      }}>
-                                        <div class='shadow p-3 popUpDetail' style={{
-                                          borderRadius: '30px',
-                                          backgroundColor: 'white'
-                                        }}>
-                                          <p class="card-text workTitle">{item.goal_title}</p>
-                                          <p class="description workDetail" align='left' >{item.goal_detail}      Lorem Ipsum is simply dummy text of the
-                                            printing and typesetting industry. Lorem
-                                            Ipsum has been the industry’s standard
-                                            dummy text ever since the 1500s, when an
-                                            unknown printer took a galley of type and
-                                            scrambled it to make a type specimen book.
-                                            It has survived not only five centuries, but
-                                            also the leap into electronic typesetting,
-                                            remaining essentially unchanged.
-                                            It was popularised in the 1960s with the
-                                            release of Letraset sheets containing
-                                            Lorem Ipsum passages, and more recently
-                                            with desktop publishing software like Aldus
-                                            PageMaker including versions of Lorem Ipsum.</p>
+                        
+                        <div class="sliderWorkRes">
+                          <div>
+                            <div class="row Cardcontent">
+                              {Goals.map((item, index) => {
+                                if (itemSer.service_name !== item.service_name)
+                                  return;
+                                const staticpath =
+                                  APIURL + `/static/goals/` +
+                                  item.goal_title +
+                                  "," +
+                                  item.goal_img;
+                                var titleN = ""
+                                if (itemSer.service_name == item.service_name) titleN = itemSer.service_name
+                                else titleN = " "
+                                return (
+                                  <div className='margiLeftWorkcard'>
+                                    <FadeIn delay={index * 100}>
+                                      <div class="col widthCardWork">
+                                        <div class="card borderCard cardCardHover">
+                                          {!item.goal_img ?
+                                            <img src={imgEMT} width="100%" /> :
+                                            <img
+                                              src={staticpath}
+                                              className='ImgcardWork'
+                                            />
+                                          }
+                                          <div className="" onClick={() => PopUp(index)} id={workID(index)} style={{
+                                            position: 'absolute', bottom: '0px', left: 0, right: 0, transition: '0.5s ease',
+                                            height: '55px'
+                                          }}>
+                                            <div class='shadow p-3 popUpDetail' style={{
+                                              borderRadius: '30px',
+                                              backgroundColor: 'white'
+                                            }}>
+                                              <p class="card-text workTitle">{item.goal_title}</p>
+                                              <p class="description workDetail" align='left' >{item.goal_detail}      Lorem Ipsum is simply dummy text of the
+                                                printing and typesetting industry. Lorem
+                                                Ipsum has been the industry’s standard
+                                                dummy text ever since the 1500s, when an
+                                                unknown printer took a galley of type and
+                                                scrambled it to make a type specimen book.
+                                                It has survived not only five centuries, but
+                                                also the leap into electronic typesetting,
+                                                remaining essentially unchanged.
+                                                It was popularised in the 1960s with the
+                                                release of Letraset sheets containing
+                                                Lorem Ipsum passages, and more recently
+                                                with desktop publishing software like Aldus
+                                                PageMaker including versions of Lorem Ipsum.</p>
+                                            </div>
+                                          </div>
                                         </div>
                                       </div>
-                                    </div>
+                                    </FadeIn>
                                   </div>
-                                </FadeIn>
-                              </div>
-                            );
-                          })}
+                                );
+                              })}
 
+                            </div>
+                          </div>
                         </div>
                       </div>
                     );

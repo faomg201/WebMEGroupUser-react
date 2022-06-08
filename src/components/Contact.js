@@ -91,7 +91,7 @@ export default function Contact() {
             <p className='TeamHeader'>our blog
               <span className='dotOrang'>.</span></p>
             <p class="TeamHeader2">บล็อกของเรา</p>
-            <p style={{ marginLeft: '9vw', fontSize: '1.2vw' }}>รู้จักเราให้มากขึ้นผ่านประสบการณ์ของเรา</p>
+            <p className='detailBlog'>รู้จักเราให้มากขึ้นผ่านประสบการณ์ของเรา</p>
             <div class="container">
               <div class="sliderBlog">
                 <div style={{ marginLeft: '1%'}}>
@@ -272,7 +272,7 @@ export default function Contact() {
                     <div class="row">
                       <div class="container">
                         <div className="row marSpRight4" align='left'>
-                          <div class="col-12 marginDisTopcon1" style={{ marginLeft: '3vw' }}>
+                          <div class="col-12 marginDisTopcon1 marginLeftConTitle" >
                             <p><span className='TextContactHsub'>โทร {item.enterprise_phone}</span></p>
                             <p><span className='TextContactHsub'>สามารถติดต่อเราได้ {item.enterprise_servicetime}</span></p>
                           </div>
@@ -310,7 +310,7 @@ export default function Contact() {
                                   <span className='TextContactHsub'>เวลาทำการ</span><br />
                                   <span className='tab'></span><span className='textInfo'>{item.enterprise_servicetime}</span>
                                 </p>
-                                <div align='center' className='marginTopCon'><a class="buttonSend" role="button" >ส่งข้อความ</a></div>
+                                <div align='center' className='marginTopCon'><a class="buttonSend" role="button" href="https://www.facebook.com/megroupenterprise" target="_blank">ส่งข้อความ</a></div>
                               </div>
                             </div>
                             <div class="col-1"></div>
@@ -346,7 +346,7 @@ export default function Contact() {
                                   <span className='TextContactHsub'><b>เวลาทำการ</b></span>
                                   <span className='tab'></span> &nbsp;<span className='textInfo'>{item.enterprise_servicetime}</span>
                                 </p>
-                                <div align='center' className='marginTopCon'><a class="buttonSend" role="button" >ส่งข้อความ</a></div>
+                                <div align='center' className='marginTopCon'><a class="buttonSend" role="button" href="https://www.facebook.com/megroupenterprise" target="_blank">ส่งข้อความ</a></div>
                               </div>
                             </div>
                           </div>
