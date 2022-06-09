@@ -75,7 +75,7 @@ export default function Serve() {
           </div>
         ) : (
           <>
-            <div className='' style={{ height: '130vw' }}>
+            <div className='OurSerPageH'>
               <br />
               <p className='OutServiceHeader'>our service
                 <span className='dotOrang'>.</span></p>
@@ -86,147 +86,41 @@ export default function Serve() {
                   height: '0px'
                 }}><img src={imgCR} width="100%" />
 
-
-                  <div class="row CardOutService ">
-                    {ServiceUs.map((item, index) => {
-                      const staticpath = APIURL + `/static/serviceUs/` + item.serviceUs_name + ',' + item.serviceUs_img
-                      return (
-                        <>
-                          <div>
-                            <div class="col " style={{ width: '18vw' }}>
-                              <div className='OutService' style={{ height: '10vw' }}></div>
-                              <div class="card borderCard cardCardHover ">
-                                <div className="" style={{
-                                  position: 'absolute', bottom: '5.9vw', left: 0, right: 0,
-                                  backgroundColor: 'none'
-                                }}>
-                                  <p class="NameOutService">{item.serviceUs_name}</p>
-                                </div>
-                                <div className="" style={{
-                                  position: 'absolute', bottom: '0.8vw', left: '34%', right: 0,
-                                  backgroundColor: 'none'
-                                }}>
-                                  <div class='Imgcircle' >
-                                    {!item.serviceUs_img ?
-                                      <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }} /> :
-                                      <img src={staticpath} width="100%" style={{ borderRadius: '100%' }} />
-                                    }
+                  <div class="sliderOurSer">
+                    <div>
+                      <div class="row CardOutService">
+                        {ServiceUs.map((item, index) => {
+                          const staticpath = APIURL + `/static/serviceUs/` + item.serviceUs_name + ',' + item.serviceUs_img
+                          return (
+                            <>
+                              <div className='margintopResSer'>
+                                <div class="col OurSerWidth" >
+                                  <div className='OutService OurSerHeight'></div>
+                                  <div class="card borderCard cardCardHover ">
+                                    <div className="marginNameOS" >
+                                      <p class="NameOutService">{item.serviceUs_name}</p>
+                                    </div>
+                                    <div className="ImgOS">
+                                      <div class='Imgcircle' >
+                                        {!item.serviceUs_img ?
+                                          <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }} /> :
+                                          <img src={staticpath} width="100%" style={{ borderRadius: '100%' }} />
+                                        }
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                        </>
-                      );
-                    })}
-                    {/* <div>
-                      <div class="col " style={{ width: '18vw' }}>
-                        <div className='OutService' style={{ height: '10vw' }}></div>
-                        <div class="card borderCard cardCardHover ">
-                          <div className="" style={{
-                            position: 'absolute', bottom: '5.9vw', left: 0, right: 0,
-                            backgroundColor: 'none'
-                          }}>
-                            <p class="NameOutService">name</p>
-                          </div>
-                          <div className="" style={{
-                            position: 'absolute', bottom: '0.8vw', left: '34%', right: 0,
-                            backgroundColor: 'none'
-                          }}>
-                            <div class='Imgcircle' >
-                              <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }} />
-                            </div>
-                          </div>
-                        </div>
+                            </>
+                          );
+                        })}
                       </div>
                     </div>
-                    <div>
-                      <div class="col " style={{ width: '18vw' }}>
-                        <div className='OutService' style={{ height: '10vw' }}></div>
-                        <div class="card borderCard cardCardHover ">
-                          <div className="" style={{
-                            position: 'absolute', bottom: '5.9vw', left: 0, right: 0,
-                            backgroundColor: 'none'
-                          }}>
-                            <p class="NameOutService">name</p>
-                          </div>
-                          <div className="" style={{
-                            position: 'absolute', bottom: '0.8vw', left: '34%', right: 0,
-                            backgroundColor: 'none'
-                          }}>
-                            <div class='Imgcircle' >
-                              <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }} />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="col " style={{ width: '18vw' }}>
-                        <div className='OutService' style={{ height: '10vw' }}></div>
-                        <div class="card borderCard cardCardHover ">
-                          <div className="" style={{
-                            position: 'absolute', bottom: '5.9vw', left: 0, right: 0,
-                            backgroundColor: 'none'
-                          }}>
-                            <p class="NameOutService">name</p>
-                          </div>
-                          <div className="" style={{
-                            position: 'absolute', bottom: '0.8vw', left: '34%', right: 0,
-                            backgroundColor: 'none'
-                          }}>
-                            <div class='Imgcircle' >
-                              <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }} />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="col " style={{ width: '18vw' }}>
-                        <div className='OutService' style={{ height: '10vw' }}></div>
-                        <div class="card borderCard cardCardHover ">
-                          <div className="" style={{
-                            position: 'absolute', bottom: '5.9vw', left: 0, right: 0,
-                            backgroundColor: 'none'
-                          }}>
-                            <p class="NameOutService">name</p>
-                          </div>
-                          <div className="" style={{
-                            position: 'absolute', bottom: '0.8vw', left: '34%', right: 0,
-                            backgroundColor: 'none'
-                          }}>
-                            <div class='Imgcircle' >
-                              <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }} />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="col " style={{ width: '18vw' }}>
-                        <div className='OutService' style={{ height: '10vw' }}></div>
-                        <div class="card borderCard cardCardHover ">
-                          <div className="" style={{
-                            position: 'absolute', bottom: '5.9vw', left: 0, right: 0,
-                            backgroundColor: 'none'
-                          }}>
-                            <p class="NameOutService">name</p>
-                          </div>
-                          <div className="" style={{
-                            position: 'absolute', bottom: '0.8vw', left: '34%', right: 0,
-                            backgroundColor: 'none'
-                          }}>
-                            <div class='Imgcircle' >
-                              <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }} />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div> */}
                   </div>
                 </div>
               </div>
+            </div>
+            <div className='OurWWUPageH'>
               <p className='WorkWithUs'>Work with us
                 <span className='dotOrang'>.</span></p>
               <p class="WorkWithUsFormation">รูปแบบการทำงานกับเรา</p>
@@ -240,9 +134,9 @@ export default function Serve() {
                     {num.map((num, index) => (
                       <>
                         <div>
-                          <div class="col " style={{ width: '13vw' }}>
+                          <div class="col WWUwidth" >
                             <div className='OutService' style={{ height: '0vw' }}></div>
-                            <img src={imagesolution[index].src} width="100%" />
+                            <img src={imagesolution[index].src} width="100%" className='ImgWWU' />
                             {/* <div class="card borderCard cardCardHover ">
                               <div className="" style={{
                                 position: 'absolute', bottom: '10.5vw', left: 0, right: 0,
@@ -281,20 +175,22 @@ export default function Serve() {
                   </div>
                 </div>
               </div>
+            </div>
+            <div className='OurSolutionPageH'>
               <p className='OurSolutionHeader'>our solution
                 <span className='dotOrang'>.</span></p>
-              <p class="OutServiceHeader2">เราตอบโจทย์ธุรกิจ</p>
-              <div className="col-12">
+              <p class="Outsolution">เราตอบโจทย์ธุรกิจ</p>
+              <div className="col-12 ">
                 <div
                   id="carouselExampleIndicators"
-                  className="carousel slide"
-                  data-bs-ride="carousel"
+                className="carousel slide"
+                data-bs-ride="carousel"
                 >
                   <FadeIn>
                     <div className="carousel-inner ">
                       <div className="carousel-item active">
                         <div className="col" style={{ width: '100vw' }}>
-                          <div style={{ height: '37vw' }}>
+                          <div style={{ height: '100vw' }}>
                             <div className="card borderCard cardCardHover">
                               <div className="" style={{
                                 position: 'absolute', bottom: '0px', left: 0, right: 0,
@@ -303,11 +199,9 @@ export default function Serve() {
                                 <div className="row justify-content-md-center" >
                                   <div style={{ marginTop: '1%' }}></div>
                                   <div className="col-1" ></div>
-                                  <div className="col-4" >
-                                    <div className="" style={{
-                                      position: 'absolute', bottom: '-0.5vw', left: '15vw', right: 0, height: '100%'
-                                    }}>
-                                      <svg width="28vw" viewBox="0 0 564 417" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <div className="col-4 " >
+                                    <div className="PosiOSap" >
+                                      <svg className='OSap' viewBox="0 0 564 417" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M144.432 11.5782C-34.0599 81.4455 -47.6821 406.578 107.712 415.542C263.105 424.505 238.939 300.433 486.339 260.49C733.74 220.548 322.924 -58.2891 144.432 11.5782Z" fill="#FF9300" />
                                         <path d="M144.432 11.5782C-34.0599 81.4455 -47.6821 406.578 107.712 415.542C263.105 424.505 238.939 300.433 486.339 260.49C733.74 220.548 322.924 -58.2891 144.432 11.5782Z" fill="url(#paint0_linear_59_296)" />
                                         <path d="M144.432 11.5782C-34.0599 81.4455 -47.6821 406.578 107.712 415.542C263.105 424.505 238.939 300.433 486.339 260.49C733.74 220.548 322.924 -58.2891 144.432 11.5782Z" fill="url(#paint1_linear_59_296)" />
@@ -323,10 +217,8 @@ export default function Serve() {
                                         </defs>
                                       </svg>
                                     </div>
-                                    <div className="" style={{
-                                      position: 'absolute', bottom: '-11.5vw', left: '23.5vw', right: 0, height: '100%'
-                                    }}>
-                                      <svg width="24vw" viewBox="0 0 495 495" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <div className="PosiCirB">
+                                      <svg className='CirB' viewBox="0 0 495 495" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="247.113" cy="247.305" r="246.944" fill="url(#paint0_linear_53_82)" />
                                         <circle cx="247.113" cy="247.305" r="246.944" fill="url(#paint1_linear_53_82)" />
                                         <defs>
@@ -342,10 +234,8 @@ export default function Serve() {
                                         </defs>
                                       </svg>
                                     </div>
-                                    <div className="" style={{
-                                      position: 'absolute', bottom: '-18.5vw', left: '11vw', right: 0, height: '100%'
-                                    }}>
-                                      <svg width="15vw" viewBox="0 0 323 232" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <div className="PosidotCube">
+                                      <svg className='dotCube' viewBox="0 0 323 232" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="320.261" cy="123.565" r="2.52174" transform="rotate(90 320.261 123.565)" fill="#FF9300" />
                                         <circle cx="320.261" cy="138.696" r="2.52174" transform="rotate(90 320.261 138.696)" fill="#FF9300" />
                                         <circle cx="320.261" cy="153.826" r="2.52174" transform="rotate(90 320.261 153.826)" fill="#FF9300" />
@@ -700,11 +590,9 @@ export default function Serve() {
                                         <circle cx="2.52172" cy="108.435" r="2.52174" transform="rotate(90 2.52172 108.435)" fill="#FF9300" />
                                       </svg>
                                     </div>
-                                    <div className="" style={{
-                                      position: 'absolute', bottom: '-6.5vw', left: '10vw', right: 0, height: '100%'
-                                    }}>
+                                    <div className="PosiImgslideSoul" >
                                       <div className='' style={{ height: '100%' }}>
-                                        <svg width="37vw" viewBox="0 0 1167 811" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg className='ImgslideSoul' viewBox="0 0 1167 811" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M743.426 808.179C1133.27 756.326 1319.54 115.16 1014.3 21.245C709.065 -72.6697 696.492 186.376 183.993 144.877C-328.507 103.378 353.581 860.032 743.426 808.179Z" fill='url(#img1)' />
                                           <pattern id="img1" width="1" height="1">ฃ
                                             <image href={APIURL + `/static/services/` +
@@ -715,10 +603,8 @@ export default function Serve() {
                                         </svg>
                                       </div>
                                     </div>
-                                    <div className="" style={{
-                                      position: 'absolute', bottom: '-8vw', left: '8.5vw', right: 0, height: '100%'
-                                    }}>
-                                      <svg width="6.5vw" viewBox="0 0 105 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <div className="PosiCirfilter">
+                                      <svg className='Cirfilter' viewBox="0 0 105 105" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g filter="url(#filter0_d_53_83)">
                                           <circle cx="52.5" cy="48.5" r="48.5" fill="url(#paint0_linear_53_83)" shape-rendering="crispEdges" />
                                           <circle cx="52.5" cy="48.5" r="48.5" fill="url(#paint1_linear_53_83)" shape-rendering="crispEdges" />
@@ -750,16 +636,16 @@ export default function Serve() {
                                   <div className="col-6 ">
                                     <div className='' style={{ borderRadius: '30px', height: '100%' }}>
                                       <div className="row justify-content-md-center">
-                                        <div className='col-10 TextHeadOutSolution' align='left'>{Service[0]?.service_name}</div>
+                                        <div className='col-10 TextHeadOutSolution PosiSoul' align='left'>{Service[0]?.service_name}</div>
                                         <div className='col-10' align='left'>
-                                          <p className='textInfoSer' style={{ marginTop: '2%' }}>
+                                          <p className='textInfoSer PosiSoulDetail' style={{ marginTop: '2%' }}>
                                             <span>ถ้าคุณคือ {Service[0]?.service_name}</span>
                                             <p><span>ที่</span><span>{Service[0]?.service_detail}</span></p>
                                           </p>
                                         </div>
                                         <div className="" style={{ position: 'absolute', bottom: '-20vw', left: '36%', right: 0, height: '100%' }}>
                                           <div className='col-10' align='center'>
-                                            <a class="buttonSendOutSolution" role="button" >สอบถามเพิ่มเติม</a>
+                                            <a class="buttonSendOutSolution PosiSoulBT" role="button" >สอบถามเพิ่มเติม</a>
                                           </div>
                                         </div>
                                       </div>
@@ -782,7 +668,7 @@ export default function Serve() {
                           return (
                             <div className="carousel-item ">
                               <div className="col" style={{ width: '100vw' }}>
-                                <div style={{ height: '37vw' }}>
+                                <div style={{ height: '100vw' }}>
                                   <div className="card borderCard cardCardHover">
                                     <div className="" style={{
                                       position: 'absolute', bottom: '0px', left: 0, right: 0,
@@ -793,10 +679,8 @@ export default function Serve() {
                                         <div style={{ marginTop: '1%' }}></div>
                                         <div className="col-1" ></div>
                                         <div className="col-4" >
-                                          <div className="" style={{
-                                            position: 'absolute', bottom: '-0.5vw', left: '15vw', right: 0, height: '100%'
-                                          }}>
-                                            <svg width="28vw" viewBox="0 0 564 417" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <div className="PosiOSap">
+                                            <svg className='OSap' viewBox="0 0 564 417" fill="none" xmlns="http://www.w3.org/2000/svg">
                                               <path d="M144.432 11.5782C-34.0599 81.4455 -47.6821 406.578 107.712 415.542C263.105 424.505 238.939 300.433 486.339 260.49C733.74 220.548 322.924 -58.2891 144.432 11.5782Z" fill="#FF9300" />
                                               <path d="M144.432 11.5782C-34.0599 81.4455 -47.6821 406.578 107.712 415.542C263.105 424.505 238.939 300.433 486.339 260.49C733.74 220.548 322.924 -58.2891 144.432 11.5782Z" fill={`url(#${'A1' + index})`} />
                                               <path d="M144.432 11.5782C-34.0599 81.4455 -47.6821 406.578 107.712 415.542C263.105 424.505 238.939 300.433 486.339 260.49C733.74 220.548 322.924 -58.2891 144.432 11.5782Z" fill={`url(#${'AA1' + index})`} />
@@ -812,10 +696,8 @@ export default function Serve() {
                                               </defs>
                                             </svg>
                                           </div>
-                                          <div className="" style={{
-                                            position: 'absolute', bottom: '-11.5vw', left: '23.5vw', right: 0, height: '100%'
-                                          }}>
-                                            <svg width="24vw" viewBox="0 0 495 495" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <div className="PosiCirB">
+                                            <svg className='CirB' viewBox="0 0 495 495" fill="none" xmlns="http://www.w3.org/2000/svg">
                                               <circle cx="247.113" cy="247.305" r="246.944" fill={`url(#${'x1' + index})`} />
                                               <circle cx="247.113" cy="247.305" r="246.944" fill={`url(#${'xx1' + index})`} />
                                               <defs>
@@ -831,10 +713,8 @@ export default function Serve() {
                                               </defs>
                                             </svg>
                                           </div>
-                                          <div className="" style={{
-                                            position: 'absolute', bottom: '-18.5vw', left: '11vw', right: 0, height: '100%'
-                                          }}>
-                                            <svg width="15vw" viewBox="0 0 323 232" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <div className="PosidotCube">
+                                            <svg className='dotCube' viewBox="0 0 323 232" fill="none" xmlns="http://www.w3.org/2000/svg">
                                               <circle cx="320.261" cy="123.565" r="2.52174" transform="rotate(90 320.261 123.565)" fill="#FF9300" />
                                               <circle cx="320.261" cy="138.696" r="2.52174" transform="rotate(90 320.261 138.696)" fill="#FF9300" />
                                               <circle cx="320.261" cy="153.826" r="2.52174" transform="rotate(90 320.261 153.826)" fill="#FF9300" />
@@ -1189,11 +1069,9 @@ export default function Serve() {
                                               <circle cx="2.52172" cy="108.435" r="2.52174" transform="rotate(90 2.52172 108.435)" fill="#FF9300" />
                                             </svg>
                                           </div>
-                                          <div className="" style={{
-                                            position: 'absolute', bottom: '-6.5vw', left: '10vw', right: 0, height: '100%'
-                                          }}>
+                                          <div className="PosiImgslideSoul">
                                             <div className='' style={{ height: '100%' }}>
-                                              <svg width="37vw" viewBox="0 0 1167 811" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <svg className='ImgslideSoul' viewBox="0 0 1167 811" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M743.426 808.179C1133.27 756.326 1319.54 115.16 1014.3 21.245C709.065 -72.6697 696.492 186.376 183.993 144.877C-328.507 103.378 353.581 860.032 743.426 808.179Z" fill={`url(#${index})`} />
                                                 <pattern id={(index)} width="1" height="1">
                                                   <image href={staticpath} width="100%" />
@@ -1201,10 +1079,8 @@ export default function Serve() {
                                               </svg>
                                             </div>
                                           </div>
-                                          <div className="" style={{
-                                            position: 'absolute', bottom: '-8vw', left: '8.5vw', right: 0, height: '100%'
-                                          }}>
-                                            <svg width="6.5vw" viewBox="0 0 105 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <div className="PosiCirfilter">
+                                            <svg className='Cirfilter' viewBox="0 0 105 105" fill="none" xmlns="http://www.w3.org/2000/svg">
                                               <g fill={`url(#${'x' + index})`}>
                                                 <circle cx="52.5" cy="48.5" r="48.5" fill={`url(#${'xx' + index})`} shape-rendering="crispEdges" />
                                                 <circle cx="52.5" cy="48.5" r="48.5" fill={`url(#${'xxx' + index})`} shape-rendering="crispEdges" />
@@ -1237,16 +1113,16 @@ export default function Serve() {
                                           <div className='col-6'></div>
                                           <div className='bg-none' style={{ borderRadius: '30px', height: '100%' }}>
                                             <div className="row justify-content-md-center">
-                                              <div className='col-10 TextHeadOutSolution' align='left'>{item.service_name}</div>
+                                              <div className='col-10 TextHeadOutSolution PosiSoul' align='left'>{item.service_name}</div>
                                               <div className='col-10' align='left'>
-                                                <p className='textInfoSer' style={{ marginTop: '2%' }}>
+                                                <p className='textInfoSer PosiSoulDetail' style={{ marginTop: '2%' }}>
                                                   <span>ถ้าคุณคือ {item.service_name}</span>
                                                   <p><span>ที่</span><span>{item.service_detail}</span></p>
                                                 </p>
                                               </div>
                                               <div className="" style={{ position: 'absolute', bottom: '-20vw', left: '36%', right: 0, height: '100%' }}>
                                                 <div className='col-10' align='center'>
-                                                  <a class="buttonSendOutSolution" role="button" >สอบถามเพิ่มเติม</a>
+                                                  <a class="buttonSendOutSolution PosiSoulBT" role="button" >สอบถามเพิ่มเติม</a>
                                                 </div>
                                               </div>
                                             </div>
@@ -1290,6 +1166,7 @@ export default function Serve() {
 
                 </div>
               </div>
+
             </div>
             {/* <div className="" align="center">
               <div className="row" >

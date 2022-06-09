@@ -340,13 +340,20 @@ a {
   background: #ffffff;
   box-shadow: 1px 5px 7px #aaa8a8;
 }
+.centertset {
+  justify-content: center;
+}
 .CardOutService {
   /* justify-content: center; */
   margin-left: 1.9vw;
   display: grid;
   grid-template-columns: repeat(5, 19vw);
-  grid-template-rows: repeat(4, minmax(12vw, auto));
+  grid-template-rows: repeat(4, minmax(13vw, auto));
   grid-gap: 0.1vw;
+  /* align-self: center;
+  justify-self: center;
+  text-align: center;
+  place-items: center; */
 }
 .CardWorkWithUs {
   justify-content: center;
@@ -390,6 +397,12 @@ a {
   margin-left: 7vw;
 }
 .OutServiceHeader2 {
+  font-size: 2vw;
+  font-weight: bold;
+  color: #fc501e;
+  margin-left: 7vw;
+}
+.Outsolution {
   font-size: 2vw;
   font-weight: bold;
   color: #fc501e;
@@ -576,12 +589,97 @@ a {
   border-radius: 100%;
   margin-top: 1%;
 }
-.marTopAboutus{
+.marTopAboutus {
   margin-top: -5%;
 }
-.detailBlog{
+.detailBlog {
   margin-left: 9vw;
   font-size: 1.2vw;
+}
+.OurSerPageH {
+  height: 30vw;
+}
+.OurWWUPageH{
+  height: 2vw;
+}
+.OurSerWidth {
+  width: 18vw;
+}
+.OurSerHeight {
+  height: 10vw;
+}
+.marginNameOS{
+  position: absolute;
+  bottom: 5.9vw;
+  left: 0;
+  right: 0;
+  background-color: none;
+}
+.ImgOS{
+  position: absolute;
+  bottom: 0.8vw;
+  left: 34%;
+  right: 0;
+  background-color: none;
+}
+.marginWork{
+  margin-left: 3.5vw;
+}
+.WWUwidth{
+  width: 13vw;
+}
+.OurSolutionPageH{
+  height: 45vw;
+}
+.ImgslideSoul{
+  width: 37vw;
+}
+.Cirfilter{
+  width: 6.5vw;
+}
+.dotCube{
+  width: 15vw;
+}
+.CirB{
+  width: 24vw;
+}
+.OSap{
+  width: 28vw;
+}
+.PosiImgslideSoul{
+  position: absolute;
+  bottom: -6.5vw;
+  left: 10vw;
+  right: 0;
+  height: 100%;
+}
+.PosiCirfilter{
+  position: absolute;
+  bottom: -8vw;
+  left: 8.5vw;
+  right: 0;
+  height: 100%;
+}
+.PosidotCube{
+  position: absolute;
+  bottom: -18.5vw;
+  left: 11vw;
+  right: 0;
+  height: 100%;
+}
+.PosiCirB{
+  position: absolute;
+  bottom: -11.5vw;
+  left: 23.5vw;
+  right: 0;
+  height: 100%;
+}
+.PosiOSap{
+  position: absolute;
+  bottom: -0.5vw;
+  left: 15vw;
+  right: 0;
+  height: 100%;
 }
 @media only screen and (max-width: 568px) {
   .marSpTop {
@@ -776,13 +874,13 @@ a {
   .ourWorksHeader {
     font-size: 3.5vw;
     font-weight: bold;
-    margin-left: 2vw;
+    margin-left: -1vw;
   }
   .ourWorksHeader2 {
     font-size: 4vw;
     font-weight: bold;
     color: #fc501e;
-    margin-left: 2vw;
+    margin-left: -1vw;
   }
   .textType {
     font-size: 3.5vw;
@@ -832,7 +930,7 @@ a {
     height: 50vw;
     width: 50vw;
   }
-  .CardAboutus{
+  .CardAboutus {
     display: grid;
     grid-template-columns: repeat(99, 100vw);
     grid-template-rows: repeat(4, minmax(0px, auto));
@@ -846,12 +944,208 @@ a {
     font-size: 3.5vw;
     color: #404040;
   }
-  .marTopAboutus{
+  .marTopAboutus {
     margin-top: -3%;
   }
-  .detailBlog{
+  .detailBlog {
     font-size: 3vw;
     color: #000000;
     font-weight: normal;
+  }
+  .marginWork{
+    margin-left: 2vw;
+  }
+  .CardOutService {
+    display: grid;
+    grid-template-columns: repeat(99, 100vw);
+    grid-template-rows: repeat(4, minmax(0px, auto));
+  }
+  .sliderOurSer {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: mandatory;
+  }
+  .sliderOurSer > div {
+    flex-shrink: 0;
+    width: 30vw;
+    height: 95vw;
+    text-align: center;
+  }
+  .sliderOurSer::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+  .margintopResSer {
+    margin-top: 13%;
+    margin-left: 15%;
+  }
+  .OurSerPageH {
+    height: 30vh;
+  }
+  .OurSerWidth {
+    width: 60vw;
+  }
+  .OurSerHeight {
+    height: 40vw;
+  }
+  .marginNameOS{
+    position: absolute;
+    bottom: 28vw;
+    left: 0;
+    right: 0;
+    background-color: none;
+  }
+  .ImgOS{
+    position: absolute;
+    bottom: 4vw;
+    left: 30%;
+    right: 0;
+    background-color: none;
+  }
+  .NameOutService {
+    text-align: center;
+    font-size: 4vw;
+    font-weight: bold;
+  }
+  .Imgcircle {
+    border-radius: 100%;
+    background-color: rgb(183, 183, 183);
+    height: 23vw;
+    width: 23vw;
+  }
+  .WorkWithUs {
+    font-size: 3.5vw;
+    font-weight: bold;
+    margin-top: 18vw;
+    text-align: center;
+  }
+  .WorkWithUsFormation {
+    font-size: 4vw;
+    font-weight: bold;
+    color: #fc501e;
+    text-align: center;
+  }
+  .OurSolutionHeader {
+    font-size: 3.5vw;
+    font-weight: bold;
+    margin-top: 30vw;
+    margin-left: 7vw;
+  }
+  .Outsolution {
+    font-size: 4vw;
+    font-weight: bold;
+    color: #fc501e;
+  }
+  .CardWorkWithUs {
+    /* justify-content: center; */
+    /* margin-left: 1.9vw; */
+    display: grid;
+    grid-template-columns: repeat(2, 38.5vw);
+    grid-template-rows: repeat(4, minmax(12vw, auto));
+    grid-gap: 10vw;
+  }
+  .OurWWUPageH{
+    height: 60vh;
+  }
+  .ImgWWU{
+    width: 18vh;
+  }
+  .OurSolutionPageH{
+    height: 55vh;
+  }
+  .PosiSoul{
+    position: absolute;
+    bottom: -70vw;
+    left: 4.5%;
+    right: 0;
+  }
+  .PosiSoulDetail{
+    position: absolute;
+    bottom: -85vw;
+    left: 8%;
+    right: 0;
+  }
+  .PosiSoulBT{
+    position: absolute;
+    bottom: -75vw;
+    left: 0;
+    right: 0;
+  }
+  .ImgslideSoul{
+    width: 70vw;
+  }
+  .Cirfilter{
+    width: 16vw;
+  }
+  .dotCube{
+    width: 31vw;
+  }
+  .CirB{
+    width: 50vw;
+  }
+  .OSap{
+    width: 54vw;
+  }
+  .PosiImgslideSoul{
+    position: absolute;
+    bottom: -6.5vw;
+    left: 15vw;
+    right: 0;
+    height: 100%;
+  }
+  .PosiCirfilter{
+    position: absolute;
+    bottom: -7vw;
+    left: 10.5vw;
+    right: 0;
+    height: 100%;
+  }
+  .PosidotCube{
+    position: absolute;
+    bottom: -25vw;
+    left: 15vw;
+    right: 0;
+    height: 100%;
+  }
+  .PosiCirB{
+    position: absolute;
+    bottom: -11.5vw;
+    left: 36vw;
+    right: 0;
+    height: 100%;
+  }
+  .PosiOSap{
+    position: absolute;
+    bottom: -0.5vw;
+    left: 26vw;
+    right: 0;
+    height: 100%;
+  }
+  .TextHeadOutSolution {
+    font-size: 4vw;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #00000053;
+  }
+  .textInfoSer {
+    font-size: 3vw;
+    color: #000000;
+  }
+  .buttonSendOutSolution {
+    background: #ff990f;
+    border-radius: 10px;
+    margin: 0 0.6em;
+    font-size: 3.5vw;
+    padding: 10px;
+    display: inline-block;
+    color: rgb(252, 252, 252);
+    letter-spacing: 1px;
+    width: 35vw;
+    height: 10vw;
+    transition: 0.5s;
+    
+  }
+  .buttonSendOutSolution:hover {
+    background: rgb(255, 255, 255);
+    color: #ff990f;
   }
 }

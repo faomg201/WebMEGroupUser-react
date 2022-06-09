@@ -239,25 +239,24 @@ export default function Abouts() {
               <div class="sliderAboutUs HiddenOBJ">
                 <div>
                   <div class="row CardAboutus">
-                  {Employees.map((item) => {
-                  const staticpath = APIURL + `/static/employees/` + item.emp_fname + ',' + item.emp_lname + ',' + item.emp_img
-                  // console.log(staticpath);
-                  return (
-                    < >
-                      <div>
-                        <div style={{ height: '20vw' }}>
-                          <img src={staticpath} width="100%" className='ImgAbouUs' />
-                          <div style={{ marginTop: '8%' }}>
-                            <h className="textNEMP" >{item.emp_fname} {item.emp_lname} #{item.mbti_name}</h>
-                            <p className="textNEMP_Mbti_Q" >{item.emp_class}</p>
-                            <p className="textNEMP_Mbti_Q marTopAboutus">{item.emp_quote}</p>
+                    {Employees.map((item) => {
+                      const staticpath = APIURL + `/static/employees/` + item.emp_fname + ',' + item.emp_lname + ',' + item.emp_img
+                      // console.log(staticpath);
+                      return (
+                        < >
+                          <div>
+                            <div style={{ height: '20vw' }}>
+                              <img src={staticpath} width="100%" className='ImgAbouUs' />
+                              <div style={{ marginTop: '8%' }}>
+                                <h className="textNEMP" >{item.emp_fname} {item.emp_lname} #{item.mbti_name}</h>
+                                <p className="textNEMP_Mbti_Q" >{item.emp_class}</p>
+                                <p className="textNEMP_Mbti_Q marTopAboutus">{item.emp_quote}</p>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                    </>
-                  );
-                })}
-
+                        </>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
