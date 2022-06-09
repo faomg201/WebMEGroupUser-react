@@ -100,7 +100,7 @@ export default function Works() {
           <div class="PageFullvh" align="center">
             <div class="row" >
               <div class="col-12">
-                <div class="container" style={{ marginLeft: '3.5vw' }}>
+                <div class="container marginWork" >
                   <div class="col-12" style={{ marginTop: '5%' }} align="left">
                     <p className='ourWorksHeader'>our works
                       <span className='dotOrang'>.</span></p>
