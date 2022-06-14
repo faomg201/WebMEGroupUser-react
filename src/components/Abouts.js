@@ -10,13 +10,37 @@ export default function Abouts() {
   const [status, setStatus] = useState(false);
   const APIURL = process.env.REACT_APP_APIURL;
 
+  const [cardTech, setcardTech] = useState([])
+
   useEffect(() => {
     const timer = setTimeout(() => {
     }, 3000);
     getData()
+    setcardTech([
+      {
+        name: 'New tech',
+        sub1: 'machine ',
+        sub2: 'artificial ',
+        sub3: 'learning',
+        sub4: 'intelligence',
+      },
+      {
+        name: 'Mobile',
+      },
+      {
+        name: 'Font-end',
+      },
+      {
+        name: 'Platform',
+      },
+      {
+        name: 'Back-end',
+      },]
+    )
     return () => clearTimeout(timer);
 
   }, [])
+
   // console.log( `${REACT_APP_APIURL}`);
   const getData = () => {
     // ${REACT_APP_APIURL}
@@ -90,13 +114,6 @@ export default function Abouts() {
                     <span className='dotOrang'>.</span></p>
                   <p className="AboutUsHeader2">เกี่ยวกับเรา</p>
                   <p className="DetailAbotus" style={{ marginTop: '5%' }}><span className="tab"></span>{Enterprises.enterprise_detail}
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                    has been the industry’s standard dummy text ever since the 1500s, when an unknown printer
-                    took a galley of type and scrambled it to make a type specimen book. It has survived not only
-                    five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                    and more recently with desktop publishing software like Aldus PageMaker including versions of
-                    Lorem Ipsum.
                   </p>
                 </div>
               </div>
@@ -262,34 +279,28 @@ export default function Abouts() {
               </div>
             </div>
           </div>
-          <div className='none' style={{ height: '60vw' }}>
-            <p className='OutServiceHeader'>our technology
+          <div className='OutTechnologyPage' >
+            <p className='OutTechnologyHeader'>our technology
               <span className='dotOrang'>.</span></p>
-            <p className="OutServiceHeader2">ความเชี่ยวชาญของเรา</p>
+            <p className="OutTechnologyHeader2">ความเชี่ยวชาญของเรา</p>
             <div className="card borderCard">
               <div className="" style={{
                 position: 'absolute', bottom: '0vw', left: 0, right: 0,
                 height: '0px'
               }}>
                 <div>
-                  <div className="col " style={{ width: '40vw', marginLeft: '7vw' }}>
+                  <div className="InfoTechsize" >
                     <div className="card borderCard cardCardHover ">
-                      <div className="" style={{
-                        position: 'absolute', bottom: '-14vw', left: 0, right: 0,
-                        backgroundColor: 'none'
-                      }}>
+                      <div className="TitleTechMargin" >
                         <p className='TitleTechstack'><span>Techstack for serve your</span><br />
                           <span style={{ color: '#fc501e' }}>Vision project</span><span>.</span></p>
                       </div>
-                      <div className="" style={{
-                        position: 'absolute', bottom: '-23vw', left: 0, right: 0,
-                        backgroundColor: 'none'
-                      }}>
+                      <div className="DetailTechMargin">
                         <p className='DetailTechstack'><span>ด้วยความเชี่ยวชาญด้านเทคโนโลยีของเราที่จะทำให้ Project ของคุณสำเร็จ</span></p>
                       </div>
-                      <div className="" style={{ position: 'absolute', bottom: '-28vw', left: '13%', right: 0, height: '100%' }}>
+                      <div className="ButtonSendTechargin" >
                         <div className='col-12' >
-                          <a className="buttonSendOutSolution" role="button" >สอบถามเพิ่มเติม</a>
+                          <a className="buttonSendTech" role="button" >สอบถามเพิ่มเติม</a>
                         </div>
                       </div>
                     </div>
@@ -297,7 +308,33 @@ export default function Abouts() {
                 </div>
               </div>
             </div>
-            <div className="card borderCard cardCardHover ">
+            <div className='row'>
+              <div className='col-6'></div>
+              <div className='col-6'>
+                <div class="sliderTech HiddenOBJ">
+                  <div>
+                    <div class="row CardTech h-100"  >
+                      {cardTech.map((item, index) => {
+                        return (
+                          <div style={{ height: '100%', padding: '0px 10px 0px 5px' }}>
+                            <div className="col " style={{ height: '100%', display: 'flex', placeContent: 'center' }}>
+                              <div className="card borderCard cardCardHover " style={{ height: '75%', width: '80%', margin: 'auto', boxShadow: '4px 4px 10px 0px #0000004d' }}>
+                                <p className="TitleTech" >{item.name}</p>
+                                <p className='font-sub'>{item.sub1}</p>
+                                <p className='font-sub'>{item.sub2}</p>
+                                <p className='font-sub'>{item.sub3}</p>
+                                <p className='font-sub'>{item.sub4}</p>
+                              </div>
+                            </div>
+                          </div>
+                        )
+                      })}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="card borderCard cardCardHover ResDisplayNone ">
               <div className="" style={{
                 position: 'absolute', bottom: '-24vw', left: '64%', right: 0,
                 height: '0px'

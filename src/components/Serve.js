@@ -3,6 +3,7 @@ import axios from 'axios';
 import FadeIn from 'react-fade-in';
 import imgEMT from '../../src/assets/Img/default-placeholder.png'
 import imgCR from '../../src/assets/Img/Path10.png'
+import imgBGserv from '../assets/Img/cover-megroup2 2.png'
 import imagesolution from './imagesolution'
 
 export default function Serve() {
@@ -75,8 +76,9 @@ export default function Serve() {
           </div>
         ) : (
           <>
+            <div className="ImgBGServ" ><img src={imgBGserv} width="100%" />
+            </div>
             <div className='OurSerPageH'>
-              <br />
               <p className='OutServiceHeader'>our service
                 <span className='dotOrang'>.</span></p>
               <p class="OutServiceHeader2">บริการของเรา</p>
@@ -130,7 +132,7 @@ export default function Serve() {
                   position: 'absolute', bottom: '-5vw', left: 0, right: 0,
                   height: '0px'
                 }}>
-                  <div class="row CardWorkWithUs">
+                  <div class="row CardWorkWithUs ">
                     {num.map((num, index) => (
                       <>
                         <div>
@@ -183,8 +185,8 @@ export default function Serve() {
               <div className="col-12 ">
                 <div
                   id="carouselExampleIndicators"
-                className="carousel slide"
-                data-bs-ride="carousel"
+                  className="carousel slide"
+                  data-bs-ride="carousel"
                 >
                   <FadeIn>
                     <div className="carousel-inner ">
