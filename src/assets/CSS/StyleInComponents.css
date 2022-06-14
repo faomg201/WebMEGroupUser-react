@@ -20,6 +20,9 @@ a {
   cursor: pointer;
   text-decoration: none;
 }
+a:active {
+  color: rgb(240, 234, 234);
+}
 .popUpCard {
   height: 98% !important;
 }
@@ -48,12 +51,12 @@ a {
   scrollbar-width: none; /* Firefox */
 }
 
-.PageFullvh {
+/* .PageFullvh {
   min-height: 100vh;
-}
+} */
 
 .BGLightNav {
-  background: #ffffff23;
+  background: #FFFFFF;
 }
 .textHead {
   font-size: 3vw;
@@ -200,31 +203,19 @@ a {
   height: 23vw;
   text-align: center;
 }
+
 .sliderMedium {
   display: flex;
   overflow-x: auto;
-  /* make it smooth on iOS */
   -webkit-overflow-scrolling: touch;
-  /* scroll-snap-points-x: repeat(300px); */
   scroll-snap-type: mandatory;
 }
-/* .sliderMedium::-webkit-scrollbar {
-  display: none;
-} */
 .sliderMedium > div {
-  /* make sure the width is honored */
   flex-shrink: 0;
   width: 28.5vw;
   height: 28vw;
-  /* line-height: 300px; */
   text-align: center;
-  /* background: #f0f0f0; */
-  /* margin-right: 15px;
-  border-radius: 5px; */
 }
-/* .marginNav{
-  margin-left: 8vw;
-} */
 
 .slider-wrapper {
   font-size: 2vw;
@@ -238,6 +229,7 @@ a {
   height: 50px;
   padding-left: 15px;
   overflow: hidden;
+  width: 100vw;
 }
 .slider div {
   height: 50px;
@@ -373,15 +365,7 @@ a {
   width: 5.5vw;
   /* margin-left: 6.5vw; */
 }
-.ImgcircleBlog {
-  /* height: 100% !important; */
-  /* overflow-y: hidden; */
-  border-radius: 100%;
-  /* background-color: rgb(183, 183, 183); */
-  height: 4vw;
-  width: 4vw;
-  /* margin-left: 6.5vw; */
-}
+
 .NameBlog {
   font-size: 1vw;
 }
@@ -390,17 +374,31 @@ a {
   font-size: 1.4vw;
   font-weight: bold;
 }
-.OutServiceHeader {
+.OutTechnologyHeader{
   font-size: 1.8vw;
   font-weight: bold;
   margin-top: 2vw;
   margin-left: 7vw;
 }
-.OutServiceHeader2 {
+.OutTechnologyHeader2 {
   font-size: 2vw;
   font-weight: bold;
   color: #fc501e;
   margin-left: 7vw;
+}
+.OutServiceHeader {
+  font-size: 1.8vw;
+  font-weight: bold;
+  margin-top: 55vw;
+  /* margin-left: 7vw; */
+  text-align: center;
+}
+.OutServiceHeader2 {
+  font-size: 2vw;
+  font-weight: bold;
+  color: #fc501e;
+  /* margin-left: 7vw; */
+  text-align: center;
 }
 .Outsolution {
   font-size: 2vw;
@@ -507,6 +505,29 @@ a {
   background: rgb(255, 255, 255);
   color: #ff990f;
 }
+.buttonSendTech {
+  background: #ff990f;
+  border-radius: 10px;
+  margin: 0 0.6em;
+  font-size: 1.2vw;
+  padding: 6px;
+  display: inline-block;
+  color: rgb(252, 252, 252);
+  letter-spacing: 1px;
+  width: 13vw;
+  height: 4vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  text-decoration: none;
+  
+}
+.buttonSendTech:hover {
+  background: rgb(255, 255, 255);
+  color: #ff990f;
+}
 .ourWorksHeader {
   font-size: 1.8vw;
   font-weight: bold;
@@ -597,7 +618,7 @@ a {
   font-size: 1.2vw;
 }
 .OurSerPageH {
-  height: 30vw;
+  height: 25vw;
 }
 .OurWWUPageH{
   height: 2vw;
@@ -680,6 +701,78 @@ a {
   left: 15vw;
   right: 0;
   height: 100%;
+}
+.sizeOurBlog{
+  height: 20vw;
+  width: 28vw;
+}
+.ImgBlog{
+  position: absolute;
+  bottom: 5.5vw;
+  left: 0.98vw;
+  right: 0;
+  background-color: none;
+  width: 26vw;
+}
+.ImgBlogsize{
+  width: 100%;
+  height: 13.5vw;
+}
+.marImgcirBlog{
+  position: absolute;
+  bottom: 0.8vw;
+  left: 0.98vw;
+  right: 0;
+  background-color: none;
+}
+.ImgcircleBlog {
+  border-radius: 100%;
+  height: 4vw;
+  width: 4vw;
+}
+.NameBlogmargin{
+  position: absolute;
+  bottom: 0.5vw;
+  left: -15vw;
+  right: 0;
+  background-color: none;
+}
+.ImgBGServ{
+  position: absolute;
+  bottom: 1vw;
+  left: 0;
+  right: 0;
+  height: 0px;
+  z-index: -1;
+}
+.OutTechnologyPage{
+  height: 60vw;
+}
+.TitleTechMargin{
+  position: absolute;
+  bottom: -14vw;
+  left: 0;
+  right: 0;
+  background-color: none;
+}
+.DetailTechMargin{
+  position: absolute;
+  bottom: -23vw;
+  left: 0;
+  right: 0;
+  background-color: none;
+}
+.ButtonSendTechargin{
+  position: absolute;
+  bottom: -28vw;
+  left: 13%;
+  right: 0;
+  background-color: none;
+  height: 100%;
+}
+.InfoTechsize{
+  width: 40vw;
+  margin-left: 7vw;
 }
 @media only screen and (max-width: 568px) {
   .marSpTop {
@@ -980,7 +1073,7 @@ a {
     margin-left: 15%;
   }
   .OurSerPageH {
-    height: 30vh;
+    height: 25vh;
   }
   .OurSerWidth {
     width: 60vw;
@@ -1147,5 +1240,166 @@ a {
   .buttonSendOutSolution:hover {
     background: rgb(255, 255, 255);
     color: #ff990f;
+  }
+  .sliderBlog {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: mandatory;
+  }
+  .sliderBlog > div {
+    flex-shrink: 0;
+    width: 95vw;
+    height: 30vh;
+    text-align: center;
+  }
+  .sliderBlog::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+  .sizeOurBlog{
+    height: 60vw;
+    width: 80vw;
+    margin-left: 6vw;
+  }
+  .ImgBlog{
+    bottom: 16.5vw;
+    left: 10vw;
+    width: 72vw;
+  }
+  .ImgBlogsize{
+    width: 100%;
+    height: 40vw;
+  }
+  .marImgcirBlog{
+    position: absolute;
+    bottom: 3vw;
+    left: 10vw;
+  }
+  .ImgcircleBlog {
+    border-radius: 100%;
+    height: 12vw;
+    width: 12vw;
+  }
+  .NameBlogmargin{
+    bottom: 4vw;
+    left: -35vw;
+  }
+  .NameBlog {
+    font-size: 3vw;
+  }
+  .ImgBGServ{
+    bottom: 8vw;
+  }
+  .OutServiceHeader {
+    font-size: 3.5vw;
+    margin-top: 55vw;
+  }
+  .OutServiceHeader2 {
+    font-size: 4vw;
+  }
+  .sliderTech {
+    /* margin-left: 45vw; */
+    width: 50vw;
+    height: 65vw;
+    /* display: flex; */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: mandatory;
+  }
+  .sliderTech > div {
+    flex-shrink: 0;
+    width: 50vw;
+    height: 65vw;
+    text-align: center;
+  }
+  .sliderTech::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+  .CardTech {
+    display: grid;
+    grid-template-columns: repeat(99, 55vw);
+  }
+  .TitleTech {
+    text-align: center;
+    font-size: 13px;
+    background: #ff990f;
+    border-radius: 99999999px;
+    margin: 15% 1.25em;
+    padding: 6px;
+    display: inline-block;
+    color: rgb(252, 252, 252);
+    letter-spacing: 1px;
+    width: auto;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    text-decoration: none;
+  }
+  .font-sub{
+    font-size: 10px;
+  }
+  .OutTechnologyPage{
+    height: 80vw;
+  }
+  .OutTechnologyHeader{
+    font-size: 3.5vw;
+    font-weight: bold;
+    margin-top: 2vw;
+    margin-left: 7vw;
+  }
+  .OutTechnologyHeader2 {
+    font-size: 4vw;
+    font-weight: bold;
+    color: #fc501e;
+    margin-left: 7vw;
+  }
+  .TitleTechMargin{
+    bottom: -21vw;
+  }
+  .DetailTechMargin{
+    bottom: -32vw;
+  }
+  .ButtonSendTechargin{
+    bottom: -40vw;
+    left: 5%;
+  }
+  .TitleTechstack {
+    font-size: 4vw;
+    font-weight: bold;
+  }
+  .DetailTechstack {
+    font-size: 2.8vw;
+    font-weight: bold;
+  }
+  .InfoTechsize{
+    width: 45vw;
+    margin-left: 7vw;
+  }
+  .buttonSendTech {
+    background: #ff990f;
+    border-radius: 10px;
+    margin: 0 0.6em;
+    font-size: 3.5vw;
+    padding: 5px 15px ;
+    display: inline-block;
+    color: rgb(252, 252, 252);
+    letter-spacing: 1px;
+    width: auto;
+    height: auto;
+    transition: 0.5s;
+    
+  }
+  .buttonSendTech:hover {
+    background: rgb(255, 255, 255);
+    color: #ff990f;
+  }
+  .overflowHomepage {
+    overflow: hidden;
+    display: grid;
+    place-content: center;
+    height: unset;
   }
 }

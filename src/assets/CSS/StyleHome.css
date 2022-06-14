@@ -1,6 +1,9 @@
-.overflowHomepage{
- overflow: hidden;
+.overflowHomepage {
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+  height: 100vh;
 }
-.Shadow{
-    text-shadow: 1px 1px 5px #00000056;
+.Shadow {
+  text-shadow: 1px 1px 5px #00000056;
 }

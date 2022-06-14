@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import { Link } from 'react-scroll'
 import { useNavigate } from "react-router-dom";
 
@@ -7,30 +7,31 @@ export const NavBar = () => {
     const isLink = (url) => {
         histotyH(`/${url}`)
     }
-    // const 
+    
     return (
         <>
-            <nav class="navbar sticky-top navbar-expand-lg navbar-light BGLightNav ResDisplayNone">
+            
+            <nav class="navbar sticky-top navbar-expand-lg navbar-light BGLightNav ResDisplayNone" >
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                            <li className="nav-item HiddenResfixed marginNav">
-                                {/* <a className="nav-link hoverBarBgBlack marginNav" onClick={() => { isLink('') }}>หน้าแรก</a> */}
-                                <Link to="HomeScroll" spy={true} ><a className="nav-link hoverBarBgBlack" >หน้าแรก</a></Link>
+                        <ul class="navbar-nav ">
+                            <li className="nav-item HiddenResfixed marginNav centerNav">
+                                
+                                <Link to="HomeScroll" spy={true} ><a className="nav-link hoverBarBgWhite " >หน้าแรก</a></Link>
                             </li>
-                            <li className="nav-item HiddenResfixed">
+                            <li className="nav-item HiddenResfixed centerNav">
                                 <Link to="ServeScroll" spy={true} ><a className="nav-link hoverBarBgWhite" >บริการ</a></Link>
                             </li>
-                            <li className="nav-item HiddenResfixed">
+                            <li className="nav-item HiddenResfixed centerNav">
                                 <Link to="WorksScroll" spy={true} ><a className="nav-link hoverBarBgWhite " >ผลงาน</a></Link>
                             </li>
-                            <li className="nav-item HiddenResfixed">
+                            <li className="nav-item HiddenResfixed centerNav">
                                 <Link to="AboutsScroll" spy={true} ><a className="nav-link hoverBarBgWhite " >เกี่ยวกับเรา</a></Link>
                             </li>
-                            <li className="nav-item HiddenResfixed">
+                            <li className="nav-item HiddenResfixed centerNav">
                                 <Link to="ContactScroll" spy={true} ><a className="nav-link hoverBarBgWhite " >ติดต่อเรา</a></Link>
                             </li>
                             <li className="nav-item HiddenResfixed marginNavVV">

@@ -1,10 +1,35 @@
-.hoverBarBgWhite {
-  color: #ff9300 !important;
+nav .containerHome ul li a {
+  padding: 0 1vw;
+  color: #000000;
+  font-size: 1.2vw;
+  font-weight: bold;
+}
+.hovewe:hover {
+  color: #888888 !important;
   transition: 0.5s;
+}
+nav .containerHome ul li.active a:hover {
+  transition: 0.5s;
+  color: #f6851483 !important;
+}
+
+nav .containerHome ul li.active a {
+  color: #fe5000;
   font-size: 1.5vw;
+  font-weight: bold;
+}
+.centerNav {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.hoverBarBgWhite {
+  /* color: #000000 !important; */
+  transition: 0.5s;
+  font-size: 1.4vw;
+  font-weight: bold;
 }
 .hoverBarBgWhite:hover {
-  color: #f6851483!important;
+  color: #888888 !important;
   transition: 0.5s;
 }
 .hoverBarBgWhitebord {
@@ -22,9 +47,10 @@
   color: #ff8000 !important ;
   transition: 0.5s;
   font-size: 1.5vw;
+  font-weight: bold;
 }
 .hoverBarBgBlack:hover {
-  color: #f6851483!important;
+  color: #f6851483 !important;
   transition: 0.5s;
 }
 .hoverBarBgBlackBord {
@@ -69,24 +95,43 @@
 }
 .textLogo1 {
   font-size: 2.5vw;
-  color: #ff9300;
+  color: #fe5000;
   text-align: center;
   font-weight: bold;
 }
 .textLogo2 {
   font-size: 1.1vw;
-  color: #ff9300;
-  text-align: center;
+  color: #000000;
+  text-align: right;
 }
-.marTopbar{
-  margin-left: 30%;
+.marginNav {
+  margin-left: 4vw;
 }
-.marTopbarContact{
-  margin-left: 28%;
+.marginNavVV {
+  margin-left: 25vw;
 }
-.marginNav{
-  margin-left: 5.5vw;
+
+@media only screen and (max-width: 992px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: inherit;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+  .sliderMedium::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+  .sliderBlog::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
 }
-.marginNavVV{
-  margin-left: 35vw;
+@media only screen and (max-width: 768px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: inherit;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
 }
