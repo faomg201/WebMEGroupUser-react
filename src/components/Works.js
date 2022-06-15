@@ -101,7 +101,7 @@ export default function Works() {
             <div class="row" >
               <div class="col-12">
                 <div class="container marginWork" >
-                  <div class="col-12" style={{ marginTop: '5%' }} align="left">
+                  <div className='col-12 marginscroll'  align="left">
                     <p className='ourWorksHeader'>our works
                       <span className='dotOrang'>.</span></p>
                     <p class="ourWorksHeader2">ผลงานของเรา</p>

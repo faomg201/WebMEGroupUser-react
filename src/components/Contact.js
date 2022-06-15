@@ -87,89 +87,7 @@ export default function Contact() {
         </div>
       ) : (
         <>
-          <div className=''>
-            <p className='TeamHeader'>our blog
-              <span className='dotOrang'>.</span></p>
-            <p class="TeamHeader2">บล็อกของเรา</p>
-            <p className='detailBlog'>รู้จักเราให้มากขึ้นผ่านประสบการณ์ของเรา</p>
-            <div class="container">
-              <div class="sliderBlog">
-                <div style={{ marginLeft: '1%'}}>
-                  <div className='' style={{ height: '20vw' }}>
-                    <div className='OurBlog sizeOurBlog'></div>
-                    <div className="card borderCard">
-                      <div className="ImgBlog" >
-                        <img src={imgEMT} className='ImgBlogsize' />
-                      </div>
-                      <div className="marImgcirBlog" >
-                        <div class='ImgcircleBlog' >
-                          <img src={imgEMT} className='ImgcircleBlog' />
-                        </div>
-                      </div>
-                      <div className="NameBlogmargin">
-                        <p class="NameBlog">Name</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div style={{ marginLeft: '1%'}}>
-                  <div className='' style={{ height: '20vw' }}>
-                    <div className='OurBlog sizeOurBlog'></div>
-                    <div className="card borderCard">
-                      <div className="ImgBlog" >
-                        <img src={imgEMT} className='ImgBlogsize' />
-                      </div>
-                      <div className="marImgcirBlog" >
-                        <div class='ImgcircleBlog' >
-                          <img src={imgEMT} className='ImgcircleBlog' />
-                        </div>
-                      </div>
-                      <div className="NameBlogmargin">
-                        <p class="NameBlog">Name</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div style={{ marginLeft: '1%'}}>
-                  <div className='' style={{ height: '20vw' }}>
-                    <div className='OurBlog sizeOurBlog'></div>
-                    <div className="card borderCard">
-                      <div className="ImgBlog" >
-                        <img src={imgEMT} className='ImgBlogsize' />
-                      </div>
-                      <div className="marImgcirBlog" >
-                        <div class='ImgcircleBlog' >
-                          <img src={imgEMT} className='ImgcircleBlog' />
-                        </div>
-                      </div>
-                      <div className="NameBlogmargin">
-                        <p class="NameBlog">Name</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div style={{ marginLeft: '1%'}}>
-                  <div className='' style={{ height: '20vw' }}>
-                    <div className='OurBlog sizeOurBlog'></div>
-                    <div className="card borderCard">
-                      <div className="ImgBlog" >
-                        <img src={imgEMT} className='ImgBlogsize' />
-                      </div>
-                      <div className="marImgcirBlog" >
-                        <div class='ImgcircleBlog' >
-                          <img src={imgEMT} className='ImgcircleBlog' />
-                        </div>
-                      </div>
-                      <div className="NameBlogmargin">
-                        <p class="NameBlog">Name</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
+          <div className='Page100Vh'>
             {/* <div class="row" >
               <div class="col-12" style={{ marginTop: '10%' }}>
                 <h class="textHead">บล็อกของเรา</h><hr class="line Cline"></hr>
@@ -208,10 +126,10 @@ export default function Contact() {
                 </div>
               </div>
             </div> */}
-            <div class="row" >
-              <p className='OutTechnologyHeader'>contact us
+            <div class="row marginscroll" >
+              <p className='OuConHeader'>contact us
                 <span className='dotOrang'>.</span></p>
-              <p class="OutServiceHeader2">ติดต่อเรา</p>
+              <p class="OutTechnologyHeader2">ติดต่อเรา</p>
 
               <div class="col-12">
                 {Location.map((item) => {
@@ -244,8 +162,8 @@ export default function Contact() {
                         <FadeIn>
                           <div class="row justify-content-md-center ResDisplayNone">
                             <div class="col-1"></div>
-                            <div class="col-4 ">
-                              <div style={{ width: "50vm", height: "30vw" }} >
+                            <div class="col-4" style={{display: 'grid',justifyItems: 'center'}}>
+                              <div className='SizeMap' >
                                 <WrappendMap
                                   googleMapURL={
                                     `https:maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=` +
@@ -264,22 +182,22 @@ export default function Contact() {
                               </div>
                             </div>
 
-                            <div class="col-6 shadowBox bg-light" style={{ borderRadius: '50px' }} align='left' >
+                            <div class="col-6 shadowBox bg-none" style={{ borderRadius: '50px' }} align='left' >
                               <div className="marSpTop3">
-                                <p><span className='TextContactHsub'>ชื่อนิติบุคคลผู้เสียภาษี</span></p>
-                                <p>
+                                <p className='messenMargin'><span className='TextContactHsub'>ชื่อนิติบุคคลผู้เสียภาษี</span></p><hr align='center' className="line ClineMessen"></hr>
+                                <p className='messenMargin'>
                                   <span className='TextContactHsub'>ที่อยู่</span> &nbsp; <span className='textInfo'>{item.enterprise_address}</span>
                                 </p>
-                                <p>
+                                <p className='messenMargin'>
                                   <span className='TextContactHsub'>เวลาทำการ</span><br />
                                   <span className='tab'></span><span className='textInfo'>{item.enterprise_servicetime}</span>
                                 </p>
                                 <div align='center' className='marginTopCon'><a class="buttonSend" role="button" href="https://www.facebook.com/megroupenterprise" target="_blank">ส่งข้อความ</a></div>
                               </div>
                             </div>
-                            <div class="col-1"></div>
+                            <div class="col-1 "></div>
                           </div>
-                          <div class="row justify-content-md-center  HiddenOBJ">
+                          <div class="row justify-content-md-center   HiddenOBJ">
                             <div class="col-12">
                               <div style={{ width: "100vw", height: "45vh" }} >
                                 <WrappendMap
@@ -298,7 +216,7 @@ export default function Contact() {
                                   }
                                 />
                               </div>
-                            </div>
+                            </div>   
                             <div class="col-12" align='left' style={{ height: "30vh" }}>
                               <div className="marSpTop3">
                                 <p><span className='TextContactHsub'><b>ชื่อนิติบุคคลผู้เสียภาษี</b></span>
