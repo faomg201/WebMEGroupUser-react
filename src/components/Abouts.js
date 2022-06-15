@@ -109,7 +109,7 @@ export default function Abouts() {
           <div className="bg-light ResDisplayNone">
             <div className="row" >
               <div className='col-7 radiusDetailAbout' style={{ height: '49.07vw' }}>
-                <div className="col" style={{ marginTop: '5%', marginLeft: '12%' }}>
+                <div className="col marginscroll" style={{  marginLeft: '11.5%' }}>
                   <p className='AboutUsHeader'>about us
                     <span className='dotOrang'>.</span></p>
                   <p className="AboutUsHeader2">เกี่ยวกับเรา</p>
@@ -225,8 +225,8 @@ export default function Abouts() {
               </div>
             </div>
           </div>
-          <div className=''>
-            <p className='TeamHeader'>our team
+          <div className='Page100Vh '>
+            <p className='TeamHeader '>our team
               <span className='dotOrang'>.</span></p>
             <p className="TeamHeader2">ทีมของเรา</p>
             <div className="container">
@@ -481,7 +481,88 @@ export default function Abouts() {
         </>
       )
       }
-
+    <div className='OurblogPageH'>
+            <p className='TeamHeader'>our blog
+              <span className='dotOrang'>.</span></p>
+            <p class="TeamHeader2">บล็อกของเรา</p>
+            <p className='detailBlog'>รู้จักเราให้มากขึ้นผ่านประสบการณ์ของเรา</p>
+            <div class="container">
+              <div class="sliderBlog">
+                <div style={{ marginLeft: '1%'}}>
+                  <div className='' style={{ height: '20vw' }}>
+                    <div className='OurBlog sizeOurBlog'></div>
+                    <div className="card borderCard">
+                      <div className="ImgBlog" >
+                        <img src={imgEMT} className='ImgBlogsize' />
+                      </div>
+                      <div className="marImgcirBlog" >
+                        <div class='ImgcircleBlog' >
+                          <img src={imgEMT} className='ImgcircleBlog' />
+                        </div>
+                      </div>
+                      <div className="NameBlogmargin">
+                        <p class="NameBlog">Name</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style={{ marginLeft: '1%'}}>
+                  <div className='' style={{ height: '20vw' }}>
+                    <div className='OurBlog sizeOurBlog'></div>
+                    <div className="card borderCard">
+                      <div className="ImgBlog" >
+                        <img src={imgEMT} className='ImgBlogsize' />
+                      </div>
+                      <div className="marImgcirBlog" >
+                        <div class='ImgcircleBlog' >
+                          <img src={imgEMT} className='ImgcircleBlog' />
+                        </div>
+                      </div>
+                      <div className="NameBlogmargin">
+                        <p class="NameBlog">Name</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style={{ marginLeft: '1%'}}>
+                  <div className='' style={{ height: '20vw' }}>
+                    <div className='OurBlog sizeOurBlog'></div>
+                    <div className="card borderCard">
+                      <div className="ImgBlog" >
+                        <img src={imgEMT} className='ImgBlogsize' />
+                      </div>
+                      <div className="marImgcirBlog" >
+                        <div class='ImgcircleBlog' >
+                          <img src={imgEMT} className='ImgcircleBlog' />
+                        </div>
+                      </div>
+                      <div className="NameBlogmargin">
+                        <p class="NameBlog">Name</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style={{ marginLeft: '1%'}}>
+                  <div className='' style={{ height: '20vw' }}>
+                    <div className='OurBlog sizeOurBlog'></div>
+                    <div className="card borderCard">
+                      <div className="ImgBlog" >
+                        <img src={imgEMT} className='ImgBlogsize' />
+                      </div>
+                      <div className="marImgcirBlog" >
+                        <div class='ImgcircleBlog' >
+                          <img src={imgEMT} className='ImgcircleBlog' />
+                        </div>
+                      </div>
+                      <div className="NameBlogmargin">
+                        <p class="NameBlog">Name</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
   );
 }

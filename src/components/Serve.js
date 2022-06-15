@@ -132,48 +132,28 @@ export default function Serve() {
                   position: 'absolute', bottom: '-5vw', left: 0, right: 0,
                   height: '0px'
                 }}>
-                  <div class="row CardWorkWithUs ">
+                  <div class="row CardWorkWithUs ResDisplayNone">
                     {num.map((num, index) => (
                       <>
                         <div>
                           <div class="col WWUwidth" >
                             <div className='OutService' style={{ height: '0vw' }}></div>
                             <img src={imagesolution[index].src} width="100%" className='ImgWWU' />
-                            {/* <div class="card borderCard cardCardHover ">
-                              <div className="" style={{
-                                position: 'absolute', bottom: '10.5vw', left: 0, right: 0,
-                                backgroundColor: 'none'
-                              }}>
-                                <p class="TitleWWU">title</p>
-                              </div>
-                              <div className="" style={{
-                                position: 'absolute', bottom: '8vw', left: 0, right: 0,
-                                backgroundColor: 'none'
-                              }}>
-                                <div className='row'>
-                                  <div className='col-1'></div>
-                                  <div className='col-10'><p class="DetailWWU">detail</p></div>
-                                  <div className='col-1'></div>
-                                </div>
-
-                              </div>
-                              <div className="" style={{
-                                position: 'absolute', bottom: '13.5vw', left: '5%', right: 0
-                              }}>
-                                <div class='ImgBoxNum'><p className='NumWWU'>{num}.</p></div>
-                              </div>
-                              <div className="" style={{
-                                position: 'absolute', bottom: '-2.4vw', left: '70%', right: 0, transition: '0.5s ease'
-                              }}>
-                                <div class='ImgWorkWithUs' >
-                                  <img src={imagesolution[index].src} width="100%" />
-                                </div>
-                              </div>
-                            </div> */}
                           </div>
                         </div>
                       </>
                     ))}
+                  </div>
+                  <div className='row Hiddenwwu' style={{ placeContent: 'center' }}>
+                    {/* <div className='col-1'></div> */}
+                    {num.map((num, index) => (
+                      <>
+                        <div className="col-5" style={{ display: 'flex', placeContent: 'end',padding: '5px' }}>
+                          <img src={imagesolution[index].src} width="100%" className='ImgWWU' />
+                        </div>
+                      </>
+                    ))}
+                    {/* <div className='col-1'></div>  */}
                   </div>
                 </div>
               </div>

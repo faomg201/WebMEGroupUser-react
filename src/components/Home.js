@@ -49,10 +49,10 @@ const Home = () => {
 				<div className='HiddenOBJ'>
 					<NavBarHome />
 				</div>
-				<div class="container-fluid overflowHomepage" align="center" >
+				<div class="container-fluid overflowHomepage" align="center"  >
 					<div>
 						<Tilt className="Tilt marginMidHomeRes" options={{ max: 25, speed: 5000 }}>
-							<div class="marSpTop easeForwards">
+							<div class="marSpTopRes easeForwards">
 								<font className="headtext Shadow" >ME Group Enterprise</font>
 							</div>
 							<div className="was">
@@ -155,7 +155,7 @@ const Home = () => {
                     </div>
                 </div>
             </nav> */}
-			<section id="ServeScroll" style={{ overflow: 'hidden' }}>
+			<section id="ServeScroll" style={{ overflow: 'hidden',position: 'relative' }}>
 				<Serve />
 			</section>
 			<section id="WorksScroll" style={{ overflow: 'hidden' }}>

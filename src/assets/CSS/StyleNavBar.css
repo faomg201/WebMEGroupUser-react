@@ -110,8 +110,36 @@ nav .containerHome ul li.active a {
 .marginNavVV {
   margin-left: 25vw;
 }
-
+.marginscroll {
+  margin-top: 7vw;
+}
+.SizeMap {
+  width: 32vw;
+  height: 25vw;
+}
+.marginTopCon {
+  margin-top: 5vw;
+}
+.PrevScrolling::-webkit-scrollbar {
+  display: none;
+}
+html {
+  overflow-y:hidden;
+  -ms-overflow-style: none;
+}
 @media only screen and (max-width: 992px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: inherit;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+  .marginTopCon {
+    margin-top: 2vw;
+  }
+}
+@media only screen and (max-width: 768px) {
   .navbar-nav {
     display: flex;
     flex-direction: inherit;
@@ -125,13 +153,8 @@ nav .containerHome ul li.active a {
   .sliderBlog::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
   }
-}
-@media only screen and (max-width: 768px) {
-  .navbar-nav {
-    display: flex;
-    flex-direction: inherit;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
+  .SizeMap {
+    width: 32vw;
+    height: 30vw;
   }
 }
