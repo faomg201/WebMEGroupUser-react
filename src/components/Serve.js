@@ -89,13 +89,13 @@ export default function Serve() {
                 }}><img src={imgCR} width="100%" />
 
                   <div class="sliderOurSer">
-                    <div>
-                      <div class="row CardOutService">
+                      {/* CardOutService */}
+                      <div class="CardOutServiceRow" >
                         {ServiceUs.map((item, index) => {
                           const staticpath = APIURL + `/static/serviceUs/` + item.serviceUs_name + ',' + item.serviceUs_img
                           return (
                             <>
-                              <div className='margintopResSer'>
+                              <div className='col-OurServ margintopResSer ' >
                                 <div class="col OurSerWidth" >
                                   <div className='OutService OurSerHeight'></div>
                                   <div class="card borderCard cardCardHover ">
@@ -117,7 +117,6 @@ export default function Serve() {
                           );
                         })}
                       </div>
-                    </div>
                   </div>
                 </div>
               </div>
