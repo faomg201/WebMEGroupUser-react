@@ -155,7 +155,8 @@ export default function Contact() {
                       <div class="container">
                         <div className="row marSpRight4" align='left'>
                           <div class="col-12 marginDisTopcon1 marginLeftConTitle" >
-                            <p><span className='TextContactHsub'>โทร {item.enterprise_phone}</span></p>
+                            <p><span className='TextContactHsub'>โทร {item.enterprise_phone} (จู)</span></p>
+                            <p className='phone2'><span className='TextContactHsub' > {item.enterprise_phone} (กล้า)</span></p>
                             <p><span className='TextContactHsub'>สามารถติดต่อเราได้ {item.enterprise_servicetime}</span></p>
                           </div>
                         </div>

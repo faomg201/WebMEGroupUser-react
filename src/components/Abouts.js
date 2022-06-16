@@ -107,8 +107,8 @@ export default function Abouts() {
         <>
 
           <div className="bg-light ResDisplayNone">
-            <div className="row" >
-              <div className='col-7 radiusDetailAbout' style={{ height: '49.07vw' }}>
+            <div className="row" style={{position:'relative'}}>
+              <div className='col-7 radiusDetailAbout' style={{ height: '49.07vw',zIndex: 1 }}>
                 <div className="col marginscroll" style={{  marginLeft: '11.5%' }}>
                   <p className='AboutUsHeader'>about us
                     <span className='dotOrang'>.</span></p>
@@ -117,7 +117,7 @@ export default function Abouts() {
                   </p>
                 </div>
               </div>
-              <div className="col-sm-5">
+              <div className="col-6" style={{position: 'absolute', marginLeft: '54vw',overflow: 'hidden'}}>
                 <div id="carouselExampleCaptions"
                   className="carousel slide "
                   data-bs-ride="carousel"
@@ -182,6 +182,7 @@ export default function Abouts() {
                 <div id="carouselExampleCaptions"
                   className="carousel slide "
                   data-bs-ride="carousel"
+                  
                 >
                   <div className="carousel-inner" >
                     <div className="carousel-item active" >
