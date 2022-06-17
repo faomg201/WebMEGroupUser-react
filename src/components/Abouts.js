@@ -108,21 +108,21 @@ export default function Abouts() {
 
           <div className="bg-light ResDisplayNone">
             <div className="row" style={{position:'relative'}}>
-              <div className='col-7 radiusDetailAbout' style={{ height: '49.07vw',zIndex: 1 }}>
-                <div className="col marginscroll" style={{  marginLeft: '11.5%' }}>
+              <div className='col-7 radiusDetailAbout PageAboutUsH' style={{ zIndex: 1, background:'#fe8805' }}>
+                <div className="col-10 marginscroll" style={{  marginLeft: '11.5%' }}>
                   <p className='AboutUsHeader'>about us
-                    <span className='dotOrang'>.</span></p>
+                    <span className='dotWhite'>.</span></p>
                   <p className="AboutUsHeader2">เกี่ยวกับเรา</p>
-                  <p className="DetailAbotus" style={{ marginTop: '5%' }}><span className="tab"></span>{Enterprises.enterprise_detail}
+                  <p className="DetailAbotus" style={{ marginTop: '5%' }}><span className="tab"></span>{Enterprises.enterprise_detail}บริษัท มี กรุ๊ป เอ็นเตอร์ไพรส์ จำกัด เป็นบริษัทพัฒนาเว็บไซต์ แอพพลิเคชั่น และเทคโนโลยี IOT ที่ตั้งขึ้นมาเพื่อแก้ไขและช่วยเหลือธุรกิจสตาร์ทอัพองค์กรขนาดเล็ก นักวิจัยและกลุ่มคนที่ต้องการเทคโนโลยีที่ตอบโจทย์ความต้องการที่รวดเร็วเพื่อนำมาสร้างโอกาสทางธุรกิจ เปลี่ยนแปลงความทันสมัยในองค์กร ช่วยเหลือทางด้านผลงานวิจัย หรือการนำเทคโนโลยีมาช่วยเหลือปัญหาของกลุ่มโปรเจคอาสาในสังคม 
                   </p>
                 </div>
               </div>
-              <div className="col-6" style={{position: 'absolute', marginLeft: '54vw',overflow: 'hidden'}}>
+              <div className="col-6 AboutSlidePosi" >
                 <div id="carouselExampleCaptions"
                   className="carousel slide "
                   data-bs-ride="carousel"
                 >
-                  <div className="carousel-inner" style={{ height: '49.07vw' }}>
+                  <div className="carousel-inner PageAboutUsH">
                     <div className="carousel-item active">
                       <div className="container" align="center">
                         {!aboutUsImg[0]?.image_name ?
@@ -152,11 +152,11 @@ export default function Abouts() {
                         );
                       })}
                   </div>
-                  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" style={{width:'50%'}}>
                     {/* <span className="carousel-control-prev-icon" aria-hidden="true"></span> */}
                     <span className="visually-hidden">Previous</span>
                   </button>
-                  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next" style={{width:'50%'}}>
                     {/* <span className="carousel-control-next-icon" aria-hidden="true"></span> */}
                     <span className="visually-hidden">Next</span>
                   </button>
@@ -166,14 +166,14 @@ export default function Abouts() {
           </div>
           <div className="bg-light HiddenOBJ">
             <div className="row" >
-              <div className='col-12 radiusDetailAbout' style={{ height: '58.41vw' }}>
+              <div className='col-12 radiusDetailAbout DetailPageSize' >
                 <div className="col-12" style={{ marginTop: '15%' }} align='center'>
                   <p className="textHeadWhite" >เกี่ยวกับเรา</p><hr align='center' className="line ClineAbout"></hr>
                 </div>
                 <div className="row">
                   <div className='col-1'></div>
                   <div className="col-10">
-                    <p className="DetailAbotus"><span className="tab"></span>{Enterprises.enterprise_detail}</p>
+                    <p className="DetailAbotus"><span className="tab"></span>{Enterprises.enterprise_detail}บริษัท มี กรุ๊ป เอ็นเตอร์ไพรส์ จำกัด เป็นบริษัทพัฒนาเว็บไซต์ แอพพลิเคชั่น และเทคโนโลยี IOT ที่ตั้งขึ้นมาเพื่อแก้ไขและช่วยเหลือธุรกิจสตาร์ทอัพองค์กรขนาดเล็ก นักวิจัยและกลุ่มคนที่ต้องการเทคโนโลยีที่ตอบโจทย์ความต้องการที่รวดเร็วเพื่อนำมาสร้างโอกาสทางธุรกิจ เปลี่ยนแปลงความทันสมัยในองค์กร ช่วยเหลือทางด้านผลงานวิจัย หรือการนำเทคโนโลยีมาช่วยเหลือปัญหาของกลุ่มโปรเจคอาสาในสังคม</p>
                   </div>
                   <div className='col-1'></div>
                 </div>
@@ -214,11 +214,11 @@ export default function Abouts() {
                         );
                       })}
                   </div>
-                  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" style={{width:'50%'}}>
                     {/* <span className="carousel-control-prev-icon" aria-hidden="true"></span> */}
                     <span className="visually-hidden">Previous</span>
                   </button>
-                  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next" style={{width:'50%'}}>
                     {/* <span className="carousel-control-next-icon" aria-hidden="true"></span> */}
                     <span className="visually-hidden">Next</span>
                   </button>
@@ -256,14 +256,14 @@ export default function Abouts() {
               </div>
               <div class="sliderAboutUs HiddenOBJ">
                 <div>
-                  <div class="row CardAboutus">
+                  <div class="row CardAboutus " >
                     {Employees.map((item) => {
                       const staticpath = APIURL + `/static/employees/` + item.emp_fname + ',' + item.emp_lname + ',' + item.emp_img
                       // console.log(staticpath);
                       return (
                         < >
-                          <div>
-                            <div style={{ height: '20vw' }}>
+                          <div >
+                            <div style={{ height: '20vw', marginTop: '21vw' }} >
                               <img src={staticpath} width="100%" className='ImgAbouUs' />
                               <div style={{ marginTop: '8%' }}>
                                 <h className="textNEMP" >{item.emp_fname} {item.emp_lname} #{item.mbti_name}</h>
