@@ -115,7 +115,7 @@ export default function Works() {
                     else return;
                     return (
                       <div>
-                        <p class="textType" align='left'>{titleN}</p>
+                        <p class="textType ResMarginWork" align='left'>{titleN}</p>
                         
                         <div class="sliderWorkRes">
                           <div>
