@@ -5,16 +5,43 @@ import imgEMT from '../../src/assets/Img/default-placeholder.png'
 import imgCR from '../../src/assets/Img/Path10.png'
 import imgBGserv from '../assets/Img/cover-megroup2 2.png'
 import imagesolution from './imagesolution'
+import { Link } from 'react-scroll'
+
 
 export default function Serve() {
   const [Service, fetchService] = useState([])
   const [ServiceUs, fetchServiceUs] = useState([])
   const [status, setStatus] = useState(false);
   const APIURL = process.env.REACT_APP_APIURL;
+
+  const [WorkWUs, setWorkWUs] = useState([])
+
   useEffect(() => {
     const timer = setTimeout(() => {
     }, 5000);
     getData()
+    setWorkWUs([
+      {
+        nameWUs: 'Product Discovery',
+        detailWUs: 'ค้นหาความต้องการและให้คำปรึกษาถึงความเป็นได้ของผลิตภัณฑ์ร่วมกัน'
+      },
+      {
+        nameWUs: 'Sketch',
+        detailWUs: 'วางแผนจัดการเรื่องเทคโนโลยี เวลาและงบประมาณ'
+      },
+      {
+        nameWUs: 'Build up',
+        detailWUs: 'สร้างผลิตภัณฑ์ขึ้นมาให้ตรงความต้องการ'
+      },
+      {
+        nameWUs: 'Iteration & Pivot',
+        detailWUs: 'ปรับแต่งและแก้ไขตามให้เหมาะสมกับกลุ่มเป้าหมาย'
+      },
+      {
+        nameWUs: 'Launch & Feed back',
+        detailWUs: 'ดูแลการเปิดตัวและเก็บเสนอแนะเพื่อปรับปรุงผลิตภัณฑ์'
+      },]
+    )
     return () => clearTimeout(timer);
 
   }, [])
@@ -89,39 +116,39 @@ export default function Serve() {
                 }}><img src={imgCR} width="100%" />
 
                   <div class="sliderOurSer">
-                      {/* CardOutService */}
-                      <div class="CardOutServiceRow" >
-                        {ServiceUs.map((item, index) => {
-                          const staticpath = APIURL + `/static/serviceUs/` + item.serviceUs_name + ',' + item.serviceUs_img
-                          return (
-                            <>
-                              <div className='col-OurServ margintopResSer ' >
-                                <div class="col OurSerWidth" >
-                                  <div className='OutService OurSerHeight'></div>
-                                  <div class="card borderCard cardCardHover ">
-                                    <div className="marginNameOS" >
-                                      <p class="NameOutService">{item.serviceUs_name}</p>
-                                    </div>
-                                    <div className="ImgOS">
-                                      <div class='Imgcircle' >
-                                        {!item.serviceUs_img ?
-                                          <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }} /> :
-                                          <img src={staticpath} width="100%" style={{ borderRadius: '100%' }} />
-                                        }
-                                      </div>
+                    {/* CardOutService */}
+                    <div class="CardOutServiceRow" >
+                      {ServiceUs.map((item, index) => {
+                        const staticpath = APIURL + `/static/serviceUs/` + item.serviceUs_name + ',' + item.serviceUs_img
+                        return (
+                          <>
+                            <div className='col-OurServ margintopResSer ' >
+                              <div class="col OurSerWidth" >
+                                <div className='OutService OurSerHeight '></div>
+                                <div class="card borderCard cardCardHover ">
+                                  <div className="marginNameOS" >
+                                    <p class="NameOutService">{item.serviceUs_name}</p>
+                                  </div>
+                                  <div className="ImgOS">
+                                    <div class='Imgcircle' >
+                                      {!item.serviceUs_img ?
+                                        <img src={imgEMT} width="100%" style={{ borderRadius: '100%' }} /> :
+                                        <img src={staticpath} width="100%" style={{ borderRadius: '100%' }} />
+                                      }
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                            </>
-                          );
-                        })}
-                      </div>
+                            </div>
+                          </>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className='OurWWUPageH'>
+            {/* <div className='OurWWUPageH'>
               <p className='WorkWithUs'>Work with us
                 <span className='dotOrang'>.</span></p>
               <p class="WorkWithUsFormation">รูปแบบการทำงานกับเรา</p>
@@ -144,7 +171,6 @@ export default function Serve() {
                     ))}
                   </div>
                   <div className='row Hiddenwwu' style={{ placeContent: 'center' }}>
-                    {/* <div className='col-1'></div> */}
                     {num.map((num, index) => (
                       <>
                         <div className="col-5" style={{ display: 'flex', placeContent: 'end',padding: '5px' }}>
@@ -152,7 +178,60 @@ export default function Serve() {
                         </div>
                       </>
                     ))}
-                    {/* <div className='col-1'></div>  */}
+                  </div>
+                </div>
+              </div>
+            </div> */}
+            <div className='OurWWUPageH'>
+              <p className='WorkWithUs'>Work with us
+                <span className='dotOrang'>.</span></p>
+              <p class="WorkWithUsFormation">รูปแบบการทำงานกับเรา</p>
+
+              <div class="card borderCard cardCardHover ">
+                <div className="" style={{
+                  position: 'absolute', bottom: '-5vw', left: 0, right: 0,
+                  height: '0px'
+                }}>
+                  <div class="row CardWorkWithUs ResDisplayNone">
+                    {WorkWUs.map((item, index) => (
+                      <>
+                        <div className='col OutService WorkWUsHeight CenterCol'>
+                          {/* <div className='OutService WorkWUsHeight'></div>
+                          <div className="" style={{
+                            position: 'absolute', bottom: '-5vw', left: 'auto', right: 'auto',
+                            height: '0px'
+                          }}> {item.nameWUs}</div> */}
+                          <div className='col-10  '>
+                            <div className='NoWWU' >{index + 1}.</div>
+                            <p className='nameWUsTitle'>{item.nameWUs}</p>
+                            <p className='detailWUs'>{item.detailWUs}</p>
+                          </div>
+                          <div className="PosiIconWWUs " >
+                            <img className='IconWWUs' src={imagesolution[index].src} />
+                          </div>
+                        </div>
+                      </>
+                    ))}
+                  </div>
+                  <div className='row Hiddenwwu' style={{ placeContent: 'center',marginTop:'-2%' }}>
+                    {WorkWUs.map((item, index) => (
+                      <>
+                        <div className="col-5" style={{ display: 'flex', placeContent: 'center', padding: '25px' }}>
+                          {/* <img src={imagesolution[index].src} width="100%" className='ImgWWU' /> */}
+                          <div className='col-12 pageWWUs WorkWUsHeight CenterCol'>
+                            <div className='col-10'>
+                              <div className='NoWWU' >{index + 1}.</div>
+                              <p className='nameWUsTitle'>{item.nameWUs}</p>
+                              <p className='detailWUs'>{item.detailWUs}</p>
+                            </div>
+                            <div className="PosiIconWWUsRes " >
+                              <img className='IconWWUs' src={imagesolution[index].src} />
+                            </div>
+                          </div>
+
+                        </div>
+                      </>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -626,7 +705,7 @@ export default function Serve() {
                                         </div>
                                         <div className="" style={{ position: 'absolute', bottom: '-20vw', left: '36%', right: 0, height: '100%' }}>
                                           <div className='col-10' align='center'>
-                                            <a class="buttonSendOutSolution PosiSoulBT" role="button" >สอบถามเพิ่มเติม</a>
+                                            <Link to="ContactScroll" spy={true} ><a class="buttonSendOutSolution PosiSoulBT" role="button" >สอบถามเพิ่มเติม</a></Link>
                                           </div>
                                         </div>
                                       </div>
@@ -1103,7 +1182,7 @@ export default function Serve() {
                                               </div>
                                               <div className="" style={{ position: 'absolute', bottom: '-20vw', left: '36%', right: 0, height: '100%' }}>
                                                 <div className='col-10' align='center'>
-                                                  <a class="buttonSendOutSolution PosiSoulBT" role="button" >สอบถามเพิ่มเติม</a>
+                                                <Link to="ContactScroll" spy={true} ><a class="buttonSendOutSolution PosiSoulBT" role="button" >สอบถามเพิ่มเติม</a></Link>
                                                 </div>
                                               </div>
                                             </div>

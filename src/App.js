@@ -5,12 +5,12 @@ import './App.css';
 import Home from './components/Home'
 //หน้าแอปส่วนหลักในการทำการ Route และrender หน้า
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
-import Works from './components/Works';
-import  Serve  from './components/Serve';
-import Abouts from './components/Abouts';
-import Contact from './components/Contact';
+// import Works from './components/Works';
+// import  Serve  from './components/Serve';
+// import Abouts from './components/Abouts';
+// import Contact from './components/Contact';
+// import Workbyid from './components/Workbyid';
 
-import Workbyid from './components/Workbyid';
 class App extends Component {
   render() {
     // const carousel = useRef();
@@ -22,11 +22,11 @@ class App extends Component {
       <Router>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/abouts' element={<Abouts/>}/>
+          {/* <Route path='/abouts' element={<Abouts/>}/>
           <Route path='/serve' element={<Serve/>}/>
           <Route path='/goals' element={<Works/>}/>
           <Route path='/contact' element={<Contact/>}/>
-          <Route path='/goals/:id' element={<Workbyid/>}/>
+          <Route path='/goals/:id' element={<Workbyid/>}/> */}
         </Routes>
       </Router>
       // <div className='App'>
