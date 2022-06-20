@@ -3,7 +3,6 @@ html {
 }
 ::-webkit-scrollbar {
   width: 12px;
-  
 }
 ::-webkit-scrollbar-thumb {
   height: 100px;
@@ -230,7 +229,6 @@ a:active {
 .sliderMedium::-webkit-scrollbar-thumb {
   border: 4px solid rgba(255, 1, 1, 0);
   background-color: #ff990f;
-  
 }
 .sliderMedium::-webkit-scrollbar-thumb:hover {
   border: 4px solid rgba(0, 0, 0, 0);
@@ -238,7 +236,6 @@ a:active {
 }
 .sliderBlog::-webkit-scrollbar {
   height: 13px;
-  
 }
 .sliderBlog::-webkit-scrollbar-thumb {
   border: 4px solid rgba(0, 0, 0, 0);
@@ -396,11 +393,50 @@ a:active {
   justify-content: center;
   /* margin-left: 1.9vw; */
   display: grid;
-  grid-template-columns: repeat(5, 17vw);
-  grid-template-rows: repeat(4, minmax(12vw, auto));
-  grid-gap: 0.1vw;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 4.5vw;
 }
-
+.PosiIconWWUs {
+  position: absolute;
+  bottom: -7vw;
+  left: auto;
+  right: auto;
+  height: 0px;
+  margin-left: 11vw;
+}
+.WorkWUsHeight {
+  display: grid;
+  background: #fbfbfb;
+  height: 12.5vw;
+  width: 12.5vw;
+}
+.nameWUsTitle {
+  margin-top: 2vw;
+  font-size: 1vw;
+  font-weight: bold;
+}
+.detailWUs {
+  font-size: 0.9vw;
+  color: #ff9300;
+  font-weight: bold;
+}
+.NoWWU {
+  background: #ff9300;
+  color: #ffffff;
+  position: absolute;
+  margin-top: -1vw;
+  width: 1.8vw;
+  height: 2vw;
+  text-align: center;
+  font-size: 1.2vw;
+  font-weight: bold;
+}
+.CenterCol {
+  justify-items: center;
+}
+.IconWWUs {
+  height: 5vw;
+}
 .Imgcircle {
   /* height: 100% !important; */
   /* overflow-y: hidden; */
@@ -479,7 +515,6 @@ a:active {
   font-weight: bold;
   color: #ffffff;
 }
-
 
 .WorkWithUs {
   font-size: 1.8vw;
@@ -598,6 +633,7 @@ a:active {
 .AboutUsHeader {
   font-size: 1.8vw;
   font-weight: bold;
+  color: #ffffff;
 }
 .AboutUsHeader2 {
   font-size: 2vw;
@@ -683,8 +719,10 @@ a:active {
   width: 18vw;
 }
 .OurSerHeight {
+  background: #fbfbfb;
   height: 10vw;
 }
+
 .marginNameOS {
   position: absolute;
   bottom: 5.9vw;
@@ -837,10 +875,10 @@ a:active {
 .col-OurServ {
   width: 17%;
 }
-.DetailPageSize{
+.DetailPageSize {
   height: 58.41vw;
 }
-.PageAboutUsH{
+.PageAboutUsH {
   height: 100vh;
 }
 nav .containerHome ul li a {
@@ -965,14 +1003,21 @@ nav .containerHome ul li.active a {
 .marginTopCon {
   margin-top: 5vw;
 }
-.AboutSlidePosi{
+.AboutSlidePosi {
   position: absolute;
   margin-left: 53vw;
   overflow: hidden;
 }
-@media only screen and (max-width: 1230px){
-  .PageAboutUsH{
+.abotusImg {
+  height: 59vw;
+  margin-left: -18%;
+}
+@media only screen and (max-width: 1230px) {
+  .PageAboutUsH {
     height: 59vw;
+  }
+  .Page100Vh {
+    height: 100vh;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -986,11 +1031,16 @@ nav .containerHome ul li.active a {
   .marginTopCon {
     margin-top: 2vw;
   }
-  
-  
+  .Page100Vh {
+    height: 90vh;
+  }
 }
 
 @media only screen and (max-width: 768px) {
+  .abotusImg {
+    margin-left: -18%;
+    margin-top: 0.2vw;
+  }
   .navbar-nav {
     display: flex;
     flex-direction: inherit;
@@ -1004,7 +1054,6 @@ nav .containerHome ul li.active a {
   }
   .sliderBlog::-webkit-scrollbar {
     height: 13px;
-    
   }
   .sliderBlog::-webkit-scrollbar-thumb {
     border: 4px solid rgba(0, 0, 0, 0);
@@ -1027,10 +1076,13 @@ nav .containerHome ul li.active a {
     border: 4px solid rgba(0, 0, 0, 0);
     background-color: #d0cbcb;
   }
-  .AboutSlidePosi{
+  .AboutSlidePosi {
     position: absolute;
     margin-left: 52vw;
     overflow: hidden;
+  }
+  .Page100Vh {
+    height: 100vh;
   }
 }
 
@@ -1044,7 +1096,7 @@ nav .containerHome ul li.active a {
     border: 4px solid rgba(0, 0, 0, 0);
     background-color: #d0cbcb63;
   }
-  
+
   .marSpTopRes {
     margin-top: 35vh;
   }
@@ -1077,7 +1129,6 @@ nav .containerHome ul li.active a {
     margin-top: 10vw;
   }
   .marginDisTopcon1 {
-    text-align: center;
     margin-left: -5%;
   }
   .HomeMenu {
@@ -1343,7 +1394,6 @@ nav .containerHome ul li.active a {
   /* .sliderOurSer::-webkit-scrollbar {
     display: none; 
   } */
-  
 
   .margintopResSer {
     margin-top: 16%;
@@ -1398,7 +1448,7 @@ nav .containerHome ul li.active a {
   .OurSolutionHeader {
     font-size: 3.5vw;
     font-weight: bold;
-    margin-top: 30vw;
+    margin-top: 35vw;
     margin-left: 7vw;
   }
   .Outsolution {
@@ -1414,7 +1464,7 @@ nav .containerHome ul li.active a {
     grid-gap: 10vw;
   }
   .OurWWUPageH {
-    height: 60vh;
+    height: 67vh;
   }
   .ImgWWU {
     width: 18vh;
@@ -1692,7 +1742,7 @@ nav .containerHome ul li.active a {
     margin-left: -5%;
   }
   .phone2 {
-    margin-left: 8vw;
+    margin-left: 5vw;
   }
   .sliderOurSer::-webkit-scrollbar {
     height: 15px;
@@ -1718,7 +1768,6 @@ nav .containerHome ul li.active a {
   }
   .sliderAboutUs::-webkit-scrollbar {
     height: 15px;
-    
   }
   .sliderAboutUs::-webkit-scrollbar-thumb {
     border: 4px solid rgba(0, 0, 0, 0);
@@ -1729,10 +1778,9 @@ nav .containerHome ul li.active a {
     border: 4px solid rgba(0, 0, 0, 0);
     background-color: #d0cbcb;
   }
-  
+
   .sliderTech::-webkit-scrollbar {
     height: 13px;
-    
   }
   .sliderTech::-webkit-scrollbar-thumb {
     border: 4px solid rgba(0, 0, 0, 0);
@@ -1745,7 +1793,6 @@ nav .containerHome ul li.active a {
   }
   .sliderBlog::-webkit-scrollbar {
     height: 13px;
-    
   }
   .sliderBlog::-webkit-scrollbar-thumb {
     border: 4px solid rgba(0, 0, 0, 0);
@@ -1756,12 +1803,54 @@ nav .containerHome ul li.active a {
     border: 4px solid rgba(0, 0, 0, 0);
     background-color: #d0cbcb;
   }
-  .ResMarginWork{
+  .ResMarginWork {
     margin-top: 8%;
   }
-  .DetailPageSize{
+  .DetailPageSize {
     height: 100%;
   }
-  
+  .PosiIconWWUsRes {
+    position: relative;
+    margin-left: 52%;
+    margin-bottom: 19%;
+  }
+  .WorkWUsHeight {
+    display: grid;
+    background: #fbfbfb;
+    height: 35vw;
+    width: 35vw;
+  }
+  .nameWUsTitle {
+    margin-top: 6.5vw;
+    font-size: 3vw;
+    font-weight: bold;
+  }
+  .detailWUs {
+    font-size: 2.9vw;
+    color: #ff9300;
+    font-weight: bold;
+  }
+  .NoWWU {
+    background: #ff9300;
+    color: #ffffff;
+    position: absolute;
+    margin-top: -4vw;
+    width: 7.5vw;
+    height: 8vw;
+    text-align: center;
+    font-size: 5vw;
+    font-weight: bold;
+  }
+  .CenterCol {
+    justify-items: center;
+  }
+  .IconWWUs {
+    height: 14vw;
+    position: absolute;
+  }
+  .pageWWUs {
+    border-radius: 0.8rem;
+    background: #ffffff;
+    box-shadow: 1px 5px 7px #aaa8a8;
+  }
 }
-

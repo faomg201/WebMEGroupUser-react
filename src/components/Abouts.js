@@ -337,7 +337,7 @@ export default function Abouts() {
             </div>
             <div className="card borderCard cardCardHover ResDisplayNone ">
               <div className="" style={{
-                position: 'absolute', bottom: '-24vw', left: '64%', right: 0,
+                position: 'absolute', bottom: '-24vw', left: '24%', right: 0,
                 height: '0px'
               }}>
                 <div className="row CardWorkWithUs">
@@ -367,7 +367,7 @@ export default function Abouts() {
                 </div>
               </div>
               <div className="" style={{
-                position: 'absolute', bottom: '-23vw', left: '98%', right: 0,
+                position: 'absolute', bottom: '-23vw', left: '60%', right: 0,
                 height: '0px'
               }}>
                 <div className="row CardWorkWithUs">
@@ -387,7 +387,7 @@ export default function Abouts() {
                 </div>
               </div>
               <div className="" style={{
-                position: 'absolute', bottom: '-24vw', left: '116%', right: 0,
+                position: 'absolute', bottom: '-24vw', left: '96%', right: 0,
                 height: '0px'
               }}>
                 <div className="row CardWorkWithUs">
@@ -417,7 +417,7 @@ export default function Abouts() {
                 </div>
               </div>
               <div className="" style={{
-                position: 'absolute', bottom: '-3.5vw', left: '80%', right: 0,
+                position: 'absolute', bottom: '-3.5vw', left: '41%', right: 0,
                 height: '0px'
               }}>
                 <div className="row CardWorkWithUs">
@@ -448,7 +448,7 @@ export default function Abouts() {
                 </div>
               </div>
               <div className="" style={{
-                position: 'absolute', bottom: '-2.5vw', left: '107%', right: 0,
+                position: 'absolute', bottom: '-2.5vw', left: '78%', right: 0,
                 height: '0px'
               }}>
                 <div className="row CardWorkWithUs">

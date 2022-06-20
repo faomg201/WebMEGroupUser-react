@@ -1,9 +1,9 @@
 
-import magnifier from '../assets/Img/workus/Product.png'
-import blueprint from '../assets/Img/workus/Sketch.png'
-import programming from '../assets/Img/workus/Build up.png'
-import loop from '../assets/Img/workus/Pivot.png'
-import spacerocketlaunch from '../assets/Img/workus/Launch.png'
+import magnifier from '../assets/Img/magnifier 1.png'
+import blueprint from '../assets/Img/blueprint 1.png'
+import programming from '../assets/Img/programming 1.png'
+import loop from '../assets/Img/loop 1.png'
+import spacerocketlaunch from '../assets/Img/space-rocket-launch 1.png'
 const imagesolution = [
     { id: 1, src: magnifier },
     { id: 2, src: blueprint },
