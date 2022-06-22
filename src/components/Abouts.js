@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import "../assets/CSS/StyleInComponents.css"
 import axios from 'axios';
 import imgEMT from '../../src/assets/Img/default-placeholder.png'
+import { Link } from 'react-scroll'
 
 export default function Abouts() {
   const [Employees, fetchEmployees] = useState([])
@@ -107,13 +108,13 @@ export default function Abouts() {
         <>
 
           <div className="bg-light ResDisplayNone">
-            <div className="row" style={{position:'relative'}}>
-              <div className='col-7 radiusDetailAbout PageAboutUsH' style={{ zIndex: 1, background:'#fe8805' }}>
-                <div className="col-10 marginscroll" style={{  marginLeft: '11.5%' }}>
+            <div className="row" style={{ position: 'relative' }}>
+              <div className='col-7 radiusDetailAbout PageAboutUsH' style={{ zIndex: 1, background: '#fe8805' }}>
+                <div className="col-10 marginscroll" style={{ marginLeft: '11.5%' }}>
                   <p className='AboutUsHeader'>about us
                     <span className='dotWhite'>.</span></p>
                   <p className="AboutUsHeader2">เกี่ยวกับเรา</p>
-                  <p className="DetailAbotus" style={{ marginTop: '5%' }}><span className="tab"></span>{Enterprises.enterprise_detail}บริษัท มี กรุ๊ป เอ็นเตอร์ไพรส์ จำกัด เป็นบริษัทพัฒนาเว็บไซต์ แอพพลิเคชั่น และเทคโนโลยี IOT ที่ตั้งขึ้นมาเพื่อแก้ไขและช่วยเหลือธุรกิจสตาร์ทอัพองค์กรขนาดเล็ก นักวิจัยและกลุ่มคนที่ต้องการเทคโนโลยีที่ตอบโจทย์ความต้องการที่รวดเร็วเพื่อนำมาสร้างโอกาสทางธุรกิจ เปลี่ยนแปลงความทันสมัยในองค์กร ช่วยเหลือทางด้านผลงานวิจัย หรือการนำเทคโนโลยีมาช่วยเหลือปัญหาของกลุ่มโปรเจคอาสาในสังคม 
+                  <p className="DetailAbotus" style={{ marginTop: '5%' }}><span className="tab"></span>{Enterprises.enterprise_detail}บริษัท มี กรุ๊ป เอ็นเตอร์ไพรส์ จำกัด เป็นบริษัทพัฒนาเว็บไซต์ แอพพลิเคชั่น และเทคโนโลยี IOT ที่ตั้งขึ้นมาเพื่อแก้ไขและช่วยเหลือธุรกิจสตาร์ทอัพองค์กรขนาดเล็ก นักวิจัยและกลุ่มคนที่ต้องการเทคโนโลยีที่ตอบโจทย์ความต้องการที่รวดเร็วเพื่อนำมาสร้างโอกาสทางธุรกิจ เปลี่ยนแปลงความทันสมัยในองค์กร ช่วยเหลือทางด้านผลงานวิจัย หรือการนำเทคโนโลยีมาช่วยเหลือปัญหาของกลุ่มโปรเจคอาสาในสังคม
                   </p>
                 </div>
               </div>
@@ -152,11 +153,11 @@ export default function Abouts() {
                         );
                       })}
                   </div>
-                  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" style={{width:'50%'}}>
+                  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" style={{ width: '50%' }}>
                     {/* <span className="carousel-control-prev-icon" aria-hidden="true"></span> */}
                     <span className="visually-hidden">Previous</span>
                   </button>
-                  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next" style={{width:'50%'}}>
+                  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next" style={{ width: '50%' }}>
                     {/* <span className="carousel-control-next-icon" aria-hidden="true"></span> */}
                     <span className="visually-hidden">Next</span>
                   </button>
@@ -182,7 +183,7 @@ export default function Abouts() {
                 <div id="carouselExampleCaptions"
                   className="carousel slide "
                   data-bs-ride="carousel"
-                  
+
                 >
                   <div className="carousel-inner" >
                     <div className="carousel-item active" >
@@ -214,11 +215,11 @@ export default function Abouts() {
                         );
                       })}
                   </div>
-                  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" style={{width:'50%'}}>
+                  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" style={{ width: '50%' }}>
                     {/* <span className="carousel-control-prev-icon" aria-hidden="true"></span> */}
                     <span className="visually-hidden">Previous</span>
                   </button>
-                  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next" style={{width:'50%'}}>
+                  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next" style={{ width: '50%' }}>
                     {/* <span className="carousel-control-next-icon" aria-hidden="true"></span> */}
                     <span className="visually-hidden">Next</span>
                   </button>
@@ -301,7 +302,7 @@ export default function Abouts() {
                       </div>
                       <div className="ButtonSendTechargin" >
                         <div className='col-12' >
-                          <a className="buttonSendTech" role="button" >สอบถามเพิ่มเติม</a>
+                          <Link to="ContactScroll" spy={true} ><a className="buttonSendTech" role="button" >สอบถามเพิ่มเติม</a></Link>
                         </div>
                       </div>
                     </div>
@@ -482,88 +483,88 @@ export default function Abouts() {
         </>
       )
       }
-    <div className='OurblogPageH'>
-            <p className='TeamHeader'>our blog
-              <span className='dotOrang'>.</span></p>
-            <p class="TeamHeader2">บล็อกของเรา</p>
-            <p className='detailBlog'>รู้จักเราให้มากขึ้นผ่านประสบการณ์ของเรา</p>
-            <div class="container">
-              <div class="sliderBlog">
-                <div style={{ marginLeft: '1%'}}>
-                  <div className='' style={{ height: '20vw' }}>
-                    <div className='OurBlog sizeOurBlog'></div>
-                    <div className="card borderCard">
-                      <div className="ImgBlog" >
-                        <img src={imgEMT} className='ImgBlogsize' />
-                      </div>
-                      <div className="marImgcirBlog" >
-                        <div class='ImgcircleBlog' >
-                          <img src={imgEMT} className='ImgcircleBlog' />
-                        </div>
-                      </div>
-                      <div className="NameBlogmargin">
-                        <p class="NameBlog">Name</p>
-                      </div>
+      {/* <div className='OurblogPageH'>
+        <p className='TeamHeader'>our blog
+          <span className='dotOrang'>.</span></p>
+        <p class="TeamHeader2">บล็อกของเรา</p>
+        <p className='detailBlog'>รู้จักเราให้มากขึ้นผ่านประสบการณ์ของเรา</p>
+        <div class="container">
+          <div class="sliderBlog">
+            <div style={{ marginLeft: '1%' }}>
+              <div className='' style={{ height: '20vw' }}>
+                <div className='OurBlog sizeOurBlog'></div>
+                <div className="card borderCard">
+                  <div className="ImgBlog" >
+                    <img src={imgEMT} className='ImgBlogsize' />
+                  </div>
+                  <div className="marImgcirBlog" >
+                    <div class='ImgcircleBlog' >
+                      <img src={imgEMT} className='ImgcircleBlog' />
                     </div>
                   </div>
-                </div>
-                <div style={{ marginLeft: '1%'}}>
-                  <div className='' style={{ height: '20vw' }}>
-                    <div className='OurBlog sizeOurBlog'></div>
-                    <div className="card borderCard">
-                      <div className="ImgBlog" >
-                        <img src={imgEMT} className='ImgBlogsize' />
-                      </div>
-                      <div className="marImgcirBlog" >
-                        <div class='ImgcircleBlog' >
-                          <img src={imgEMT} className='ImgcircleBlog' />
-                        </div>
-                      </div>
-                      <div className="NameBlogmargin">
-                        <p class="NameBlog">Name</p>
-                      </div>
-                    </div>
+                  <div className="NameBlogmargin">
+                    <p class="NameBlog">Name</p>
                   </div>
                 </div>
-                <div style={{ marginLeft: '1%'}}>
-                  <div className='' style={{ height: '20vw' }}>
-                    <div className='OurBlog sizeOurBlog'></div>
-                    <div className="card borderCard">
-                      <div className="ImgBlog" >
-                        <img src={imgEMT} className='ImgBlogsize' />
-                      </div>
-                      <div className="marImgcirBlog" >
-                        <div class='ImgcircleBlog' >
-                          <img src={imgEMT} className='ImgcircleBlog' />
-                        </div>
-                      </div>
-                      <div className="NameBlogmargin">
-                        <p class="NameBlog">Name</p>
-                      </div>
+              </div>
+            </div>
+            <div style={{ marginLeft: '1%' }}>
+              <div className='' style={{ height: '20vw' }}>
+                <div className='OurBlog sizeOurBlog'></div>
+                <div className="card borderCard">
+                  <div className="ImgBlog" >
+                    <img src={imgEMT} className='ImgBlogsize' />
+                  </div>
+                  <div className="marImgcirBlog" >
+                    <div class='ImgcircleBlog' >
+                      <img src={imgEMT} className='ImgcircleBlog' />
                     </div>
                   </div>
+                  <div className="NameBlogmargin">
+                    <p class="NameBlog">Name</p>
+                  </div>
                 </div>
-                <div style={{ marginLeft: '1%'}}>
-                  <div className='' style={{ height: '20vw' }}>
-                    <div className='OurBlog sizeOurBlog'></div>
-                    <div className="card borderCard">
-                      <div className="ImgBlog" >
-                        <img src={imgEMT} className='ImgBlogsize' />
-                      </div>
-                      <div className="marImgcirBlog" >
-                        <div class='ImgcircleBlog' >
-                          <img src={imgEMT} className='ImgcircleBlog' />
-                        </div>
-                      </div>
-                      <div className="NameBlogmargin">
-                        <p class="NameBlog">Name</p>
-                      </div>
+              </div>
+            </div>
+            <div style={{ marginLeft: '1%' }}>
+              <div className='' style={{ height: '20vw' }}>
+                <div className='OurBlog sizeOurBlog'></div>
+                <div className="card borderCard">
+                  <div className="ImgBlog" >
+                    <img src={imgEMT} className='ImgBlogsize' />
+                  </div>
+                  <div className="marImgcirBlog" >
+                    <div class='ImgcircleBlog' >
+                      <img src={imgEMT} className='ImgcircleBlog' />
                     </div>
+                  </div>
+                  <div className="NameBlogmargin">
+                    <p class="NameBlog">Name</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style={{ marginLeft: '1%' }}>
+              <div className='' style={{ height: '20vw' }}>
+                <div className='OurBlog sizeOurBlog'></div>
+                <div className="card borderCard">
+                  <div className="ImgBlog" >
+                    <img src={imgEMT} className='ImgBlogsize' />
+                  </div>
+                  <div className="marImgcirBlog" >
+                    <div class='ImgcircleBlog' >
+                      <img src={imgEMT} className='ImgcircleBlog' />
+                    </div>
+                  </div>
+                  <div className="NameBlogmargin">
+                    <p class="NameBlog">Name</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </div> */}
     </div>
   );
 }
