@@ -87,7 +87,7 @@ export default function Contact() {
         </div>
       ) : (
         <>
-          <div className='Page100Vh'>
+          <div className='Page100VhConT'>
             {/* <div class="row" >
               <div class="col-12" style={{ marginTop: '10%' }}>
                 <h class="textHead">บล็อกของเรา</h><hr class="line Cline"></hr>

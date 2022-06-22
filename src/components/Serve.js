@@ -213,7 +213,7 @@ export default function Serve() {
                       </>
                     ))}
                   </div>
-                  <div className='row Hiddenwwu' style={{ placeContent: 'center',marginTop:'-2%' }}>
+                  <div className='row Hiddenwwu' style={{ placeContent: 'center', marginTop: '-2%' }}>
                     {WorkWUs.map((item, index) => (
                       <>
                         <div className="col-5" style={{ display: 'flex', placeContent: 'center', padding: '25px' }}>
@@ -243,14 +243,14 @@ export default function Serve() {
               <div className="col-12 ">
                 <div
                   id="carouselExampleIndicators"
-                  className="carousel slide"
-                  data-bs-ride="carousel"
+                className="carousel slide"
+                data-bs-ride="carousel"
                 >
                   <FadeIn>
                     <div className="carousel-inner ">
                       <div className="carousel-item active">
                         <div className="col" style={{ width: '100vw' }}>
-                          <div style={{ height: '100vw' }}>
+                          <div style={{ height: '100vh' }}>
                             <div className="card borderCard cardCardHover">
                               <div className="" style={{
                                 position: 'absolute', bottom: '0px', left: 0, right: 0,
@@ -693,14 +693,14 @@ export default function Serve() {
                                     </div>
                                   </div>
                                   <div className="col-1" ></div>
-                                  <div className="col-6 ">
+                                  <div className="col-6 ResDisplayNone">
                                     <div className='' style={{ borderRadius: '30px', height: '100%' }}>
                                       <div className="row justify-content-md-center">
                                         <div className='col-10 TextHeadOutSolution PosiSoul' align='left'>{Service[0]?.service_name}</div>
                                         <div className='col-10' align='left'>
                                           <p className='textInfoSer PosiSoulDetail' style={{ marginTop: '2%' }}>
                                             <span>ถ้าคุณคือ {Service[0]?.service_name}</span>
-                                            <p><span>ที่</span><span>{Service[0]?.service_detail}</span></p>
+                                            <p><span></span><span>{Service[0]?.service_detail}</span></p>
                                           </p>
                                         </div>
                                         <div className="" style={{ position: 'absolute', bottom: '-20vw', left: '36%', right: 0, height: '100%' }}>
@@ -708,6 +708,20 @@ export default function Serve() {
                                             <Link to="ContactScroll" spy={true} ><a class="buttonSendOutSolution PosiSoulBT" role="button" >สอบถามเพิ่มเติม</a></Link>
                                           </div>
                                         </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className='row heddinResslide' >
+                                    <div className='col-10'>
+                                      <p className='TextHeadOutSolution' align='left'>{Service[0]?.service_name}</p>
+                                      <p className='textInfoSer ' style={{ marginTop: '2%' }}>
+                                        <span>ถ้าคุณคือ  {Service[0]?.service_name}</span>
+                                        <p><span></span><span>{Service[0]?.service_detail}</span></p>
+                                      </p>
+                                    </div>
+                                    <div className="" style={{ position: 'absolute', bottom: '-42vw', left: '31%', right: 0, height: '100%' }}>
+                                      <div className='col-10' align='center'>
+                                        <Link to="ContactScroll" spy={true} ><a class="buttonSendOutSolution PosiSoulBT" role="button" >สอบถามเพิ่มเติม</a></Link>
                                       </div>
                                     </div>
                                   </div>
@@ -728,7 +742,7 @@ export default function Serve() {
                           return (
                             <div className="carousel-item ">
                               <div className="col" style={{ width: '100vw' }}>
-                                <div style={{ height: '100vw' }}>
+                                <div style={{ height: '100vh' }}>
                                   <div className="card borderCard cardCardHover">
                                     <div className="" style={{
                                       position: 'absolute', bottom: '0px', left: 0, right: 0,
@@ -1169,25 +1183,39 @@ export default function Serve() {
                                           </div>
                                         </div>
                                         <div className="col-1" ></div>
-                                        <div className="col-6 " >
-                                          <div className='col-6'></div>
-                                          <div className='bg-none' style={{ borderRadius: '30px', height: '100%' }}>
+                                        <div className="col-6 ResDisplayNone">
+                                          <div className='' style={{ borderRadius: '30px', height: '100%' }}>
                                             <div className="row justify-content-md-center">
                                               <div className='col-10 TextHeadOutSolution PosiSoul' align='left'>{item.service_name}</div>
                                               <div className='col-10' align='left'>
                                                 <p className='textInfoSer PosiSoulDetail' style={{ marginTop: '2%' }}>
                                                   <span>ถ้าคุณคือ {item.service_name}</span>
-                                                  <p><span>ที่</span><span>{item.service_detail}</span></p>
+                                                  <p><span></span><span>{item.service_detail}</span></p>
                                                 </p>
                                               </div>
                                               <div className="" style={{ position: 'absolute', bottom: '-20vw', left: '36%', right: 0, height: '100%' }}>
                                                 <div className='col-10' align='center'>
-                                                <Link to="ContactScroll" spy={true} ><a class="buttonSendOutSolution PosiSoulBT" role="button" >สอบถามเพิ่มเติม</a></Link>
+                                                  <Link to="ContactScroll" spy={true} ><a class="buttonSendOutSolution PosiSoulBT" role="button" >สอบถามเพิ่มเติม</a></Link>
                                                 </div>
                                               </div>
                                             </div>
                                           </div>
                                         </div>
+                                        <div className='row heddinResslide' >
+                                          <div className='col-10'>
+                                            <p className='TextHeadOutSolution' align='left'>{item.service_name}</p>
+                                            <p className='textInfoSer ' style={{ marginTop: '2%' }}>
+                                              <span>ถ้าคุณคือ  {item.service_name}</span>
+                                              <p><span></span><span>{item.service_detail}</span></p>
+                                            </p>
+                                          </div>
+                                          <div className="" style={{ position: 'absolute', bottom: '-42vw', left: '31%', right: 0, height: '100%' }}>
+                                            <div className='col-10' align='center'>
+                                              <Link to="ContactScroll" spy={true} ><a class="buttonSendOutSolution PosiSoulBT" role="button" >สอบถามเพิ่มเติม</a></Link>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        
                                       </div>
                                     </div>
                                   </div>

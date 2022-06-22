@@ -1012,11 +1012,17 @@ nav .containerHome ul li.active a {
   height: 59vw;
   margin-left: -18%;
 }
+.heddinResslide{
+  display: none ;
+}
 @media only screen and (max-width: 1230px) {
   .PageAboutUsH {
     height: 59vw;
   }
   .Page100Vh {
+    height: 100vh;
+  }
+  .Page100VhConT{
     height: 100vh;
   }
 }
@@ -1034,9 +1040,15 @@ nav .containerHome ul li.active a {
   .Page100Vh {
     height: 90vh;
   }
+  .Page100VhConT{
+    height: 90vh;
+  }
 }
 
 @media only screen and (max-width: 768px) {
+  .OurSolutionPageH {
+    height: 47vw;
+  }
   .abotusImg {
     margin-left: -18%;
     margin-top: 0.2vw;
@@ -1489,7 +1501,7 @@ nav .containerHome ul li.active a {
   }
   .PosiSoulBT {
     position: absolute;
-    bottom: -75vw;
+    bottom: -70vw;
     left: 0;
     right: 0;
   }
@@ -1737,6 +1749,9 @@ nav .containerHome ul li.active a {
   .Page100Vh {
     height: 100vh;
   }
+  .Page100VhConT {
+    height: 96vh;
+  }
   .marginTopCon {
     margin-top: 10vh;
     margin-left: -5%;
@@ -1852,5 +1867,10 @@ nav .containerHome ul li.active a {
     border-radius: 0.8rem;
     background: #ffffff;
     box-shadow: 1px 5px 7px #aaa8a8;
+  }
+  .heddinResslide{
+    display: flex;
+    justify-content: center;
+    margin-top: 61%;
   }
 }
