@@ -119,7 +119,7 @@ export default function Serve() {
                     {/* CardOutService */}
                     <div class="CardOutServiceRow" >
                       {ServiceUs.map((item, index) => {
-                        const staticpath = APIURL + `/static/serviceUs/` + item.serviceUs_name + ',' + item.serviceUs_img
+                        const staticpath = APIURL + `/static/serviceUs/` +  item.serviceUs_img
                         return (
                           <>
                             <div className='col-OurServ margintopResSer ' >
@@ -656,8 +656,6 @@ export default function Serve() {
                                           <path d="M743.426 808.179C1133.27 756.326 1319.54 115.16 1014.3 21.245C709.065 -72.6697 696.492 186.376 183.993 144.877C-328.507 103.378 353.581 860.032 743.426 808.179Z" fill='url(#img1)' />
                                           <pattern id="img1" width="1" height="1">ฃ
                                             <image href={APIURL + `/static/services/` +
-                                              Service[0]?.service_name +
-                                              "," +
                                               Service[0]?.service_img} width="100%" />
                                           </pattern>
                                         </svg>
@@ -736,8 +734,6 @@ export default function Serve() {
                         .map((item, index) => {
                           const staticpath =
                             APIURL + `/static/services/` +
-                            item.service_name +
-                            "," +
                             item.service_img;
                           return (
                             <div className="carousel-item ">

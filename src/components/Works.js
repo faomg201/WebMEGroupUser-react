@@ -125,8 +125,6 @@ export default function Works() {
                                   return;
                                 const staticpath =
                                   APIURL + `/static/goals/` +
-                                  item.goal_title +
-                                  "," +
                                   item.goal_img;
                                 var titleN = ""
                                 if (itemSer.service_name == item.service_name) titleN = itemSer.service_name
