@@ -237,7 +237,7 @@ export default function Abouts() {
               <br /><br />
               <div className="sliderMedium ResDisplayNone">
                 {Employees.map((item) => {
-                  const staticpath = APIURL + `/static/employees/` + item.emp_fname + ',' + item.emp_lname + ',' + item.emp_img
+                  const staticpath = APIURL + `/static/employees/` +  item.emp_img
                   // console.log(staticpath);
                   return (
                     < >
@@ -259,7 +259,7 @@ export default function Abouts() {
                 <div>
                   <div class="row CardAboutus " >
                     {Employees.map((item) => {
-                      const staticpath = APIURL + `/static/employees/` + item.emp_fname + ',' + item.emp_lname + ',' + item.emp_img
+                      const staticpath = APIURL + `/static/employees/` +  item.emp_img
                       // console.log(staticpath);
                       return (
                         < >
